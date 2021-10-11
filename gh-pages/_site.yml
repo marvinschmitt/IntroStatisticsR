@@ -1,0 +1,6 @@
+name: "IntroStatisticsR"
+output_dir: "."
+navbar:
+  title: "Einführung in die Statistik mit R"
+  left:
+    - text: "Home"

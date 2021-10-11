@@ -1,0 +1,6 @@
+---
+title: "Einführung in die Statistik mit R"
+---
+
+
+Herzlich willkommen im Kurs **Einführung in die Statistik mit R**!
