@@ -1,6 +1,24 @@
 ---
-title: "Einführung in die Statistik mit R"
+title: "Introduction to Statistics with R"
 ---
 
 
-Herzlich willkommen im Kurs **Einführung in die Statistik mit R**!
+Welcome to the course **Introduction to Statistics with R** (Einführung in die Statistik mit R)!
+
+This website summarizes the material and general information of the course.
+The public material is provided in English, the teaching language is German.
+The assignments are available in the corresponding GitHub repository at <https://github.com/marvinschmitt/IntroStatisticsR>.
+
+The participants will receive all non-public information (in-person meeting locations, online meeting login data) via e-mail.
+
+## Course outline
+
+Date | Topic | Location
+--- | --- | ---
+19.10.2021, 09:15 - 12:45 | Kickoff and setup | in-person   
+26.10.2021, 09:15 - 10:45 | Descriptive statistics and diagrams | Online
+02.11.2021, 09:15 - 10:45 | Correlation | Online
+09.11.2021, 09:15 - 10:45 | Regression | Online
+16.11.2021, 09:15 - 10:45 | t-Test | Online
+23.11.2021, 09:15 - 10:45 | ANOVA | Online
+30.11.2021, 09:15 - 12:45 | Conclusion and Hackathon | in-person
