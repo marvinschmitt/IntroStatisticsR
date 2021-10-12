@@ -1,0 +1,35 @@
+---
+title: "Introduction to Statistics with R -- FAQ"
+date: "Page updated: `r format.Date(file.mtime('FAQ.Rmd'),'%d.%m.%Y')`"
+---
+
+### I cannot load files, such as data sets in `.csv` format
+The problem might be that your working directory is not correctly set. Execute the command
+
+```{r eval=FALSE}
+getwd()
+```
+
+and see if the printed working directory matches your expectation. That is the root of all your file references. 
+
+**Tip:** You can set the working directory to the folder of the current `.R` or `.Rmd` file with:
+
+```{r eval=FALSE}
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+```
+
+### Problems with generating RMarkdown Notebooks
+You might have not installed `knitr` which generates the pretty files from your `.Rmd` notebooks. Try to execute the following code to install `knitr`:
+
+```{r eval=FALSE}
+install.packages("knitr")
+```
+
+### RMarkdown Notebooks won't generate even though `knitr` is installed
+The problem might be that there is no sufficient LaTeX distribution installed. LaTeX is used for typesetting. Install a minimum LaTeX distribution with the following code:
+
+```{r eval=FALSE}
+install.packages("tinytex")
+tinytex::install_tinytex()
+```
+

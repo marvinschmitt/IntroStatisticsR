@@ -1,4 +1,17 @@
 name: "IntroStatisticsR"
 output_dir: "."
 navbar:
-  title: "Einführung in die Statistik mit R"
+  title: "Introduction to Statistics with R"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "FAQ"
+      href: FAQ.html
+author: "Marvin Schmitt"
+output:
+  html_document:
+    theme: readable
+    toc: true
+    toc_collapse: false
+    toc_depth: 3
+    toc_float: true

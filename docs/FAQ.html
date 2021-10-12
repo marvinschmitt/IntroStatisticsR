@@ -11,7 +11,7 @@
 
 
 
-<title>Introduction to Statistics with R</title>
+<title>Introduction to Statistics with R – FAQ</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -375,126 +375,30 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Introduction to Statistics with R</h1>
+<h1 class="title toc-ignore">Introduction to Statistics with R – FAQ</h1>
 <h4 class="date">Page updated: 12.10.2021</h4>
 
 </div>
 
 
-<p>Welcome to the course <strong>Introduction to Statistics with R</strong> (Einführung in die Statistik mit R)!</p>
-<div id="general" class="section level2">
-<h2>General</h2>
-<p>This website summarizes the material and general information of the course. The public material is provided in English, the teaching language is German. The assignments are available in the corresponding GitHub repository at <a href="https://github.com/marvinschmitt/IntroStatisticsR" class="uri">https://github.com/marvinschmitt/IntroStatisticsR</a>.</p>
-<p>The participants will receive all non-public information (in-person meeting locations, online meeting login data, video material) via e-mail.</p>
+<div id="i-cannot-load-files-such-as-data-sets-in-.csv-format" class="section level3">
+<h3>I cannot load files, such as data sets in <code>.csv</code> format</h3>
+<p>The problem might be that your working directory is not correctly set. Execute the command</p>
+<pre class="r"><code>getwd()</code></pre>
+<p>and see if the printed working directory matches your expectation. That is the root of all your file references.</p>
+<p><strong>Tip:</strong> You can set the working directory to the folder of the current <code>.R</code> or <code>.Rmd</code> file with:</p>
+<pre class="r"><code>setwd(dirname(rstudioapi::getSourceEditorContext()$path))</code></pre>
 </div>
-<div id="course-outline" class="section level2">
-<h2>Course Outline</h2>
-<p>The course features five lessons <code>R01</code> – <code>R05</code>, each with a focus topic covering the essentials of one fundamental statistical method. Before the first lesson, we will make sure that all software is well set-up (<code>R00</code>). After the last lesson, we will meet for a conclusion and outlook on how to apply the statistical methods in your own research (<code>R06</code>).</p>
-<table>
-<thead>
-<tr class="header">
-<th>Week</th>
-<th>Topic</th>
-<th>Lecture notes</th>
-<th>Assignment</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R00_setup">R00</a></td>
-<td>Setup</td>
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R00_setup/R00_notes.pdf">R00_notes.pdf</a></td>
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R00_setup/R00_assignment.pdf">R00_assignment.pdf</a></td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R01_basics-diagrams">R01</a></td>
-<td>Basics and Diagrams</td>
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R01_basics-diagrams/R01_notes.pdf">R01_notes.pdf</a></td>
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R01_basics-diagrams/R01_assignment.pdf">R01_assignment.pdf</a></td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R02_correlation">R02</a></td>
-<td>Correlation</td>
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R02_correlation/R02_notes.pdf">R02_notes.pdf</a></td>
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R02_correlation/R02_assignment.pdf">R02_assignment.pdf</a></td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R03_regression">R03</a></td>
-<td>Regression</td>
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R03_regression/R03_notes.pdf">R03_notes.pdf</a></td>
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R03_regression/R03_assignment.pdf">R03_assignment.pdf</a></td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R04_ttest">R04</a></td>
-<td>t-Test</td>
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R04_ttest/R04_notes.pdf">R04_notes.pdf</a></td>
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/ttest/R04_assignment.pdf">R04_assignment.pdf</a></td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R05_anova">R05</a></td>
-<td>ANOVA</td>
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R05_anova/R05_notes.pdf">R05_notes.pdf</a></td>
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R05_anova/R05_assignment.pdf">R05_assignment.pdf</a></td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R05_conclusion">R06</a></td>
-<td>Conclusion</td>
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R06_conclusion/R06_notes.pdf">R06_notes.pdf</a></td>
-<td><a href="https://github.com/marvinschmitt/IntroStatisticsR/material/R06_conclusion/R06_assignment.pdf">R06_assignment.pdf</a></td>
-</tr>
-</tbody>
-</table>
+<div id="problems-with-generating-rmarkdown-notebooks" class="section level3">
+<h3>Problems with generating RMarkdown Notebooks</h3>
+<p>You might have not installed <code>knitr</code> which generates the pretty files from your <code>.Rmd</code> notebooks. Try to execute the following code to install <code>knitr</code>:</p>
+<pre class="r"><code>install.packages(&quot;knitr&quot;)</code></pre>
 </div>
-<div id="teaching-mode" class="section level2">
-<h2>Teaching mode</h2>
-<p>The course aims at using a suitable teaching format for each component. Therefore, we will have different modes of in-person + online as well as synchronous + asynchronous parts. The synchronous parts (i.e., <em>meetings</em>) take place on the following dates:</p>
-<table>
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Topic</th>
-<th>Location</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>19.10.2021, 09:15 - 12:45</td>
-<td>Kickoff and setup</td>
-<td>in-person</td>
-</tr>
-<tr class="even">
-<td>26.10.2021, 09:15 - 10:45</td>
-<td>Basics and diagrams</td>
-<td>Online</td>
-</tr>
-<tr class="odd">
-<td>02.11.2021, 09:15 - 10:45</td>
-<td>Correlation</td>
-<td>Online</td>
-</tr>
-<tr class="even">
-<td>09.11.2021, 09:15 - 10:45</td>
-<td>Regression</td>
-<td>Online</td>
-</tr>
-<tr class="odd">
-<td>16.11.2021, 09:15 - 10:45</td>
-<td>t-Test</td>
-<td>Online</td>
-</tr>
-<tr class="even">
-<td>23.11.2021, 09:15 - 10:45</td>
-<td>ANOVA</td>
-<td>Online</td>
-</tr>
-<tr class="odd">
-<td>30.11.2021, 09:15 - 12:45</td>
-<td>Conclusion</td>
-<td>in-person</td>
-</tr>
-</tbody>
-</table>
-<p>During each synchronous online lesson (<code>R01</code>-<code>R05</code>), we will focus on discussing a statistical method from a conceptual point of view. In addition, each lesson (<code>R01</code>-<code>R05</code>) will feature an asynchronous <strong>video</strong> that introduces the implementation of the corresponding method in <code>R</code>. Past experience has shown that asynchronous teaching of programming methods was perceived as superior to <em>live teaching</em>. That’s for one simple reason: Participants reported that they could simply pause or replay parts of the video in order to assure that they can follow the course. The link to the teaching videos will be provided to the participants via e-mail.</p>
+<div id="rmarkdown-notebooks-wont-generate-even-though-knitr-is-installed" class="section level3">
+<h3>RMarkdown Notebooks won’t generate even though <code>knitr</code> is installed</h3>
+<p>The problem might be that there is no sufficient LaTeX distribution installed. LaTeX is used for typesetting. Install a minimum LaTeX distribution with the following code:</p>
+<pre class="r"><code>install.packages(&quot;tinytex&quot;)
+tinytex::install_tinytex()</code></pre>
 </div>
 
 

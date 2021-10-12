@@ -1,24 +1,42 @@
 ---
 title: "Introduction to Statistics with R"
+date: "Page updated: `r format.Date(file.mtime('index.Rmd'),'%d.%m.%Y')`"
 ---
-
-
 Welcome to the course **Introduction to Statistics with R** (Einführung in die Statistik mit R)!
 
+## General
 This website summarizes the material and general information of the course.
 The public material is provided in English, the teaching language is German.
 The assignments are available in the corresponding GitHub repository at <https://github.com/marvinschmitt/IntroStatisticsR>.
 
-The participants will receive all non-public information (in-person meeting locations, online meeting login data) via e-mail.
+The participants will receive all non-public information (in-person meeting locations, online meeting login data, video material) via e-mail.
 
-## Course outline
+## Course Outline
+The course features five lessons `R01` -- `R05`, each with a focus topic covering the essentials of one fundamental statistical method. Before the first lesson, we will make sure that all software is well set-up (`R00`). After the last lesson, we will meet for a conclusion and outlook on how to apply the statistical methods in your own research (`R06`).
+
+Week    | Topic     | Lecture notes   |  Assignment
+---     | ---       | ---             | --- 
+[R00](https://github.com/marvinschmitt/IntroStatisticsR/material/R00_setup)     | Setup     |[R00_notes.pdf](https://github.com/marvinschmitt/IntroStatisticsR/material/R00_setup/R00_notes.pdf) | [R00_assignment.pdf](https://github.com/marvinschmitt/IntroStatisticsR/material/R00_setup/R00_assignment.pdf)
+[R01](https://github.com/marvinschmitt/IntroStatisticsR/material/R01_basics-diagrams)     | Basics and Diagrams     |[R01_notes.pdf](https://github.com/marvinschmitt/IntroStatisticsR/material/R01_basics-diagrams/R01_notes.pdf) | [R01_assignment.pdf](https://github.com/marvinschmitt/IntroStatisticsR/material/R01_basics-diagrams/R01_assignment.pdf)
+[R02](https://github.com/marvinschmitt/IntroStatisticsR/material/R02_correlation)     | Correlation     |[R02_notes.pdf](https://github.com/marvinschmitt/IntroStatisticsR/material/R02_correlation/R02_notes.pdf) | [R02_assignment.pdf](https://github.com/marvinschmitt/IntroStatisticsR/material/R02_correlation/R02_assignment.pdf)
+[R03](https://github.com/marvinschmitt/IntroStatisticsR/material/R03_regression)     | Regression     |[R03_notes.pdf](https://github.com/marvinschmitt/IntroStatisticsR/material/R03_regression/R03_notes.pdf) | [R03_assignment.pdf](https://github.com/marvinschmitt/IntroStatisticsR/material/R03_regression/R03_assignment.pdf)
+[R04](https://github.com/marvinschmitt/IntroStatisticsR/material/R04_ttest)     | t-Test     |[R04_notes.pdf](https://github.com/marvinschmitt/IntroStatisticsR/material/R04_ttest/R04_notes.pdf) | [R04_assignment.pdf](https://github.com/marvinschmitt/IntroStatisticsR/material/ttest/R04_assignment.pdf)
+[R05](https://github.com/marvinschmitt/IntroStatisticsR/material/R05_anova)     | ANOVA     |[R05_notes.pdf](https://github.com/marvinschmitt/IntroStatisticsR/material/R05_anova/R05_notes.pdf) | [R05_assignment.pdf](https://github.com/marvinschmitt/IntroStatisticsR/material/R05_anova/R05_assignment.pdf)
+[R06](https://github.com/marvinschmitt/IntroStatisticsR/material/R05_conclusion)     | Conclusion     |[R06_notes.pdf](https://github.com/marvinschmitt/IntroStatisticsR/material/R06_conclusion/R06_notes.pdf) | [R06_assignment.pdf](https://github.com/marvinschmitt/IntroStatisticsR/material/R06_conclusion/R06_assignment.pdf)
+
+
+## Teaching mode
+The course aims at using a suitable teaching format for each component. Therefore, we will have different modes of in-person + online as well as synchronous + asynchronous parts. The synchronous parts (i.e., _meetings_) take place on the following dates:
 
 Date | Topic | Location
 --- | --- | ---
 19.10.2021, 09:15 - 12:45 | Kickoff and setup | in-person   
-26.10.2021, 09:15 - 10:45 | Descriptive statistics and diagrams | Online
+26.10.2021, 09:15 - 10:45 | Basics and diagrams | Online
 02.11.2021, 09:15 - 10:45 | Correlation | Online
 09.11.2021, 09:15 - 10:45 | Regression | Online
 16.11.2021, 09:15 - 10:45 | t-Test | Online
 23.11.2021, 09:15 - 10:45 | ANOVA | Online
-30.11.2021, 09:15 - 12:45 | Conclusion and Hackathon | in-person
+30.11.2021, 09:15 - 12:45 | Conclusion | in-person
+
+During each synchronous online lesson (`R01`-`R05`), we will focus on discussing a statistical method from a conceptual point of view.
+In addition, each lesson (`R01`-`R05`) will feature an asynchronous **video** that introduces the implementation of the corresponding method in `R`. Past experience has shown that asynchronous teaching of programming methods was perceived as superior to _live teaching_. That's for one simple reason: Participants reported that they could simply pause or replay parts of the video in order to assure that they can follow the course. The link to the teaching videos will be provided to the participants via e-mail.
