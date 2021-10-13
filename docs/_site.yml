@@ -5,6 +5,8 @@ navbar:
   left:
     - text: "Home"
       href: index.html
+    - text: "Setup"
+      href: setup.html
     - text: "FAQ"
       href: FAQ.html
 author: "Marvin Schmitt"

@@ -11,7 +11,7 @@
 
 
 
-<title>Introduction to Statistics with R – FAQ</title>
+<title>Introduction to Statistics with R – Setup</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -378,30 +378,61 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Introduction to Statistics with R – FAQ</h1>
-<h4 class="date">Page updated: 12.10.2021</h4>
+<h1 class="title toc-ignore">Introduction to Statistics with R – Setup</h1>
+<h4 class="date">Page updated: 13.10.2021</h4>
 
 </div>
 
 
-<div id="i-cannot-load-files-such-as-data-sets-in-.csv-format" class="section level3">
-<h3>I cannot load files, such as data sets in <code>.csv</code> format</h3>
-<p>The problem might be that your working directory is not correctly set. Execute the command</p>
-<pre class="r"><code>getwd()</code></pre>
-<p>and see if the printed working directory matches your expectation. That is the root of all your file references.</p>
-<p><strong>Tip:</strong> You can set the working directory to the folder of the current <code>.R</code> or <code>.Rmd</code> file with:</p>
-<pre class="r"><code>setwd(dirname(rstudioapi::getSourceEditorContext()$path))</code></pre>
+<p>Our setup comprises three steps:</p>
+<ol style="list-style-type: decimal">
+<li>Installing the programming language <code>R</code></li>
+<li>Installing the development environment <code>RStudio</code> that lets us use <code>R</code> conveniently</li>
+<li>Installing the required packages and extensions to get the best experience for the course</li>
+</ol>
+<p>Steps 1 and 2 might vary slightly depending on the operating system that you use (Windows, MacOS, or Linux). For the third step, all users are created equal.</p>
+<div id="installing-r" class="section level1">
+<h1>Installing <code>R</code></h1>
+<details>
+<summary><strong>Windows</strong></summary> Download and install <code>R</code> from <a href="https://cran.r-project.org/bin/windows/base/R-4.1.1-win.exe" class="uri">https://cran.r-project.org/bin/windows/base/R-4.1.1-win.exe</a>.
+</details>
+<details>
+<p><summary><strong>Mac</strong></summary> Mac has recently changed their main processor type from Intel to ARM. Find out if your Mac uses an Intel processor (before 2020) or an ARM processor (“Apple Silicon”) and download the corresponding installer:</p>
+<ul>
+<li><strong>Intel</strong>: <a href="https://cran.r-project.org/bin/macosx/base/R-4.1.1.pkg" class="uri">https://cran.r-project.org/bin/macosx/base/R-4.1.1.pkg</a></li>
+<li><strong>ARM</strong> (Apple Silicon): <a href="https://cran.r-project.org/bin/macosx/big-sur-arm64/base/R-4.1.1-arm64.pkg" class="uri">https://cran.r-project.org/bin/macosx/big-sur-arm64/base/R-4.1.1-arm64.pkg</a></li>
+</ul>
+Install the downloaded <code>.pkg</code> file. You might need to confirm that you trust the app developer.
+</details>
+<details>
+<summary><strong>Linux</strong></summary> If you are using Linux, chances are that you know what you are doing. Head over to <a href="https://cran.r-project.org/index.html" class="uri">https://cran.r-project.org/index.html</a> and find the <code>R</code> installer that suits your distribution.
+</details>
 </div>
-<div id="problems-with-generating-rmarkdown-notebooks" class="section level3">
-<h3>Problems with generating RMarkdown Notebooks</h3>
-<p>You might have not installed <code>knitr</code> which generates the pretty files from your <code>.Rmd</code> notebooks. Try to execute the following code to install <code>knitr</code>:</p>
-<pre class="r"><code>install.packages(&quot;knitr&quot;)</code></pre>
+<div id="installing-rstudio" class="section level1">
+<h1>Installing <code>RStudio</code></h1>
+<details>
+<summary><strong>Windows</strong></summary> Download and install <code>RStudio</code> from <a href="https://download1.rstudio.org/desktop/windows/RStudio-2021.09.0-351.exe" class="uri">https://download1.rstudio.org/desktop/windows/RStudio-2021.09.0-351.exe</a>.
+</details>
+<details>
+<summary><strong>Mac</strong></summary> Download and install <code>RStudio</code> from <a href="https://download1.rstudio.org/desktop/macos/RStudio-2021.09.0-351.dmg" class="uri">https://download1.rstudio.org/desktop/macos/RStudio-2021.09.0-351.dmg</a>. That installer works on both Intel and ARM (Apple Silicon) processors. Again, you might need to confirm that you trust the app developer.
+</details>
+<details>
+<summary><strong>Linux</strong></summary> Again, you probably know what you are doing. Installers for different distributions are available at <a href="https://www.rstudio.com/products/rstudio/download/#download" class="uri">https://www.rstudio.com/products/rstudio/download/#download</a>.
+</details>
 </div>
-<div id="rmarkdown-notebooks-wont-generate-even-though-knitr-is-installed" class="section level3">
-<h3>RMarkdown Notebooks won’t generate even though <code>knitr</code> is installed</h3>
-<p>The problem might be that there is no sufficient LaTeX distribution installed. LaTeX is used for typesetting. Install a minimum LaTeX distribution with the following code:</p>
-<pre class="r"><code>install.packages(&quot;tinytex&quot;)
-tinytex::install_tinytex()</code></pre>
+<div id="installing-required-packages-for-the-course" class="section level1">
+<h1>Installing required packages for the course</h1>
+<p>We will be using <code>RMarkdown</code> which is a nice extension to create pretty PDF files directly from <code>RStudio</code>. For plot creation, we will be using <code>ggplot2</code>. For general data handling, we will occasionally use packages from the <code>tidyverse</code> collection. We will now install these packages.</p>
+<ol style="list-style-type: decimal">
+<li>Please open <code>RStudio</code> and find the <strong>console</strong> on the left side of the window or in the bottom-left corner.</li>
+<li>To test whether everything works and you are actually using the console, type <code>1+2</code> and see if the console outputs <code>3</code>.</li>
+<li>Now, we are ready to install all required packages with the following code:</li>
+</ol>
+<pre class="r"><code>install.packages(c(&quot;rmarkdown&quot;, &quot;tinytex&quot;, &quot;ggplot2&quot;, &quot;tidyverse&quot;))</code></pre>
+</div>
+<div id="lets-test" class="section level1">
+<h1>Let’s test!</h1>
+<p>Please go to <a href="https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R00_setup" class="uri">https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R00_setup</a> and download the file <a href='https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R00_setup/R00_setup_test.Rmd' target='_blank'><code>R00_setup_test.Rmd</code></a>. Open the file in <code>RStudio</code> and click the <strong>Knit</strong> button in the top toolbar. If you don’t see any output, click on the <strong>Viewer</strong> pane on the bottom-right of the window. Feel free to play around with the elements of the document and see what happens!</p>
 </div>
 
 

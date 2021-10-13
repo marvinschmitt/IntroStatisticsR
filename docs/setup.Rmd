@@ -1,0 +1,62 @@
+---
+title: "Introduction to Statistics with R -- Setup"
+date: "Page updated: `r format.Date(file.mtime('setup.Rmd'),'%d.%m.%Y')`"
+---
+
+Our setup comprises three steps:
+
+1. Installing the programming language `R`
+2. Installing the development environment `RStudio` that lets us use `R` conveniently
+3. Installing the required packages and extensions to get the best experience for the course
+
+Steps 1 and 2 might vary slightly depending on the operating system that you use (Windows, MacOS, or Linux). For the third step, all users are created equal.
+
+# Installing `R`
+<details>
+<summary>**Windows**</summary>
+Download and install `R` from <https://cran.r-project.org/bin/windows/base/R-4.1.1-win.exe>.
+</details>
+
+<details>
+<summary>**Mac**</summary>
+Mac has recently changed their main processor type from Intel to ARM. Find out if your Mac uses an Intel processor (before 2020) or an ARM processor ("Apple Silicon") and download the corresponding installer:
+
+- **Intel**: <https://cran.r-project.org/bin/macosx/base/R-4.1.1.pkg>
+- **ARM** (Apple Silicon): <https://cran.r-project.org/bin/macosx/big-sur-arm64/base/R-4.1.1-arm64.pkg>
+
+Install the downloaded `.pkg` file. You might need to confirm that you trust the app developer.
+</details>
+
+<details>
+<summary>**Linux**</summary>
+If you are using Linux, chances are that you know what you are doing. Head over to <https://cran.r-project.org/index.html> and find the `R` installer that suits your distribution.
+</details>
+
+# Installing `RStudio`
+<details>
+<summary>**Windows**</summary>
+Download and install `RStudio` from <https://download1.rstudio.org/desktop/windows/RStudio-2021.09.0-351.exe>.
+</details>
+
+<details>
+<summary>**Mac**</summary>
+Download and install `RStudio` from <https://download1.rstudio.org/desktop/macos/RStudio-2021.09.0-351.dmg>. That installer works on both Intel and ARM (Apple Silicon) processors. Again, you might need to confirm that you trust the app developer.
+</details>
+
+<details>
+<summary>**Linux**</summary>
+Again, you probably know what you are doing. Installers for different distributions are available at <https://www.rstudio.com/products/rstudio/download/#download>.
+</details>
+
+# Installing required packages for the course
+We will be using `RMarkdown` which is a nice extension to create pretty PDF files directly from `RStudio`. For plot creation, we will be using `ggplot2`. For general data handling, we will occasionally use packages from the `tidyverse` collection. We will now install these packages. 
+
+1. Please open `RStudio` and find the **console** on the left side of the window or in the bottom-left corner.
+2. To test whether everything works and you are actually using the console, type `1+2` and see if the console outputs `3`.
+3. Now, we are ready to install all required packages with the following code:
+```{r eval=FALSE}
+install.packages(c("rmarkdown", "tinytex", "ggplot2", "tidyverse"))
+```
+
+# Let's test!
+Please go to <https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R00_setup> and download the file <a href='https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R00_setup/R00_setup_test.Rmd' target='_blank'>`R00_setup_test.Rmd`</a>. Open the file in `RStudio` and click the **Knit** button in the top toolbar. If you don't see any output, click on the **Viewer** pane on the bottom-right of the window. Feel free to play around with the elements of the document and see what happens!
