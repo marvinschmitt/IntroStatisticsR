@@ -279,3 +279,10 @@ author: "<YOUR NAME>"
 output: pdf_document
 ---
 ```
+
+```{r echo=FALSE, include=FALSE}
+filename = "R00_student_data.csv"
+if (file.exists(filename)){
+  file.remove(filename)
+}
+```
