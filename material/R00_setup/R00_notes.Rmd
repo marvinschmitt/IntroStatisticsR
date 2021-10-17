@@ -1,0 +1,280 @@
+---
+title: "Introduction to Statistics with R"
+subtitle: "Session R00: Kickoff and Setup"
+author: "Marvin Schmitt"
+output:
+  beamer_presentation:
+    slide_level: 2
+    toc: no
+    theme: Berlin
+    includes:
+      in_header: ../../config-files/notes-config.tex
+  slidy_presentation: default
+  ioslides_presentation: default
+header-includes: \setbeamertemplate{footline}[]{}
+---
+
+
+
+
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(ggplot2)
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+set.seed(42)
+```
+
+# Welcome!
+
+## Kickoff
+
+![](../../assets/imgs/img_compass.jpg)
+
+- Where do you feel **at home**?
+- What is your **background**?
+- What is your **motivation** for participating in this course?
+- How would you retrospectively notice that the course was good?
+
+## Syllabus
+Let's take a look at the course website: <https://marvinschmitt.github.io/IntroStatisticsR/>
+
+# Setup
+## Installing R
+**Any problems?**
+
+Please execute in the console:
+
+```{r eval=FALSE}
+R.version
+```
+
+## Installing RStudio
+**Any problems?**
+
+Find out which version of `RStudio` you have:
+
+```{r eval=FALSE}
+rstudioapi::versionInfo()$version
+```
+
+## Installing the packages
+**Any problems?**
+
+Find out which package versions you have:
+
+```{r eval=FALSE}
+packageVersion("rmarkdown")
+packageVersion("tinytex")
+packageVersion("ggplot2")
+packageVersion("tidyverse")
+```
+
+## Testfile
+**Any problems?**
+
+# R Fundamentals
+## Basic usage
+`R` is an **interpreted script language**, so you can just write your code into a text file and execute it line by line:
+
+```{r}
+1+2
+```
+
+**Let's try it out!**
+- Open `RStudio`
+- Create a new file: `File -> New File -> R Script`
+- Type some expression and execute each line with `Ctrl + Enter` (Windows) or `Cmd + Enter` (Mac)
+
+## Basic calculations
+`R` supports basic arithmetic:
+```{r eval=FALSE}
+1+2
+3-4
+5*6
+7/8
+sqrt(9)
+10**2
+sin(pi/2)
+log(55)
+```
+
+## Comments
+If you type `#`, you start a **comment** for the rest of the line. Commented text is not evaluated!
+
+```{r}
+# This is a program that adds my two favorite numbers, namely 2 and 8.
+# I thank all my sponsors and my mom for the invaluable support
+# while writing this program.
+
+2+8    # this line is where I do all the addition magic!
+
+# End of the program
+# Thank you!
+```
+
+Use comments where ever you can. Your future self will thank you!
+
+## The help function
+If you come across a command that you don't know (yet), you can use `R`s internal help. Just move the cursor to the function and press `F1`.
+Alternatively, you can call `help()` and type the command you want to help for in the parentheses:
+
+```{r eval=FALSE}
+help(log)      # Read the help for the log() function
+```
+
+## Variables
+Just like in math, we often want to store numbers in variables:
+```{r}
+a = 5
+b = 10
+a+b
+```
+
+## Arrays
+Arrays are vectors with homogeneous entries (e.g. only numbers or only text). Arrays are constructed using the command `c()`. We can also store vectors in variables.
+
+```{r}
+age = c(27, 28, 32, 30, 27)
+institute = c('IDF', 'Slavistik', 'Germanistik', 'IDF', 'IUED')
+ID = 1:5    # shortcut for c(1, 2, 3, 4, 5)
+
+age
+institute
+ID
+```
+
+***
+We can do **calculations** on arrays:
+
+```{r}
+age * 365
+ID ^ 2 + (ID-20)^2 - 200
+age + 10 * ID
+```
+
+***
+We can **access** array elements by their index with `v[index]`. The index can also be an array if we want to access multiple entries:
+
+```{r}
+age[1]
+institute[c(1, 2)]
+age[2:4]
+```
+
+*** 
+To **append** items to an array, use this trick: Just create a **new array** with the original array as the first argument:
+
+```{r}
+age = c(age, 31)
+institute = c(institute, 'Germanistik')
+ID = c(ID, 6)
+```
+
+## Dataframes
+Dataframes are the fundamental data structure for data sets in `R`.
+
+```{r}
+df = data.frame(ID, age, institute)
+df
+```
+
+***
+
+Add an additional column `matnr` that contains the matrical number:
+
+```{r}
+matnr = c(3324567, 4356475, 4335263, 4231526, 3324153, 3657687)
+df = data.frame(df, matnr)
+df
+```
+
+*** 
+Access element in a data frame with index `df[row, column]`:
+```{r}
+df[1, 3]      # row 1, column 3
+df[2, 1]      # row 2, column 1
+df[1:4, 1:3]  # rows 1-4, columns 1-3
+```
+
+Access column by name `df$columnname`:
+```{r}
+df$age        # column 'age'
+df$institute  # column 'institute'
+```
+
+***
+
+`df$columnname` returns a `vector`, so we can handle it like one:
+
+```{r}
+df$age
+df$age * 365
+df$age[2:4]
+df$ID + df$age
+```
+
+## Reading and writing files
+You often find yourself with a data file (e.g. `.csv` or Excel) that you want to analyze in `R`. The following slides will cover:
+
+- Setting your **working directory**
+- **Writing** `.csv` files
+- **Reading** `.csv` files
+
+***
+
+You need to set your **working directory**. That is the base path from where all your references originate.
+You can set it using the `setwd()` command:
+
+```{r eval=FALSE}
+setwd("C:\\Users\\Marvin\\IntroStatisticsR\\material\\R00_setup")  # Windows
+setwd("~/IntroStatisticsR/material/R00_setup")    # Mac
+```
+
+Print the current working directory using `getwd()`:
+```{r}
+getwd()
+```
+
+Use this trick to set the working directory to where your current file is located:
+
+```{r eval=FALSE}
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+```
+
+***
+Write a dataframe into a file using the `write.csv` command:
+
+```{r}
+write.csv(df, file='R00_student_data.csv', row.names=FALSE)
+```
+
+- `df` is the data frame that you want to save.
+- `file='R00_student_data.csv'` specifies the file name relative to the working directory.
+- `row.names=FALSE` controls that we do not want to save row names. That's optional.
+
+*** 
+
+Read a data set using the `read.csv()` command:
+```{r}
+df_new = read.csv(file="R00_student_data.csv") 
+df_new
+```
+
+- `file="R00_student_data.csv"` provides the file name relative to the working directory.
+- We save the result of the `read.csv()` command into the object `df_new`.
+
+## RMarkdown
+`RMarkdown` is a very simple way to create _beautiful_ output files for your program code. Let's head right into `RStudio` and see how we can use `RMarkdown`.
+
+**Task:** Translate all the previous code into a `.Rmd` notebook and write some wrapper text. Use the following header: 
+
+```{r eval=FALSE}
+---
+title: "Introduction to Statistics with R -- R00: Setup"
+subtitle: "RMarkdown Exercise"
+author: "<YOUR NAME>"
+output: pdf_document
+---
+```

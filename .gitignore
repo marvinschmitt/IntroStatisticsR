@@ -3,3 +3,10 @@
 *.Rproj
 *.DS_Store
 *.Rhistory
+
+
+# pdfLatex aux files
+*.log
+*.tex
+*.gz
+*.synctex.gz

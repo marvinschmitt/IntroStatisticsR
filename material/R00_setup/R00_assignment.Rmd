@@ -1,14 +1,14 @@
 ---
 title: "Setup Test"
 author: "Marvin Schmitt"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Hello world!
+## 
 
 Hello! If you can read this, chances are that you have successfully installed the environment for the course. Please click the **Knit** button in the toolbar at the top to see if everything works correctly! 
 
