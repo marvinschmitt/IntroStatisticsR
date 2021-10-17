@@ -83,6 +83,7 @@ packageVersion("tidyverse")
 ```
 
 **Let's try it out!**
+
 - Open `RStudio`
 - Create a new file: `File -> New File -> R Script`
 - Type some expression and execute each line with `Ctrl + Enter` (Windows) or `Cmd + Enter` (Mac)
