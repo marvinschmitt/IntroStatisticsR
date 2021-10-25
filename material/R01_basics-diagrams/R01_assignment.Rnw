@@ -1,0 +1,126 @@
+\documentclass[paper=a4, fontsize=12pt, parskip=half]{scrartcl}
+
+%%%%% SET ATTRIBUTES!!! %%%%%
+\newcommand{\assignmentnumber}{1}
+\newcommand{\assignmentformat}{PDF}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+\usepackage{amsmath, amssymb}
+\usepackage{tcolorbox}
+\usepackage[normalem]{ulem}
+\usepackage{enumitem}
+
+\usepackage{float}
+
+\usepackage{wasysym}
+
+\usepackage[
+paper=a4paper,
+left=3cm,
+right=3cm,
+top=3cm,
+bottom=3cm
+]{geometry}
+\usepackage{graphicx}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{\large\texttt{Introduction to Statistics with R}}
+\rhead{\bfseries Assignment 0\assignmentnumber}
+\rfoot{Marvin Schmitt}
+\setlength\parindent{0pt}
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\newcommand{\twodigit}[1]{\two@digits{#1}}
+
+
+
+% Automatische Nummerierung
+\newcounter{tasknumber}
+\setcounter{tasknumber}{1}
+\newcommand{\task}[1]{
+	\vspace*{0.5cm}
+	\textbf{Task \assignmentnumber.\arabic{tasknumber} (#1).}
+	\stepcounter{tasknumber}
+}
+
+
+\newcommand{\footer}{
+	\vfill
+	
+	\par\noindent\rule{\textwidth}{0.4pt}
+
+	Please solve the assignment in the \texttt{.Rmd} format and export it as \\
+	\texttt{R0\assignmentnumber-<LastName><FirstName>.\assignmentformat}
+}
+
+
+
+\newcommand{\notetop}[1]{
+	\par\noindent\rule{\textwidth}{0.4pt}
+	\textbf{Note:\\}
+	#1
+	\par\noindent\rule{\textwidth}{0.4pt}
+}
+
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\SweaveOpts{keep.source=TRUE}
+
+
+<<echo=FALSE,eval=TRUE>>=
+options(continue="...", prompt="> ")
+knitr::opts_chunk$set(size = "small")
+@
+
+	\renewcommand{\arraystretch}{1.2}
+
+  Please download the data set \texttt{R01\_assignment\_dataset.csv} from the GitHub repository. Load it as a data frame \texttt{df}:
+  
+<<echo=TRUE,eval=FALSE>>=
+df = read.csv("R01_assignment_dataset.csv")
+@
+
+  \task{Exploring the data set}
+  
+  \begin{enumerate}
+    \item What data does the data set contain?
+    \item How many variables (columns) and how many observations (rows) does the data set contain?
+    \item Use the \texttt{table()} function to find out how many authors are male and female.
+    \item Is the column \texttt{pronoun} simply the sum of the columns \texttt{i, we, you, SheHe, they, ImpersonalPronouns}? \\
+    \textbf{Hint:} You might tackle this question with simple array calculations on the columns.
+  \end{enumerate}
+  
+  
+  \task{Investigating trends in the data}
+  
+  \begin{enumerate}
+    \item Take a closer look at the data to answer the following question: \\
+    \emph{Do male and female authors differ with respect to the average number of words they write per sentence?}
+    \begin{enumerate}[label=(\roman*)]
+      \item Use \texttt{ggplot2} to create a barplot with \texttt{geom\_bar} that shows the average number of words per sentence separately for the male and female authors.
+      \item Use \texttt{ggplot2} to create a density plot with \texttt{geom\_density} that shows the distribution of number of words per sentence separately for the male and female authors.
+    \end{enumerate}
+    \item Choose another \emph{continuous} variable in the data set. Visualize its distribution separately for male and female authors.
+  \end{enumerate}
+  
+  
+  
+  
+	\footer
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End

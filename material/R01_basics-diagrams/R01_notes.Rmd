@@ -1,0 +1,162 @@
+---
+title: "Introduction to Statistics with R"
+subtitle: "Session R01: Basics and Diagrams"
+author: "Marvin Schmitt"
+output:
+  beamer_presentation:
+    slide_level: 2
+    toc: no
+    theme: Berlin
+    includes:
+      in_header: ../../config-files/notes-config.tex
+header-includes: \setbeamertemplate{footline}[]{}
+---
+
+
+
+
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(fig.height = 3, fig.width = 6)
+
+library(tidyverse)
+library(ggplot2)
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+set.seed(61)
+```
+
+## Prequel: The pipe operator `%>%`
+If you load the `tidyverse` library, you can use the `%>%` pipe. Instead of `function_b(function_a(x))` we can write 
+
+`x %>% function_a() %>% function_b()`
+```{r}
+x = 10
+round(log(x), 3)
+x %>% log() %>% round(3)
+```
+
+The ` %>% ` operator works like a **pipe** and passes the left-hand-side as the first argument to the function on the right-hand-side.
+
+## Sampling from a distribution
+`rnorm(n=n, mean=mu, sd=sigma)` draws `n` samples from the normal distribution $\mathcal{N}(\mu, \sigma)$:
+```{r}
+IQ_values = rnorm(n=200, mean=100, sd=15) %>% round()
+print(IQ_values)
+```
+
+## Descriptive statistics
+```{r}
+mean(IQ_values)          # Mean
+var(IQ_values)           # Variance
+sd(IQ_values)            # Standard Deviation sigma
+min(IQ_values)           # Minimum
+max(IQ_values)           # Maximum
+max(IQ_values) - min(IQ_values)  # Range
+```
+
+## Plots: Histogram in base `R`
+```{r}
+hist(IQ_values, main="IQ Distribution", xlab = "IQ", breaks = 5)
+```
+
+## Plots: `ggplot2` introduction
+
+- `ggplot2` is a modern library to generate publication-ready plots. 
+- When you are visualizing data, it should usually be your first choice. 
+- The `ggplot2` syntax is modular and different from the base `R` syntax. 
+-`ggplot2` works best on data frames, so let's turn `x` into a data frame:
+
+```{r}
+df_IQ = data.frame(IQ_values)
+```
+
+## Plots: `ggplot2` histogram
+
+```{r}
+ggplot(data=df_IQ, aes(x=IQ_values)) +
+  geom_histogram(fill="pink", color="black")
+```
+
+*** 
+
+
+```{r}
+ggplot(data=df_IQ, aes(x=IQ_values)) +
+  geom_histogram(binwidth=20, fill="pink", color="black")
+```
+
+***
+
+```{r}
+ggplot(data=df_IQ, aes(x=IQ_values)) +
+  geom_histogram(binwidth=10, fill="pink", color="black")
+```
+
+
+
+## Plots: `ggplot2` density plot
+
+```{r}
+ggplot(data=df_IQ, aes(x=IQ_values)) +
+  geom_histogram(aes(y=..density..), binwidth=10, fill="pink", 
+                 color="black", alpha=.50) +
+  geom_density(fill="firebrick", alpha = .50)
+```
+
+
+## Plots: `ggplot2` density plot with mean
+
+```{r}
+ggplot(data=df_IQ, aes(x=IQ_values)) +
+  geom_density(fill="firebrick", alpha = .30) +
+  geom_vline(aes(xintercept = mean(IQ_values)), size=1, col="firebrick")
+```
+
+
+## Plots: `ggplot2` density plot with normal distribution
+
+```{r}
+ggplot(data=df_IQ, aes(x=IQ_values)) +
+  geom_density(fill="firebrick", alpha = .30) +  
+  stat_function(fun = dnorm, n = 101, args = list(mean = 100, sd = 15), 
+                col="blue", size=1)
+```
+
+## Plots: `ggplot2` histogram with normal distribution
+
+```{r}
+ggplot(data=df_IQ, aes(x=IQ_values)) +
+  geom_histogram(aes(y=..density..), binwidth=10, fill="pink", 
+                 color="black", alpha=.50) +  
+  stat_function(fun = dnorm, n = 101, args = list(mean = 100, sd = 15), 
+                col="blue", size=1)
+```
+
+## Plots: Plotting different groups
+We will add a group variable `school` and simulate data:
+
+```{r}
+IQ_1 = rnorm(n=100, mean=105, sd=10) %>% round()
+IQ_2 = rnorm(n=100, mean=120, sd=16) %>% round()
+df_1 = data.frame(school="school1", IQ=IQ_1)
+df_2 = data.frame(school="school2", IQ=IQ_2)
+df_schools = rbind(df_1, df_2)
+```
+
+## Plots: `ggplot2` density plot with 2 groups
+```{r}
+ggplot(data=df_schools, aes(x=IQ, fill=school)) +
+  geom_density(alpha = .50)
+```
+
+## Plots: `ggplot2` barplot
+
+```{r}
+ggplot(data=df_schools, aes(x=school, y=IQ, fill=school)) +
+  geom_bar(stat="summary", fun="mean") +
+  ylim(0, 130)
+```
+
+```{r echo=FALSE, include=FALSE}
+# cleanup here
+```

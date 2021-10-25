@@ -1,0 +1,695 @@
+"NovelID","AuthorID","Sex","Author","Nationality","Novel","WordCount","WordsPerSentence","pronoun","i","we","you","SheHe","they","ImpersonalPronouns","AuxiliaryVerb","adverb","negation","verb","adjective"
+1,1,"male","William Golding","British","Lord of the Flies",60719,10.32,12.87,1.16,1.04,1.1,4.29,1.58,3.69,6.66,4.32,1.52,15.98,3.99
+2,1,"male","William Golding","British","Pincher Martin",54216,11.79,13.01,1.63,0.15,0.72,5.87,0.89,3.74,6.54,4.01,1.31,14.09,4.2
+3,2,"male","P. H. Newby","British","Something to Answer For",97852,11.59,15.82,1.56,0.26,1.77,6.44,1.05,4.74,10.43,4.55,2.12,19.64,3.56
+4,3,"male","Stanley Middleton","British","Holiday",70335,10.69,16.97,1.76,0.41,1.47,8.02,1.14,4.16,7.45,4.03,2.55,15.93,4.44
+5,4,"male","Paul Scott","British","The Jewel in the Crown",211231,19.57,14.85,3.09,0.61,0.76,3.96,0.99,5.42,8.29,4.68,1.73,16.48,4.04
+6,5,"male","Kingsley Amis","British","Lucky Jim",91872,14.13,17.31,2.54,0.31,1.99,6.04,0.56,5.84,9.16,5.27,2.23,18.73,4.37
+7,5,"male","Kingsley Amis","British","Colonel Sun",73647,12.57,13.39,1.64,0.72,1.56,4.02,0.88,4.53,8.02,4.26,1.67,15.54,4.66
+8,6,"male","John Berger","British","G.",110440,14.21,16.08,1.27,0.47,1.22,6.7,1.45,4.97,8.53,3.75,1.59,15.18,4.34
+9,6,"male","John Berger","British","Pig Earth",60774,12.51,15.29,2.71,0.62,1.22,5.33,1.27,4.13,7.4,3.79,1.48,15.25,4.3
+10,7,"male","Barry Unsworth","British","Stone Virgin",114393,15.32,15.31,2.26,0.41,0.96,5.88,0.76,5.01,8.18,4.78,1.68,16.07,4.25
+11,7,"male","Barry Unsworth","British","Sacred Hunger",229088,16.21,14.24,1.41,0.44,1.12,5.59,1.13,4.53,7.5,3.95,1.56,15.12,4.17
+12,8,"male","V. S. Naipaul","British","In a Free State",46000,11.03,13.24,1.92,0.39,1.34,4.12,1.43,4.03,7.43,4.52,1.72,16.66,4.55
+13,9,"male","David Storey","British","A Temporary Life",71529,8.85,18.94,4.86,0.63,2.05,6.39,0.64,4.33,8.18,3.99,1.5,18.11,3.5
+14,9,"male","David Storey","British","Saville",200678,12.07,16.65,1.83,0.45,1.7,7.75,1.14,3.77,7.49,4.31,1.52,17.74,3.75
+15,10,"male","Howard Jacobson","British","The Making of Henry",111608,12.09,17.36,1.48,0.25,1.96,6.79,1.02,5.82,9.52,5.15,2.85,17.39,3.96
+16,10,"male","Howard Jacobson","British","Kalooki Nights",157806,13.86,18.34,4.08,0.81,1.6,4.98,1.22,5.63,9.47,4.67,2.71,17.05,3.89
+17,11,"male","John Banville","Irish","Nightspawn",63192,11.2,17.18,5.87,0.65,1.23,4.39,0.61,4.37,6.04,3.86,1.57,15.04,3.57
+18,11,"male","John Banville","Irish","The Book of Evidence",71940,15.72,16.83,6.78,0.46,0.34,3.69,0.81,4.72,7.33,4.49,1.57,15.19,4.24
+19,12,"male","Julian Barnes","British","Metroland",50403,13.95,15.61,4.49,1.18,1.93,2.24,0.66,5.1,8.36,5.14,2.26,16.37,4.8
+20,12,"male","Julian Barnes","British","Flaubert's Parrot",62408,15.06,14.02,2.8,0.54,0.99,3.75,0.98,4.95,7.62,4.24,1.65,14.03,4.53
+21,13,"male","James Kelman","Scottish","A Chancer",110387,9.1,16.55,2.21,0.32,2.04,7.03,0.75,4.2,6.97,4.2,1.65,16.95,3.83
+22,14,"male","Jim Crace","British","Signals of Distress",82666,11.25,14.43,1.09,0.4,0.96,6.67,1.67,3.62,8.94,3.83,2.23,16.32,3.66
+23,13,"male","James Kelman","Scottish","How Late It Was, How Late",118806,10.87,19.97,2.16,0.32,3.2,5.43,1.31,7.5,9.73,5.9,1.34,19.91,4.62
+24,14,"male","Jim Crace","British","Being Dead",58987,12.99,12.65,0.21,0.2,0.27,6.51,2.17,3.27,8.52,4.23,1.78,14.53,4.55
+25,15,"male","Salman Rushdie","British-American","Midnight's Children",214744,23.94,12.85,3.27,0.55,0.76,3.28,0.79,4.18,6.42,3.87,1.37,12.68,3.95
+26,16,"male","Ian McEwan","British","The Comfort of Strangers",36081,15.12,13.36,1.62,0.44,0.62,5.24,2.04,3.38,5.79,4,1.09,13.93,4.78
+27,16,"male","Ian McEwan","British","Black Dogs",49830,15.78,15.21,3.56,0.92,0.74,4.14,1.19,4.65,7.48,4.32,1.42,14.65,4.23
+28,17,"male","Graham Swift","British","Waterland",112555,15.58,12.99,1.19,0.71,0.82,3.53,0.84,5.87,6.6,4.71,1.97,12.69,4.02
+29,17,"male","Graham Swift","British","Last Orders",82488,12.68,19.32,4.95,0.99,1.93,4.83,0.6,5.98,10.07,5.45,3.22,21.04,3.94
+30,18,"male","Kazuo Ishiguro","British-Japanese","The Remains of the Day",76604,19.56,15.65,5.29,0.66,1.4,2.27,0.45,5.58,9.12,5.84,1.44,16.27,4.52
+31,18,"male","Kazuo Ishiguro","British-Japanese","The Unconsoled",207896,13.73,17.78,5.55,1.24,1.94,3.22,0.75,5.05,9.32,6.66,1.64,18.51,4.29
+32,19,"male","Sebastian Barry","Irish","The Whereabouts of Eneas McNulty",89867,15.72,13.91,1.33,0.26,1.43,5.73,1.04,4.08,7.18,4.76,1.82,13.74,4.39
+33,19,"male","Sebastian Barry","Irish","Annie Dunne",71284,14.81,16.27,4.57,0.83,0.97,4.37,1.07,4.45,7.91,4.89,1.89,14.73,4.3
+34,20,"male","Roddy Doyle","Irish","Paddy Clarke Ha Ha Ha",82704,8.22,20.32,5.92,1.53,1.05,5.53,1.37,4.9,10.63,4.67,2.94,21.9,3.84
+35,20,"male","Roddy Doyle","Irish","A Star Called Henry",116371,9.5,17.52,5.58,1.32,1.18,4.12,1.59,3.72,8.07,4.12,1.79,17.59,3.78
+36,21,"male","Edward St Aubyn","British","Never Mind",40094,15.89,14.65,0.93,0.24,0.87,7.24,0.83,4.53,7.42,4.42,1.44,15.94,4.35
+37,21,"male","Edward St Aubyn","British","A Clue to the Exit",40792,16.19,14.95,4.97,0.85,0.91,2.41,0.62,5.19,7.91,4.09,1.74,15.35,4.17
+38,22,"male","Will Self","British","My Idea of Fun",102561,15.83,15.11,3.8,0.53,1.26,3.42,0.84,5.26,7.56,4.22,1.42,13.59,4.58
+39,22,"male","Will Self","British","The Butt",99793,14.4,12.53,1.17,0.32,1.08,4.4,1.14,4.41,6.84,3.77,1.12,13.01,3.84
+40,23,"male","Colum McCann","Irish-American","This Side of Brightness",82011,12.75,14.84,1.64,0.32,0.85,7.6,1.24,3.19,5,3.69,1.31,13.3,3.67
+41,23,"male","Colum McCann","Irish-American","Let the Great World Spin",130596,10.39,16.91,3.51,0.69,0.97,5.92,1.25,4.54,7.16,4.54,1.72,16.32,3.63
+42,24,"male","Stephen Kelman","British","Pigeon English",70927,8.81,21.23,6.05,1,2.72,3.35,1.74,6.36,10.44,6.56,2.61,21.25,4.35
+43,25,"male","Adam Foulds","British","The Quickening Maze",59773,10.48,16.72,1.62,0.32,1.46,7.91,1.13,4.26,7.69,4.3,1.69,16.08,4.27
+44,26,"male","Sunjeev Sahota","British","The Year of the Runaways",149020,9.47,16.83,1.68,0.45,1.65,7.91,1.19,3.94,7.91,4.51,1.73,18.27,4.17
+45,27,"male","G. K. Chesterton","British","The Ball and The Cross",80010,17.45,14.11,1.67,0.71,1.54,3.61,1.06,5.52,7.3,4.29,1.35,14.64,5.27
+46,27,"male","G. K. Chesterton","British","The Flying Inn",88989,19.92,13.24,1.52,0.51,1.29,3.69,0.7,5.53,7.62,4.59,1.58,14.59,5.12
+47,28,"male","Walter de la Mare","British","Memoirs of a Midget",151819,15.77,16.27,6.52,0.52,0.97,3.35,0.47,4.42,7.12,4.81,1.63,13.69,4.9
+48,28,"male","Walter de la Mare","British","The Return",81123,14.11,16.45,3.28,0.62,2.06,4.94,0.42,5.13,7.64,5.89,1.92,16.15,4.47
+49,29,"male","Charles Dickens","British","A Tale of Two Cities",137143,17.61,14.99,2.38,0.28,1.35,4.82,0.96,5.18,7.45,3.94,1.61,14.53,4.39
+50,29,"male","Charles Dickens","British","Dombey and Son",358418,19.97,15.11,2.29,0.24,1.34,5.68,0.61,4.95,7.28,4.44,1.69,14.84,4.5
+51,30,"male","Ford Madox Ford","British","The Fifth Queen Crowned",60665,16.41,17.92,2.53,0.24,1.9,7.08,0.78,5.39,8.14,4.45,1.34,15.57,3.75
+52,30,"male","Ford Madox Ford","British","The Good Soldier",76206,18.58,17.34,2.86,0.31,0.68,6.38,0.8,6.3,9.18,4.55,1.79,16.49,4.22
+53,31,"male","Thomas Hardy","British","Far from the Madding Crowd",138072,15.58,13.7,2.34,0.24,1.37,4.46,0.65,4.64,7.93,4.55,1.9,15.24,4.62
+54,31,"male","Thomas Hardy","British","The Mayor of Casterbridge",117679,17.77,15.02,2.14,0.28,1.17,5.65,0.8,4.97,7.95,4.55,1.83,15.39,4.7
+55,32,"male","Rudyard Kipling","British","Captains Courageous",53954,13.71,12.95,1.83,0.78,1.52,4.12,1.12,3.57,6.32,3.63,1.64,14.38,4.15
+56,32,"male","Rudyard Kipling","British","Kim",107527,12.89,13.64,2.85,0.57,1.43,3.74,0.97,4.07,6.81,3.72,1.48,14.33,4.4
+57,33,"male","George Meredith","British","Beauchamp's Career",193780,15.81,15.76,2.13,0.65,1.38,6.52,0.94,4.13,7.9,2.93,1.72,14.18,3.74
+58,33,"male","George Meredith","British","Rhoda Fleming",152777,13.69,17.77,3.4,0.31,2.15,6.68,0.7,4.53,8.7,3.46,2.06,16.57,3.74
+59,34,"male","John Henry Newman","British","Callista",95354,19.83,15.14,1.75,0.51,1.48,4.9,1.34,5.18,8.5,3.9,1.76,14.78,4.43
+60,34,"male","John Henry Newman","British","Loss and Gain",107300,19.57,15.95,2.41,0.74,1.63,4.05,1.17,5.94,9.4,4.55,2.45,17.15,4.44
+61,35,"male","Thomas Love Peacock","British","Crotchet Castle",37220,19.71,12.33,2.11,0.42,1.2,3.3,0.92,4.38,6.81,3.25,1.54,11.81,4.37
+62,35,"male","Thomas Love Peacock","British","Maid Marian",36040,24.01,12.92,2.04,0.54,1.61,3.85,1.06,3.83,6.29,2.94,1.38,12.11,3.87
+63,36,"male","James Joyce","Irish","A Portrait of the Artist as a Young Man",84951,15.86,13.49,1.09,0.36,1.09,5.79,1.08,4.08,6.27,3.09,1.11,13.57,4.18
+64,36,"male","James Joyce","Irish","Ulysses",265556,10.63,12.69,1.88,0.39,1.03,4.66,0.94,3.77,5.08,3.17,1.16,11.83,3.86
+65,37,"male","Thomas Moore","Irish","The Epicurean",54764,32.27,12.93,3.61,0.52,0.17,2.32,0.68,5.62,4.92,3.91,0.79,10.02,4.97
+66,38,"male","John Galt","Scottish","Annals of the Parish",64578,45.41,13.69,3.14,0.69,0.14,3.44,1.06,5.21,7.38,3.54,1.26,13.67,4.36
+67,38,"male","John Galt","Scottish","Ringan Gilhaize",148782,43.23,13.83,2.59,0.85,0.53,3.89,1.4,4.57,6.68,3.4,1.16,12.6,3.72
+68,39,"male","James Hogg","Scottish","The Brownie of Bodsbeck",49427,28.16,15.58,1.81,0.49,1.55,4.98,1.54,5.21,6.68,3.73,1.38,12.62,4.21
+69,40,"male","Walter Scott","Scottish","The Black Dwarf",58373,26.58,14.97,2.75,0.6,1.83,4.13,0.95,4.71,6.96,3.49,1.27,12.44,4.4
+70,40,"male","Walter Scott","Scottish","Waverley",191027,29.69,12.57,1.5,0.36,0.96,4.26,0.96,4.53,6.35,3.44,1.15,11.12,4.55
+71,41,"male","William Sharp","Scottish","Green Fire: A Romance",51247,18.68,13.95,1.16,0.34,0.99,5.05,0.73,5.68,7.38,4.79,1.58,13.82,4.79
+72,41,"male","William Sharp","Scottish","Pharais",35524,20.51,11.13,0.79,0.21,0.56,4.99,0.62,3.95,5.37,4.17,1.36,12.08,5.01
+73,42,"male","Robert Louis Stevenson","Scottish","Catriona",101036,18.25,19.02,6.91,0.82,2.18,3.41,0.56,5.14,8.89,4.58,1.45,16.93,4.31
+74,42,"male","Robert Louis Stevenson","Scottish","Kidnapped",80554,21.18,16.54,5.64,0.91,1.42,3.15,0.6,4.81,7.75,4.58,1.33,15.83,4.74
+75,43,"male","Bernard Malamud","American","The Natural",75556,14.44,15.15,1.44,0.2,1.03,7.29,0.98,4.2,6.75,3.93,1.61,15.62,4.11
+76,43,"male","Bernard Malamud","American","The Fixer",103942,14.15,15.84,2.93,0.36,1.98,5.31,0.95,4.29,7.99,3.79,1.87,16.24,4.21
+77,44,"male","Norman Mailer","American","The Deer Park",129672,13.63,19.78,4.89,0.47,2.27,6.39,0.67,5.08,9.99,4.74,2.06,20.49,3.93
+78,44,"male","Norman Mailer","American","Why Are We in Vietnam?",48632,28.24,10.09,0.74,0.33,1.33,2.55,1.37,3.74,5.85,4.06,1.41,12.57,4.67
+79,45,"male","Peter Matthiessen","American","At Play in the Fields of the Lord",130284,15.49,14.57,1.25,0.44,1.29,6.54,1.1,3.94,6.59,4.21,1.68,14.33,4.3
+80,46,"male","William Kennedy","American","Billy Phelan's Greatest Game",82268,11.38,14.43,2.05,0.37,1.99,4.61,0.81,4.58,6.53,4.24,1.98,16,3.38
+81,47,"male","E. L. Doctorow","American","Billy Bathgate",122013,26.21,16.51,4.95,0.55,1,3.74,1.03,5.23,7.44,4.1,1.59,15.63,4.03
+82,48,"male","John Updike","American","Couples",164931,11.97,15.28,2.23,0.53,1.7,5.99,0.89,3.94,7.94,3.82,1.73,15.98,4.36
+83,48,"male","John Updike","American","Marry Me",87545,10.97,18.56,3.15,0.53,2.36,7.11,0.92,4.47,9.15,4.25,2.26,18.73,4.13
+84,49,"male","Philip Roth","American","Portnoy's Complaint",79655,15.07,17.25,5.65,0.66,1.77,3.05,0.69,5.41,7.8,5.1,1.93,15.03,3.96
+85,50,"male","Cormac McCarthy","American","Child of God",35981,11.48,14.25,1.17,0.28,1.29,6.81,1.12,3.57,5.04,4.05,1.24,14.42,3.13
+86,49,"male","Philip Roth","American","The Professor of Desire",79716,16.95,17.6,5.5,0.68,1.65,3.6,0.55,5.61,8.2,5.71,2.06,15.63,4.16
+87,50,"male","Cormac McCarthy","American","Blood Meridian",116586,15.12,12.12,0.57,0.28,0.68,4.61,2.72,3.26,4.65,3.11,1.2,12.38,3.07
+88,51,"male","Don DeLillo","American","Americana",125973,11.6,15.6,4.73,1.17,1.26,2.98,0.69,4.76,7.57,4.02,1.44,16.13,4.22
+89,52,"male","Larry McMurtry","American","Terms of Endearment",143253,12.6,18.15,3.12,0.31,2.34,6.96,0.67,4.74,10.14,5.54,2.61,20.89,4.43
+90,51,"male","Don DeLillo","American","White Noise",102087,10.33,15.37,3.78,1.23,1.43,2.89,0.9,5.13,7.4,3.81,1.56,16.43,4.13
+91,52,"male","Larry McMurtry","American","Lonesome Dove",365661,13.01,16.06,1.49,0.43,1.2,7.17,1.26,4.49,9.89,5.26,2.41,21.05,4.26
+92,53,"male","Pete Dexter","American","God's Pocket",100145,12.36,17.65,1.17,0.21,1.32,8.46,1.16,5.3,8.28,4.66,2.12,20.57,3.11
+93,53,"male","Pete Dexter","American","The Paperboy",96559,14.4,17.8,4.14,0.69,0.91,6.41,0.74,4.9,7.27,4.05,1.82,18.33,3.73
+94,54,"male","Richard Ford","American","A Piece of My Heart",100191,15.82,14.88,1.58,0.16,1.21,7.14,0.74,4.03,6.43,3.98,1.71,16.94,3.21
+95,54,"male","Richard Ford","American","Independence Day",186164,17.26,14.46,4.59,0.72,1.25,2.83,0.64,4.42,7.34,5.36,1.8,15.29,5.05
+96,55,"male","Robert Olen Butler","American","The Hot Country",109331,13.51,17.86,6.86,0.78,0.83,4.38,0.7,4.29,7.41,4.66,1.51,16,3.84
+97,55,"male","Robert Olen Butler","American","The Star of Istanbul",117439,13.36,16.96,6.47,0.96,0.7,4.23,0.58,3.99,7.23,4.26,1.33,15.56,4.06
+98,56,"male","Denis Johnson","American","Angels",65537,12.64,16.1,1.92,0.33,1.45,6.22,1.17,4.99,6.93,4.36,1.75,16.71,3.75
+99,57,"male","Richard Russo","American","Mohawk",105416,12.76,15.05,1.44,0.21,1.14,6.73,0.89,4.62,8.67,5.35,2.4,17.24,4.56
+100,57,"male","Richard Russo","American","The Risk Pool",193897,14.57,17.68,5.69,0.69,1.1,4.75,0.57,4.87,8.65,5.47,2.07,17.89,4.76
+101,56,"male","Denis Johnson","American","Resuscitation of a Hanged Man",76082,11.67,16.49,2.21,0.3,1.71,6.21,0.87,5.18,7.82,4.49,1.85,17.64,3.86
+102,58,"male","Richard Powers","American","Galatea 2.2",115124,8.99,16.58,5.03,1.16,1.37,2.95,0.62,5.42,7.21,4.08,1.96,16.08,4.17
+103,58,"male","Richard Powers","American","The Time of Our Singing",269674,10.2,17,3.45,1.37,1.2,5.31,1.12,4.54,6.82,4.51,2.01,15.6,4.22
+104,59,"male","Jonathan Franzen","American","Strong Motion",181303,12.82,15.5,2.26,0.36,1.91,5.51,0.77,4.68,7.81,4.35,1.74,15.98,4.15
+105,59,"male","Jonathan Franzen","American","The Corrections",199479,14.04,14.05,1.49,0.32,1.32,6,0.53,4.37,7.51,4.02,1.61,15.24,4.24
+106,60,"male","Jeffrey Eugenides","American","The Virgin Suicides",66135,17.66,12.37,0.45,2.4,0.34,4.1,1.58,3.5,5.2,3.9,1.42,13.63,4.14
+107,60,"male","Jeffrey Eugenides","American","Middlesex",196481,11.24,14.31,3.61,0.63,0.95,4.07,0.85,4.2,6.86,4.12,1.56,14.91,4.05
+108,61,"male","Michael Chabon","American","The Amazing Adventures of Kavalier & Clay",222588,14.99,13.07,1.17,0.22,0.91,5.56,0.89,4.31,6.45,3.73,1.19,13.86,4.1
+109,61,"male","Michael Chabon","American","The Final Solution",29257,17.58,11.64,0.76,0.17,0.53,5.65,0.66,3.87,5.4,3.5,1.11,11.54,4.25
+110,62,"male","Adam Johnson","American","The Orphan Master's Son",169717,11.74,16.59,2.49,0.83,1.82,5.24,1.38,4.82,8.3,4.29,1.72,17.99,3.26
+111,63,"male","Junot Díaz","American-Dominican","The Brief Wondrous Life of Oscar Wao",93787,15.71,16.57,2.4,0.41,1.24,6.91,0.79,4.81,8.19,4.65,2.22,16.17,4.07
+112,64,"male","Colson Whitehead","American","John Henry Days",154425,14.42,13.24,0.83,0.23,0.75,5.21,1.49,4.71,6.47,3.69,1.42,14.07,4.13
+113,64,"male","Colson Whitehead","American","Sag Harbor",100783,14.21,15.04,3.61,1.73,1.13,2.48,1.13,4.95,6.55,3.92,1.63,14.44,4.16
+114,65,"male","Anthony Doerr","American","About Grace",121630,12.82,12.6,0.88,0.18,0.75,6.78,1.02,2.95,5.46,3.34,1.03,13.04,3.73
+115,65,"male","Anthony Doerr","American","All the Light We Cannot See",129134,11.95,11.7,0.62,0.36,0.78,5.22,1.25,3.43,5.36,3.45,1.16,12.05,3.88
+116,66,"male","Phil Klay","American","Redeployment",77832,10.65,18.35,5.73,1.13,1.62,3.82,0.92,5.13,8.47,4.79,2.22,19.12,4.04
+117,67,"male","Sherwood Anderson","American","Poor White",108054,18.51,12.98,0.96,0.2,0.53,6.66,0.97,3.65,6.97,3.18,1.13,16.26,3.64
+118,67,"male","Sherwood Anderson","American","Windy McPherson's Son",110167,20.03,13.15,1.2,0.23,0.66,6.62,1.04,3.39,5.47,2.63,0.87,14.76,3.56
+119,68,"male","William Wells Brown","American","Clotel; or, The President's Daughter",57257,21.66,13.21,1.51,0.52,1.28,4.33,1.27,4.31,7.61,3.49,1.38,14.09,4.7
+120,69,"male","George Washington Cable","American","Bonaventure: A Prose Pastoral",82013,16.06,12.64,1.4,0.21,1.15,4.8,0.99,4.08,6.01,4.57,1.67,13.67,4.77
+121,69,"male","George Washington Cable","American","The Grandissimes",114415,16.89,13.08,1.57,0.39,1.26,4.71,0.88,4.27,6.37,3.53,1.48,13.55,4.31
+122,70,"male","Charles W. Chesnutt","American","The Colonel's Dream",85190,19.62,12.61,1.69,0.35,1.15,4.54,0.85,4.02,8.29,3.6,1.65,15.1,4.45
+123,70,"male","Charles W. Chesnutt","American","The House Behind the Cedars",70019,20.05,13.58,1.55,0.29,1.06,6.24,0.59,3.85,8.1,3.58,1.61,14.57,4.74
+124,71,"male","James Fenimore Cooper","American","The Headsman: The Abbaye des Vignerons ",157795,28.02,12.69,1.22,0.79,1.22,3.13,0.88,5.45,6.87,3.51,1.17,11.65,5.19
+125,71,"male","James Fenimore Cooper","American","The Pilot: A Tale of the Sea",158812,27.56,13.38,1.76,0.77,1.5,3.77,1.06,4.52,6.81,3.31,1.19,12.28,4.48
+126,72,"male","Stephen Crane","American","Active Service",78483,13.37,15.5,1.75,0.27,1.42,5.87,1.15,5.04,7.94,4.19,1.75,15.68,3.93
+127,72,"male","Stephen Crane","American","The Red Badge of Courage",46534,12.89,13.74,0.77,0.31,0.29,6.53,1.74,4.1,6.6,3.21,1.06,13.99,3.96
+128,73,"male","Theodore Dreiser","American","Sister Carrie",157491,12.3,16.66,1.38,0.24,1.33,7.68,0.63,5.38,8.41,4.92,2.07,17.82,4.49
+129,73,"male","Theodore Dreiser","American","The ""Genius""",306958,14.19,17.71,1.71,0.2,1.49,7.85,0.73,5.72,9.82,4.87,2.1,17.73,4.73
+130,74,"male","W. E. B. Du Bois","American","The Quest of the Silver Fleece",109763,13.24,14.25,1.54,0.42,1.12,6.45,0.83,3.89,6.74,4.05,1.66,15.41,4.53
+131,75,"male","Nathaniel Hawthorne","American","The House of the Seven Gables",104205,23.06,12.23,1.04,0.43,0.71,3.96,0.78,5.32,6.84,4.58,1.38,11.79,5.6
+132,75,"male","Nathaniel Hawthorne","American","The Scarlet Letter",84287,24.12,13.03,1.35,0.29,0.8,4.21,0.82,5.54,6.51,4.35,1.31,11.32,5.22
+133,76,"male","Ernest Hemingway","American","A Farewell to Arms",89043,8.61,17.46,5.51,1.5,2.47,2.53,1.24,4.21,10.05,4.79,2.47,21.13,3.55
+134,76,"male","Ernest Hemingway","American","The Old Man and the Sea",26675,13.86,16.07,2.35,0.26,0.87,7.17,1.11,4.31,8.26,4.79,1.66,17.53,4.53
+135,77,"male","William Dean Howells","American","A Modern Instance",155337,16.55,19.18,2.91,0.38,1.93,7.51,1,5.44,8.26,4.35,2.17,17.47,3.99
+136,77,"male","William Dean Howells","American","Their Wedding Journey",74153,27.29,13,1.08,0.66,0.71,2.88,2.44,5.23,6.26,3.93,1.41,12.28,4.86
+137,78,"male","Sinclair Lewis","American","Dodsworth",138714,17.11,14.9,2.46,0.46,1.59,4.99,1.03,4.35,8.22,4.88,1.82,15.34,4.93
+138,78,"male","Sinclair Lewis","American","Main Street",169733,14.43,14.68,2.38,0.49,1.47,5.11,1.13,4.1,7.89,3.86,1.87,15.35,4.42
+139,79,"male","Jack London","American","Martin Eden",140443,15.44,16.92,1.78,0.13,1.31,7.73,0.91,5.05,8.08,3.72,1.88,15.48,4.13
+140,79,"male","Jack London","American","Michael, Brother of Jerry",96706,16.5,13.07,1.55,0.26,1.09,5.19,0.85,4.11,6.52,3.6,1.58,12.89,4.06
+141,80,"male","Herman Melville","American","Moby-Dick; or, The Whale",212662,21.98,11.93,1.62,0.43,1.03,2.85,0.84,5.15,5.74,4.8,1.3,10.86,4.86
+142,80,"male","Herman Melville","American","The Confidence-Man: His Masquerade",94624,19.26,13.89,2.64,0.25,1.98,2.94,0.51,5.57,7.28,5.05,2.19,13.14,4.9
+143,81,"male","Frank Norris","American","The Octopus: A Story of California",198267,15.17,12.76,1.38,0.42,1.04,5.04,0.76,4.11,6.51,3.87,1.42,13.18,4.27
+144,81,"male","Frank Norris","American","The Pit: A Story of Chicago",125955,14.4,15.15,2.37,0.42,1.44,5.57,0.72,4.61,7.25,4.43,1.76,15.03,4.36
+145,82,"male","Edgar Allan Poe","American","The Narrative of Arthur Gordon Pym of Nantucket",71022,28.56,11.94,2.41,2.15,0.04,2.18,0.79,4.38,6.58,4.44,1.3,11.82,5.16
+146,83,"male","Upton Sinclair","American","The Jungle",151354,22.77,13.53,0.58,0.12,0.57,5.3,1.84,5.11,8.49,4.48,1.46,15.92,3.83
+147,83,"male","Upton Sinclair","American","They Call Me Carpenter",58223,15.51,16.16,4.12,0.86,1.83,3.36,1.15,4.85,7.89,3.75,1.56,16.65,3.33
+148,84,"male","Jean Toomer","American","Cane",41602,8.83,15.78,2.68,0.27,1.41,5.36,1.38,4.67,6.97,3.33,1.92,15.47,3.92
+149,85,"male","Mark Twain","American","Adventures of Huckleberry Finn",112201,19.22,17.27,4.38,1.12,1.56,3.63,1.32,5.26,7.79,5.63,2.66,17.5,3.47
+150,85,"male","Mark Twain","American","The Adventures of Tom Sawyer",71210,14.61,15.03,1.88,0.38,1.42,4.65,1.38,5.31,7.82,5.22,2.04,16.33,3.96
+151,86,"male","Frank J. Webb","American","The Garies and Their Friends",129952,20.33,16.76,3.01,0.53,2.02,5.51,1.14,4.54,8.6,4.32,1.83,16.03,4.3
+152,87,"female","Barbara Pym","British","Quartet in Autumn",56755,17.97,14.11,0.86,0.3,0.81,5.23,0.97,5.93,10.09,5.34,2.24,18.91,4.29
+153,88,"female","Penelope Fitzgerald","British","The Bookshop",35779,15.4,13.77,1.61,0.28,1.41,4.16,1,5.28,9.6,4.43,2.11,17.62,4.69
+154,88,"female","Penelope Fitzgerald","British","Offshore",40496,13.87,14.72,1.9,0.42,1.7,4.35,1.21,5.12,9.39,5.03,2.43,18.03,4.11
+155,89,"female","Muriel Spark","Scottish","Robinson",51602,13.68,16.53,6.03,0.82,1.2,3.17,0.52,4.78,8.27,3.92,1.59,16.85,3.91
+156,89,"female","Muriel Spark","Scottish","The Prime of Miss Jean Brodie",39760,17.48,13.44,1.48,0.29,1,4.62,1.38,4.67,8.09,3.73,1.43,17.58,5.39
+157,90,"female","Doris Lessing","British-Zimbabwean","The Golden Notebook",259170,14.78,17.73,4.3,0.78,1.4,4.97,0.73,5.53,9.16,4.87,2.01,18.49,4.51
+158,90,"female","Doris Lessing","British-Zimbabwean","The Summer Before the Dark",168874,16.43,15.74,0.95,0.25,0.68,6.57,1.36,5.89,9.52,4.57,1.92,17.97,4.38
+159,91,"female","Bernice Rubens","Welsh","Madame Sousatzka",66056,11.24,17.52,1.49,0.33,1.25,9.42,0.93,4.08,7.85,3.94,1.65,17.55,3.69
+160,92,"female","Nina Bawden","British","Change Here for Babylon",64509,13.24,20.33,5.6,0.72,1.66,6.97,0.51,4.86,10.1,4.21,2.22,20.22,4.65
+161,92,"female","Nina Bawden","British","Just Like A Lady",91903,12.13,18,1.86,0.25,1.75,9.12,0.72,4.27,8.81,3.69,2.05,18.04,4.43
+162,93,"female","Ruth Prawer Jhabvala","British-American","The Householder",58942,14.31,16.88,1.56,0.41,1.16,8.11,1.15,4.48,8.04,5.35,1.57,18.29,3.99
+163,94,"female","Fay Weldon","British","The Fat Woman's Joke",45971,9.63,20.83,5.22,0.44,4.45,4.23,0.69,5.79,11.3,5.56,3.08,20.82,4.81
+164,94,"female","Fay Weldon","British","Female Friends",80116,12.16,14.85,1.9,0.4,1.49,5.66,0.95,4.42,8.61,4.49,2.28,16.23,4.55
+165,95,"female","Beryl Bainbridge","British","Another Part of the Wood",57039,12.49,15.25,1.27,0.18,0.98,8.67,0.69,3.43,7.49,4.02,1.96,16.92,3.8
+166,96,"female","Penelope Lively","British","The Road to Lichfield",78789,12.62,16.22,2.98,0.69,1.83,4.3,0.74,5.65,9.02,5.53,2.26,18.55,3.89
+167,96,"female","Penelope Lively","British","According to Mark",73976,12.29,14.57,1.77,0.33,1.26,5.1,0.6,5.46,8.7,5.28,1.9,16.83,4.25
+168,97,"female","A. S. Byatt","British","Possession",194728,17.04,14.8,3.01,0.71,1.34,3.91,0.88,4.93,7.89,3.98,1.85,15.26,4.43
+169,98,"female","Rose Tremain","British","Sadler's Birthday",59725,11.82,17.32,2.08,0.37,1.58,7.13,1.1,5.04,8.87,5.15,2.46,19.59,4.29
+170,98,"female","Rose Tremain","British","Restoration",136545,18.68,17.46,7.15,0.6,0.88,3.22,0.73,4.87,7.51,4.1,1.69,15.26,3.91
+171,99,"female","Pat Barker","British","Regeneration",82058,10.43,15.93,2.52,0.31,2.21,5.21,1,4.68,9.4,4.81,2.54,19.26,4.26
+172,99,"female","Pat Barker","British","The Eye in the Door",75638,10.73,16.27,2.63,0.32,1.86,5.71,0.92,4.81,9.32,4.52,2.36,19.12,4.14
+173,100,"female","Marina Warner","British","The Leto Bundle",145493,18.47,14.55,1.31,0.69,1.22,5.66,1.42,4.23,6.81,3.99,1.42,14.28,4.09
+174,101,"female","Michèle Roberts","British-French","Ignorance",72224,10.6,16.66,5.82,1.1,1.11,4.56,1.27,2.77,5.19,3.2,1.41,14.1,4.58
+175,101,"female","Michèle Roberts","British-French","The Walworth Beauty",110263,9.64,14.56,1.48,0.32,1.26,7.1,1.35,3.03,5.02,3.49,1.21,13.03,4.58
+176,102,"female","Carol Birch","British","Jamrach's Menagerie",102298,10.26,16.36,4.53,1.56,1.24,3.73,0.6,4.66,6.92,4.47,1.9,16.82,4.97
+177,102,"female","Carol Birch","British","Orphans of the Carnival",110566,9.27,17.34,2.06,0.36,1.94,7.45,1.04,4.46,8.16,4.63,2.07,18.77,4.8
+178,103,"female","Hilary Mantel","British","Every Day is Mother's Day",69779,10.23,17.84,2.41,0.46,2.12,6.88,1.08,4.89,9.35,4.19,2.38,19.18,3.48
+179,103,"female","Hilary Mantel","British","An Experiment in Love",68893,13.59,17.2,5.7,1.24,1.31,3.49,0.96,4.48,8.25,3.69,1.68,16.6,4.03
+180,104,"female","Deborah Levy","British","Beautiful Mutants",23251,16.81,16.14,4.37,0.69,1.12,5.29,1.24,3.39,6.02,2.93,1.05,14.02,3.69
+181,104,"female","Deborah Levy","British","Billy and Girl",50785,8.54,14.92,2.29,0.54,1.26,6.08,0.84,3.88,7.42,3.95,1.81,16.37,3.76
+182,105,"female","Anne Enright","Irish","The Wig My Father Wore",48101,11.34,17.46,4.78,0.72,1.26,4.88,0.82,4.99,7.54,4.74,1.78,17.33,4.12
+183,105,"female","Anne Enright","Irish","The Gathering",75885,15.5,17.11,4.65,0.86,0.75,4.51,0.87,5.46,7.79,5.33,1.77,15.87,4.22
+184,106,"female","Nicola Barker","British","Wide Open",84110,7.47,18.91,2.58,0.19,1.35,8.5,0.78,5.5,8.24,4.89,2.18,17.3,4.29
+185,106,"female","Nicola Barker","British","Darkmans",231702,9.7,16.78,2.07,0.28,1.54,7.52,0.58,4.78,6.66,5.49,1.68,14.16,4.34
+186,107,"female","Monica Ali","British","Brick Lane",154127,9.59,16.65,1.9,0.47,1.16,7.25,1.18,4.67,7.22,4.31,1.71,17.28,3.88
+187,107,"female","Monica Ali","British","Untold Story",92325,10.71,18.99,3.36,0.37,1.64,7.62,0.71,5.28,10.04,4.98,2.16,20.4,3.78
+188,108,"female","M. J. Hyland","British","Carry Me Down",89853,10.45,20.36,8.14,0.92,1.91,4.76,0.74,3.89,8.15,4.79,2.11,19.67,4.18
+189,108,"female","M. J. Hyland","British","This is How",94057,9.21,20.58,8.13,0.6,2.19,4.81,0.53,4.31,8.79,4.73,2.3,21.22,4.3
+190,109,"female","Rachel Seiffert","British","The Dark Room",83536,9.58,14.35,1.22,0.39,0.99,7.12,1.72,2.89,6.48,4.31,1.97,15.52,4.51
+191,109,"female","Rachel Seiffert","British","Afterwards",72394,13.93,16.37,1.23,0.28,0.84,7.73,1.67,4.61,9.33,5.79,2.44,20.08,4.39
+192,110,"female","Alison Moore","British","The Lighthouse",48960,16.91,15.74,0.56,0.07,0.55,10.19,0.73,3.64,6.33,4.43,1.41,16.38,3.56
+193,110,"female","Alison Moore","British","He Wants",42264,15.81,15.24,0.74,0.13,1.06,7.66,1.04,4.58,7.8,4.75,1.86,18.15,3.36
+194,111,"female","Sarah Hall","British","How to Paint a Dead Man",91280,13.09,14.6,1.23,0.34,2.19,5.69,1.08,4.05,8.19,4.24,1.56,15.13,3.91
+195,111,"female","Sarah Hall","British","The Wolf Border",121079,10.43,13.38,0.99,0.32,0.78,6.79,1.22,3.28,8.31,4.41,1.95,16.12,4.34
+196,112,"female","Zadie Smith","British","On Beauty",155229,12.15,16.41,2.2,0.48,1.74,5.34,0.92,5.73,7.82,4.91,2.11,16.84,4.39
+197,112,"female","Zadie Smith","British","Swing Time",137193,19.86,16.63,4.78,1.14,0.92,3.9,0.92,4.95,7.27,4.76,1.88,15.81,4.67
+198,113,"female","Anne Brontë","British","Agnes Grey",68591,28.26,17.44,5.73,0.55,1.4,4.27,1.21,4.28,8.48,5.12,2.2,15.78,5.08
+199,113,"female","Anne Brontë","British","The Tenant of Wildfell Hall",166931,23.5,19.33,6.57,0.48,2.21,5.24,0.57,4.27,8.19,4.76,2.36,15.08,4.59
+200,114,"female","Jane Austen","British","Persuasion",83640,22.88,14.56,1.88,0.33,0.94,5.62,1.25,4.53,10.21,5.22,2.2,17.11,5.07
+201,114,"female","Jane Austen","British","Sense and Sensibility",119866,25.06,16.73,2.67,0.32,1.36,6.11,1.27,5,9.34,5.22,2.23,16.1,5.08
+202,115,"female","Charlotte Brontë","British","Jane Eyre",187489,19.08,17.23,6.29,0.29,2.02,3.81,0.68,4.13,7.89,4.4,1.87,15.2,4.45
+203,115,"female","Charlotte Brontë","British","Villette",196486,18.9,16,5.01,0.33,1.12,4.58,0.6,4.36,7.05,4.29,1.93,14.21,4.74
+204,116,"female","Maria Edgeworth","British","Belinda",180378,22.74,18.09,4.15,0.34,2.18,5.76,0.52,5.13,8.65,3.81,2.12,16.17,4.17
+205,116,"female","Maria Edgeworth","British","The Absentee",103057,22.55,16.44,3.62,0.41,2.06,4.86,0.75,4.74,8.28,3.99,2.19,16.09,4.03
+206,117,"female","George Eliot","British","Adam Bede",217382,24.6,15.58,2.42,0.5,1.62,5.45,0.79,4.8,8.65,4.42,1.87,17.06,5.43
+207,117,"female","George Eliot","British","Felix Holt, the Radical",183746,22.85,14.85,2.07,0.3,1.21,5.05,0.75,5.48,8.98,3.89,1.87,16.15,4.92
+208,118,"female","Emily Brontë","British","Wuthering Heights",117138,17.28,18.94,5.52,0.55,2.09,6.42,0.59,3.76,8.13,3.86,2.09,15.75,4.13
+209,119,"female","Elizabeth Gaskell","British","Mary Barton",163507,18.81,15.61,2.34,0.4,1.21,6.53,0.95,4.18,8.37,4.77,1.86,16.91,4.86
+210,119,"female","Elizabeth Gaskell","British","North and South",40685,19.57,14.89,2.17,0.38,1.06,5.94,0.93,4.39,8.28,4.63,1.77,16.31,5.41
+211,120,"female","Ouida","British","Othmar",192360,21.09,17.2,1.78,0.29,1.37,7.55,0.89,5.32,8.67,4.06,1.87,15.1,4.9
+212,120,"female","Ouida","British","Two Little Wooden Shoes",55330,20.86,15.11,1.51,0.12,1.29,6.79,1.18,4.21,7.33,4.5,1.9,15.18,5.33
+213,121,"female","Dorothy Richardson","British","Pointed Roofs",56735,12.33,13.06,0.78,0.2,0.7,6.27,1.31,3.77,6.92,3.56,1.48,15.57,5.04
+214,121,"female","Dorothy Richardson","British","The Tunnel",94580,12.58,13.87,1.65,0.2,1.07,4.57,1.34,5.02,7.98,4.15,1.84,16.15,5.38
+215,122,"female","Mary Shelley","British","Falkner",153044,25.53,16.76,2.84,0.4,0.99,7.35,0.68,4.5,7.54,4.03,1.61,14.03,4.33
+216,122,"female","Mary Shelley","British","The Fortunes of Perkin Warbeck",183391,25.71,14.09,1.45,0.51,0.85,6.28,1.04,3.96,6.13,3.35,1.11,11.45,4.35
+217,123,"female","May Sinclair","British","Mr and Mrs Nevill Tyson",49498,13.42,17.6,1.94,0.14,1.43,8.16,0.64,5.26,9.13,4.53,2.38,17.54,4.17
+218,123,"female","May Sinclair","British","The Immortal Moment",46364,9.72,23.41,4.13,0.23,3.87,8.09,1.16,5.9,10.6,4.77,3.32,21.13,4.18
+219,124,"female","Mrs. Humphry Ward","British","Robert Elsmere",289533,18.44,14.26,1.47,0.28,0.92,6.45,0.74,4.4,6.8,3.95,1.33,13.98,4.98
+220,124,"female","Mrs. Humphry Ward","British","Sir George Tressady",172010,15.84,15.9,1.84,0.36,1.11,7.16,0.81,4.61,7.59,4.32,1.64,15.85,4.62
+221,125,"female","Rebecca West","British","The Judge",193274,19.48,17.45,1.36,0.16,0.92,7.9,0.98,6.12,8.74,4.49,1.63,16.93,4.48
+222,125,"female","Rebecca West","British","The Thinking Reed",125920,20.26,17.57,1.74,0.34,1.15,6.8,1.52,6.01,9.24,4.69,1.85,17.39,4.46
+223,126,"female","Sarah Grand","Irish","Ideala",68258,18.49,18.2,3.58,0.82,1.45,5.65,1.08,5.61,9.05,4.5,2.05,17.29,4.37
+224,126,"female","Sarah Grand","Irish","The Beth Book",246478,17.68,16.15,1.9,0.3,1.53,6.54,1.08,4.8,8.27,4.24,1.84,16.42,4.35
+225,127,"female","Katharine Tynan","Irish","Mary Gray",75809,13.68,16.28,2.22,0.31,1.35,6.98,0.94,4.45,9.87,4.26,1.8,17.78,4.93
+226,127,"female","Katharine Tynan","Irish","The Story of Bawn",62787,16.7,19.33,6.97,0.68,1.29,4.47,0.75,5.16,9.96,4.76,1.91,18.83,4.39
+227,128,"female","Susan Edmonstone Ferrier","Scottish","Marriage",147145,23.84,15.01,2.51,0.39,1.48,5.18,0.82,4.63,8.02,4.28,1.57,14.09,4.57
+228,128,"female","Susan Edmonstone Ferrier","Scottish","The Inheritance",64706,26.3,17.21,3.09,0.29,2.21,6.35,0.61,4.65,8.69,4.43,1.79,15.55,3.95
+229,129,"female","Nella Larsen","American","Quicksand",46550,13.66,15.48,0.93,0.15,0.84,7.24,0.84,5.45,7.68,4.97,1.82,14.71,5.01
+230,129,"female","Nella Larsen","American","Passing",35011,11.53,18.26,2.03,0.19,1.39,7.21,0.9,6.52,9.62,5.32,2.62,17.9,4.68
+231,130,"female","Alison Lurie","American","Foreign Affairs",107816,15.9,14.44,1.42,0.17,0.96,6.31,0.85,4.7,7.96,5.33,1.99,15.18,5.27
+232,131,"female","Lore Segal","Austrian-American","Other People's Houses",70100,14.48,17.21,6.63,0.91,1.11,4.09,0.83,3.64,7.44,4,1.43,18.75,3.67
+233,131,"female","Lore Segal","Austrian-American","Her First American",82873,10.28,14.51,2.85,0.57,2.03,4.19,0.8,4.06,7.52,3.52,1.77,19.67,3.28
+234,132,"female","Shirley Ann Grau","American","Roadwalkers",83759,12.16,13.79,3.35,0.6,0.94,4.52,1.29,3.09,5.67,3.94,1.32,14.11,4.91
+235,133,"female","Toni Morrison","American","The Bluest Eye",52102,11.05,16.77,2.66,1.01,1.23,5.83,1.56,4.45,7.17,4.52,2.34,16.29,4.23
+236,133,"female","Toni Morrison","American","Sula",47055,14.96,15.02,1.11,0.15,0.95,5.87,1.94,4.97,6.58,4.76,2.11,15.26,4.27
+237,134,"female","Carol Shields","American-Canadian","Small Ceremonies",56598,11.46,17.14,5.03,1.02,1.26,3.75,0.76,5.3,8.18,4.85,1.86,15.87,4.42
+238,134,"female","Carol Shields","American-Canadian","The Box Garden",62484,11.96,17.07,5.05,0.97,1.14,4.2,0.67,5.03,8.39,5.48,2.21,16.5,4.34
+239,135,"female","Annie Proulx","American","Postcards",108611,12.48,12.59,1.58,0.31,1.17,4.82,0.99,3.7,5.95,3.62,1.47,14.42,4.13
+240,135,"female","Annie Proulx","American","The Shipping News",109067,10.06,11.81,1.59,0.44,1.25,3.82,0.91,3.78,6.01,3.67,1.41,14.78,3.73
+241,136,"female","Joyce Carol Oates","American","We Were the Mulvaneys",176498,14.8,12.83,1.78,0.44,0.98,5.07,0.68,3.86,8.25,4.78,2.05,15.22,4.68
+242,136,"female","Joyce Carol Oates","American","Blonde",307427,12.52,14.42,1.82,0.35,1.22,6.35,0.73,3.96,8.82,4.24,2.15,15.49,4.5
+243,137,"female","Anne Tyler","American","Searching for Caleb",105413,11.67,16.47,1.75,0.42,1.49,7.52,1.06,4.21,7.93,5.23,2.08,18.07,3.74
+244,137,"female","Anne Tyler","American","Breathing Lessons",104210,11.26,17.41,2.14,0.48,1.63,7.42,0.99,4.73,8.36,5.35,2.03,18.9,3.6
+245,138,"female","Marilynne Robinson","American","Housekeeping",61039,15.48,15.06,2.89,2.02,0.55,3.78,1.25,4.55,7.56,4.59,1.53,15.81,3.98
+246,138,"female","Marilynne Robinson","American","Gilead",85166,16.47,19.9,6.02,0.76,1.48,3.93,1.16,6.53,9.91,5.9,1.71,18.96,3.93
+247,139,"female","Jane Smiley","American","Horse Heaven",251062,14.08,16.05,1.35,0.23,1.33,6.64,1.07,5.42,8.6,5.26,1.88,17.66,3.79
+248,139,"female","Jane Smiley","American","Good Faith",153980,12.24,18.52,5.4,1,1.75,3.59,0.9,5.84,9.34,5.51,2.04,19.14,3.72
+249,140,"female","Alice McDermott","American","That Night",53324,16.91,16.81,1.86,0.91,0.55,7.46,1.8,4.22,7.04,4.62,1.26,16.08,4.46
+250,140,"female","Alice McDermott","American","Charming Billy",79378,16.95,16.02,1.6,0.5,0.97,7.07,1.2,4.65,7.5,4.79,1.34,16.05,4.3
+251,141,"female","Andrea Barrett","American","The Middle Kingdom",83958,12.48,18.21,6.65,1.41,1.2,4.2,0.78,3.95,7.57,4.08,1.44,17.37,4.25
+252,141,"female","Andrea Barrett","American","The Forms of Water",88025,13.91,17.03,1.14,0.67,0.95,8.51,1.47,4.27,8.76,4.46,1.72,18.44,3.77
+253,142,"female","Louise Erdrich","American","The Plague of Doves",106443,13.68,16.1,4.41,1.07,0.66,4.85,1.1,3.99,6.66,4.38,1.34,15.61,4.34
+254,142,"female","Louise Erdrich","American","The Round House",109866,10.84,17.95,5.6,1.27,1.05,4.82,0.84,4.35,7.42,4.64,1.5,17.65,3.69
+255,143,"female","Barbara Kingsolver","American","Pigs in Heaven",114402,11.23,16,2.25,0.57,1.76,5.28,1.18,4.93,7.74,4.55,1.97,17.5,3.88
+256,143,"female","Barbara Kingsolver","American","The Poisonwood Bible",179702,14.86,15.4,3.84,1.74,0.9,3.16,1.31,4.43,7.17,4.84,1.66,15.39,4.32
+257,144,"female","Geraldine Brooks","Australian-American","Year of Wonders",102128,17.83,17.4,5.27,1.13,0.93,4.92,0.73,4.41,7.08,4.41,1.45,14.8,4.51
+258,144,"female","Geraldine Brooks","Australian-American","March",94845,16.74,16.4,5.52,0.85,0.93,4.01,0.83,4.25,7.02,4.24,1.49,14.39,4.43
+259,145,"female","Elizabeth Strout","American","Amy and Isabelle",113255,14.77,15.16,0.98,0.1,0.9,7.39,0.89,4.89,7.59,4.89,1.61,16.99,4.52
+260,146,"female","Julia Glass","American","Three Junes",141049,13.78,16.63,4.53,0.6,1.19,5.21,0.84,4.25,7.37,4.79,1.8,15.57,4.44
+261,146,"female","Julia Glass","American","I See You Everywhere",106029,11.6,18.07,6.06,0.97,1.37,4.32,0.68,4.66,7.51,4.89,1.82,16.19,4.37
+262,147,"female","Donna Tartt","American","The Little Friend",224379,14.69,13.74,1.11,0.19,1.04,6.27,0.91,4.2,6.6,4.39,1.76,14.91,4.36
+263,148,"female","Jhumpa Lahiri","American","The Namesake",103693,16.83,14.55,0.45,0.09,0.38,8.35,1.62,3.64,6.49,3.75,1.31,13.64,4.09
+264,148,"female","Jhumpa Lahiri","American","The Lowland",112214,12.6,15.7,0.48,0.13,0.55,8.75,1.62,4.16,7.58,3.97,1.56,15.68,3.75
+265,149,"female","Lydia Millet","American","Everyone's Pretty",59980,8.94,15.36,2.53,0.33,1.89,6.2,0.84,3.55,8.38,3.47,1.6,15.95,3.66
+266,149,"female","Lydia Millet","American","Pills and Starships",72440,14.09,17.09,4.53,2.05,1.01,2.07,1.94,5.47,9.13,6.06,2.08,18.18,4.67
+267,150,"female","C. E. Morgan","American","The Sport of Kings",219162,14.98,15.01,1.51,0.25,1.61,6.79,0.94,3.88,6.42,4.73,1.98,14.1,4.38
+268,151,"female","Jesmyn Ward","American","Salvage the Bones",85284,12.35,16.44,3.78,0.95,0.7,6.04,1.1,3.85,6.14,3.9,1.4,15.17,4.33
+269,151,"female","Jesmyn Ward","American","Sing, Unburied, Sing",78007,12.75,17.98,5.74,0.55,0.81,5.93,0.88,4.06,5.78,4.4,1.76,16.18,4.13
+270,152,"female","Louisa May Alcott","American","An Old Fashioned Girl",102542,20.95,15.92,3.13,0.57,1.55,5.13,0.72,4.82,8.35,4.73,1.63,18.22,5.69
+271,152,"female","Louisa May Alcott","American","Rose in Bloom: A Sequel to Eight Cousins",94331,22.42,15.96,3.34,0.36,1.8,5.2,0.71,4.54,8.09,4.86,2.09,17.09,5.79
+272,153,"female","Alice Childress","American","A Hero Ain't Nothin' But A Sandwich",33559,14.84,17.4,5.48,0.84,1.71,3.41,1.29,4.65,8.03,4.2,2.47,17.33,4.29
+273,153,"female","Alice Childress","American","Like One of the Family",62663,17.64,19.12,5.1,0.94,2.27,3,1.44,6.36,9.15,5.59,2.45,20.04,4.02
+274,154,"female","Kate Chopin","American","At Fault",58325,18.65,15.26,1.73,0.25,1.24,6.53,0.68,4.82,7,3.84,1.88,14.58,4.08
+275,154,"female","Kate Chopin","American","The Awakening",50100,14.48,15.84,1.57,0.12,1.11,7.91,0.92,4.19,7.48,3.96,1.9,15.76,4.04
+276,155,"female","Rebecca Harding Davis","American","John Andross",101616,14.11,15.98,2.59,0.25,1.7,6.24,0.64,4.54,8.2,4.29,1.92,15.96,4.57
+277,155,"female","Rebecca Harding Davis","American","Margret Howth",59511,17.22,15.34,1.31,0.2,1.04,6.87,0.87,5.05,6.78,3.96,1.56,15.16,5.61
+278,156,"female","Jessie Redmon Fauset","American","Plum Bun: A Novel Without a Moral",94226,16.38,17.33,2.38,0.32,1.53,7.52,0.79,4.78,9.05,5.21,2.2,17.06,4.86
+279,157,"female","Charlotte Perkins Gilman","American","The Crux",52188,13.02,16.24,2.44,0.26,1.78,6.48,0.82,4.46,8.11,4.82,2.29,16.74,5.51
+280,157,"female","Charlotte Perkins Gilman","American","What Diantha Did",57270,13.54,16,2.65,0.46,2.04,5.17,1.02,4.66,8.05,4.42,1.97,16.13,5.22
+281,158,"female","Ellen Glasgow","American","The Ancient Law",119671,21.71,17.65,2.52,0.16,1.46,8.36,0.43,4.71,7.38,4.25,1.55,15.14,4.76
+282,158,"female","Ellen Glasgow","American","The Builders",107489,18.36,16.95,2.9,0.45,1.48,6.69,0.43,5,9.07,4.62,2.06,17.38,4.87
+283,159,"female","Susan Glaspell","American","Fidelity",100763,16.42,20.25,1.07,0.16,0.83,9.37,1,7.8,9.95,5.46,2.03,20.86,4.66
+284,159,"female","Susan Glaspell","American","The Visioning",115437,13.43,18.96,2.55,0.33,1.74,6.04,0.97,7.3,10.18,5.46,2.34,20.07,4.59
+285,160,"female","Frances Harper","American","Minnie's Sacrifice",30226,20.06,16.78,3.04,0.65,1.34,6.13,1.25,4.36,8.42,4.57,1.66,16.97,4.55
+286,160,"female","Frances Harper","American","Sowing and Reaping",27385,20.14,17.08,4.49,0.5,1.78,5.22,0.64,4.43,9.09,4.25,1.9,16.94,4.8
+287,161,"female","Pauline Hopkins","American","Hagar's Daughter: A Story of Southern Caste Prejudice",82827,14.96,14.62,2.6,0.43,1.59,5.87,0.56,3.57,7.18,3.38,1.52,14.18,4.49
+288,161,"female","Pauline Hopkins","American","Winona: A Tale of Negro Life in the South and Southwest",44465,15.4,12.95,1.75,0.57,1.51,4.58,1.06,3.47,6.38,3.2,1.4,13.3,4.58
+289,162,"female","Zora Neale Hurston","American","Their Eyes Were Watching God",61200,11.93,13.06,0.82,0.39,1.58,5.57,0.9,3.78,6.93,4.45,2.77,16.15,3.98
+290,163,"female","Harriet Ann Jacobs","American","Incidents in the Life of a Slave Girl",82002,16.3,18.89,6.63,0.52,1.15,5.47,1.19,3.94,8.89,3.76,1.63,17.17,4.03
+291,164,"female","Emma Dunham Kelley","American","Megda",82105,15.39,16.03,2.48,0.53,1.57,6.04,1.02,4.38,8.68,4.36,1.87,17.72,5.04
+292,165,"female","Janet Lewis","American","The Trial of Sören Qvist",64334,16.26,15.3,2.14,0.31,1.15,6.86,0.64,4.19,7.6,4.17,1.68,15.94,4.61
+293,165,"female","Janet Lewis","American","The Wife of Martin Guerre",29020,19.58,14.28,1.49,0.19,1.06,6.57,0.68,4.3,7.23,3.57,1.49,13.54,4.56
+294,166,"female","Josefina Niggli","American","Mexican Village",186557,12.25,14.54,1.88,0.23,1.43,6.34,0.82,3.84,6.8,3.55,1.58,14.38,4.61
+295,166,"female","Josefina Niggli","American","Step Down, Elder Brother",143122,12.43,15.59,1.95,0.35,1.45,6.9,0.79,4.14,7.55,3.93,1.76,15.35,4.26
+296,167,"female","María Ruiz de Burton","American","The Squatter and the Don",137705,16.89,15.51,2.77,0.81,1.67,4.4,1.21,4.64,9.02,4.39,1.95,17.92,4.03
+297,167,"female","María Ruiz de Burton","American","Who Would Have Thought It?",109948,17.67,15.69,2.63,0.52,1.63,5.54,0.98,4.38,8.33,4.41,1.93,16.93,4.5
+298,168,"female","Elizabeth Drew Stoddard","American","The Morgesons",100613,13.41,18.15,5.25,1.02,1.61,5.28,0.73,4.27,7.91,3.57,1.68,16.95,3.91
+299,168,"female","Elizabeth Drew Stoddard","American","Two Men",71226,14.66,17.53,2.21,0.32,1.89,7.82,0.71,4.58,8.3,3.71,2.01,16.92,3.76
+300,169,"female","Harriet Beecher Stowe","American","Dred: A Tale of the Great Dismal Swamp",232619,17.47,15.23,2.77,0.76,1.62,3.82,1.12,5.14,8.27,4.35,1.78,16.06,4.22
+301,169,"female","Harriet Beecher Stowe","American","Uncle Tom's Cabin",183686,17.52,15.41,2.81,0.54,1.68,4.75,0.92,4.7,7.7,4.24,1.76,16.52,4.63
+302,170,"female","Edith Wharton","American","The Fruit of the Tree",144510,19.48,16.17,1.73,0.2,1.19,7.68,0.73,4.63,7.44,4.21,1.64,15.01,4.5
+303,170,"female","Edith Wharton","American","The Valley of Decision",155090,25.26,12.55,1.11,0.23,0.77,5.47,0.9,4.07,5.73,3.12,1.01,11.2,4.37
+304,171,"female","Harriet E. Wilson","American","Our Nig",22688,15,15.59,1.18,0.24,0.72,9.37,0.77,3.31,7.7,4.12,1.84,15.79,4.57
+305,172,"male","Sumner Locke Elliott","Australian","Careful, He Might Hear You",107708,11.74,15.89,2.02,0.48,1.95,5.93,0.87,4.62,8.15,5.16,2.11,18.43,3.99
+306,172,"male","Sumner Locke Elliott","Australian","Fairyland",82441,18.07,12.97,1.26,0.25,1.29,4.99,1.11,4.05,7.72,4.4,1.46,15.46,4.06
+307,173,"male","Patrick White","Australian","A Fringe of Leaves",136658,17.31,14.65,1.28,0.36,0.72,7.06,1.19,4.04,7.88,3.63,1.75,14.18,4.37
+308,173,"male","Patrick White","Australian","The Eye of the Storm",208137,14.83,15.17,1.46,0.27,1.43,6.59,0.94,4.47,8.77,4.21,2.12,15.68,4.48
+309,173,"male","Patrick White","Australian","The Living and the Dead",122200,11.99,15.19,0.77,0.18,1.41,7.17,0.52,5.11,6.75,3.96,1.51,15.35,3.93
+310,173,"male","Patrick White","Australian","The Solid Mandala",106551,12.19,15.14,1.11,0.32,0.98,6.74,1.23,4.75,9.01,4.77,2.2,17.68,4.26
+311,173,"male","Patrick White","Australian","The Tree of Man",202221,13.56,15.94,1.04,0.23,0.67,7.16,1.21,5.6,9.06,4.12,1.7,17.41,4.11
+312,173,"male","Patrick White","Australian","The Twyborn Affair",141767,15,13.86,1.63,0.41,0.99,5.72,1.03,4.06,7.79,3.79,1.81,14.07,4.41
+313,173,"male","Patrick White","Australian","The Vivisector",217733,12.82,16.44,1.79,0.26,1.37,7.68,1.09,4.24,8.95,4.45,2.2,16.97,4.36
+314,173,"male","Patrick White","Australian","Voss",162514,14.75,14.09,1.35,0.33,0.86,5.1,1.23,5.21,9.24,3.95,1.58,15.96,4.39
+315,174,"male","Jaime Manrique","Colombian-American","Cervantes Street",99052,17.48,15.85,5.97,1.1,1.03,3.15,0.88,3.72,7.15,3.24,1.34,14.51,4.27
+316,174,"male","Jaime Manrique","Colombian-American","Our Lives Are the Rivers",91273,15.95,16.88,6.47,1.16,1.24,3.44,0.85,3.73,7.5,3.7,1.54,15.66,4.12
+317,175,"male","Patrick Ness","British-American","The Crane Wife",72418,11.78,17.83,1.92,0.26,1.65,7.07,0.9,6.03,8.72,6.4,2.28,18.08,4.63
+318,175,"male","Patrick Ness","British-American","The Crash of Hennington",129952,10.58,16.9,2.92,0.54,2.19,4.45,0.84,5.93,9.72,5.99,2.34,17.94,4.7
+319,176,"male","E. F. Benson","British","An Act in a Backwater",60738,15.44,15.26,2.3,0.44,1.47,5.19,0.82,5.04,9.3,4.62,1.91,18.35,4.48
+320,176,"male","E. F. Benson","British","Daisy's Aunt",59178,15.17,18.32,3.07,0.42,1.76,5.99,0.74,6.33,9.97,5.27,2.41,19.08,4.4
+321,176,"male","E. F. Benson","British","Scarlet and Hyssop",74366,14.76,17.48,2.54,0.41,2.04,5.63,0.81,6.04,9.5,5.15,2.25,17.73,4.48
+322,176,"male","E. F. Benson","British","The Angel of Pain",143331,18.29,17.43,2.21,0.24,1.44,6.11,0.61,6.81,9.86,5.56,2.15,17.75,4.62
+323,176,"male","E. F. Benson","British","The Blotting Book",36951,18.26,15.64,1.98,0.22,1.33,5.76,0.54,5.81,9.06,4.77,1.6,16.84,4.18
+324,176,"male","E. F. Benson","British","The Challoners",95676,14.81,17.27,2.77,0.3,1.96,5.95,0.57,5.71,9.02,5.4,2.13,17.2,4.58
+325,176,"male","E. F. Benson","British","The House of Defence",90721,17.09,17.72,2.01,0.28,1.58,6.65,0.6,6.6,9.53,5.66,2.15,17.86,4.41
+326,176,"male","E. F. Benson","British","The Relentless City",87653,15.84,16.86,2.46,0.28,1.75,6.03,0.72,5.6,8.68,4.81,1.88,16.91,4.58
+327,177,"male","Samuel Butler","British","Erewhon Revisited",85265,23.72,17.63,3.53,0.83,1.27,5.02,1.18,5.79,10.07,5.04,1.99,17.35,4.65
+328,177,"male","Samuel Butler","British","Erewhon, or Over the Range",82180,34.07,15.45,3.56,0.86,0.27,1.98,2.04,6.75,9.72,4.88,1.78,15.66,5.28
+329,177,"male","Samuel Butler","British","The Way of All Flesh",163321,29.27,16.42,1.99,0.44,0.66,6.33,1.17,5.83,10.22,5.09,2.04,17.43,5.28
+330,178,"male","Ronald Firbank","British","Caprice",18903,8.9,13.93,3.16,0.27,1.63,5.35,0.47,3.05,6.85,4.21,1.38,14.6,3.73
+331,178,"male","Ronald Firbank","British","Inclinations",24867,8.24,16.79,4.51,0.67,2,4.7,0.6,4.29,9.41,5.28,1.95,18.65,3.71
+332,178,"male","Ronald Firbank","British","Vainglory",48041,10.99,14.27,2.99,0.35,1.16,4.96,0.54,4.25,8.74,5.57,1.7,16.11,4.24
+333,179,"male","E. M. Forster","British","A Passage to India",101411,14.01,16.03,2.33,0.58,1.38,5.35,1.46,4.92,9.06,4.45,2.34,16.78,4.26
+334,179,"male","E. M. Forster","British","A Room with a View",67326,11.6,17.27,2.74,0.64,1.69,5.74,1.13,5.32,9.41,4.74,2.42,18.28,4.34
+335,179,"male","E. M. Forster","British","Howards End",110181,11.83,16.63,2.54,0.66,1.57,5.18,1.13,5.54,9.88,4.68,2.51,17.9,4.38
+336,179,"male","E. M. Forster","British","The Longest Journey",95168,11.24,17.51,2.42,0.59,1.63,6.5,1.12,5.25,9.59,4.69,2.58,17.95,4.33
+337,179,"male","E. M. Forster","British","Where Angels Fear to Tread",50127,11.74,17.38,2.27,0.52,1.57,7.19,0.77,5.04,9.59,4.77,2.38,18.11,4.62
+338,180,"male","Patrick Gale","British","A Sweet Obscurity",134704,12.58,14.96,1.3,0.23,1.1,7.31,1.01,3.99,8.02,5.17,1.81,16.32,4.66
+339,180,"male","Patrick Gale","British","Ease",44156,10.28,15.46,2.46,0.28,1.71,6.33,0.72,3.95,8.3,4.65,1.66,16.94,4.12
+340,180,"male","Patrick Gale","British","Facing the Tank",99398,13.5,13.89,1.36,0.21,1.02,6.78,0.85,3.65,7.7,4.31,1.3,15.46,4.71
+341,180,"male","Patrick Gale","British","Friendly Fire",94017,12.87,15.02,1.37,0.22,1.2,7,1.35,3.87,8,5.02,1.84,16.52,4.55
+342,180,"male","Patrick Gale","British","Kansas in August",44909,11.16,14.35,1.43,0.23,1.28,7.46,0.59,3.34,7.64,4.28,1.47,15.63,4.42
+343,180,"male","Patrick Gale","British","Rough Music",112227,11.95,15.73,1.51,0.28,1.27,7.26,1.08,4.32,8.56,5.34,1.89,17.46,4.87
+344,180,"male","Patrick Gale","British","The Aerodynamics of Pork",66354,9.85,14.95,2.35,0.28,1.7,5.77,0.84,4,8.13,4.8,1.72,17.32,4.61
+345,180,"male","Patrick Gale","British","The Facts of Life",173997,12.46,15.73,1.69,0.24,1.17,7.98,0.98,3.65,7.26,4.77,1.56,15.6,4.63
+346,180,"male","Patrick Gale","British","Tree Surgery for Beginners",84292,12.52,15.81,1.76,0.29,1.18,8.2,0.91,3.45,7.6,4.74,1.54,15.72,4.63
+347,181,"male","Mark Gatiss","British","The Vesuvius Club",67860,10.6,15.21,6.08,0.78,1.35,3.02,0.43,3.55,6.17,3.86,1.06,13.29,3.96
+348,182,"male","Philip Hensher","British","King of the Badgers",151717,15.37,14.14,1.36,0.51,1.19,4.28,1.52,5.25,8.75,4.58,2.03,17.97,4.15
+349,182,"male","Philip Hensher","British","The Mulberry Empire",189837,17.89,13.46,1.4,0.49,1,4.68,1.32,4.55,7.57,4.26,1.95,15.3,4.58
+350,182,"male","Philip Hensher","British","The Northern Clemency",257775,15.66,16.15,1.65,0.3,1.53,5.39,1.42,5.85,9.4,5,2.36,19.49,4.31
+351,183,"male","Alan Hollinghurst","British","The Folding Star",162970,19.28,15.66,5.16,0.61,0.81,4,0.66,4.41,7.35,4.71,1.34,15.4,4.54
+352,183,"male","Alan Hollinghurst","British","The Line of Beauty",160436,15.94,14,1.15,0.3,0.95,5.99,0.96,4.65,7.47,4.63,1.48,16.55,4.6
+353,183,"male","Alan Hollinghurst","British","The Sparsholt Affair",147318,15.99,14.65,1.81,0.32,0.99,6.05,1.02,4.44,6.97,4.76,1.45,16.36,4.87
+354,183,"male","Alan Hollinghurst","British","The Spell",96253,17.19,13.47,1.1,0.19,0.9,5.82,0.9,4.55,7.49,4.65,1.33,16.08,4.45
+355,183,"male","Alan Hollinghurst","British","The Stranger's Child",177448,15.43,14.19,1.53,0.29,1,6.12,0.89,4.35,7.19,5.08,1.48,16.14,4.68
+356,183,"male","Alan Hollinghurst","British","The Swimming Pool Library",130477,17.74,15.58,5.08,0.62,0.83,3.71,0.66,4.66,7.34,5.04,1.29,15.15,4.84
+357,184,"male","Christopher Isherwood","British","A Single Man",43479,13.63,15.67,1.78,0.63,1.7,4.16,1.61,5.76,8.95,5.86,2.25,16.64,4.65
+358,185,"male","Jonathan Kemp","British","Ghosting",50498,13.11,17.54,2.33,0.32,1.29,8.22,0.94,4.42,7.77,4.78,2,17.86,4.49
+359,186,"male","Francis King","British","Act of Darkness",108772,13.84,15.96,1.55,0.24,1.02,7.07,0.88,5.17,7.44,4.95,1.84,14.64,4.33
+360,187,"male","C. H. B. Kitchin","British","Crime at Christmas",68771,13.8,16.14,5.77,0.54,1.78,2.98,0.41,4.65,8.99,5.11,1.9,17.24,4.48
+361,188,"male","Adam Mars-Jones","British","Pilcrow",216572,15.73,15.38,4.79,0.63,0.76,3.06,0.76,5.37,9.87,5,2.09,17.77,4.63
+362,189,"male","Chuck Palahniuk","American","Beautiful You",66818,11.99,13.53,0.75,0.14,1.08,7.16,1.03,3.37,6.83,3.07,1.29,13.24,4.79
+363,189,"male","Chuck Palahniuk","American","Choke",70331,11.17,16.51,4.24,0.53,2.22,4.16,0.92,4.4,6.91,4.85,1.69,16.1,4.27
+364,189,"male","Chuck Palahniuk","American","Damned",63799,16.92,13.26,5.14,0.57,1.19,2.17,0.86,3.33,5.24,3.73,1.29,11.44,4.84
+365,189,"male","Chuck Palahniuk","American","Fight Club",50437,11.67,13.99,4.42,0.89,2.34,1.79,0.59,3.93,7.05,4.03,1.66,15.63,3.79
+366,189,"male","Chuck Palahniuk","American","Invisible Monsters",59512,12.23,15.07,4.84,0.97,1.83,2.58,0.74,4.1,7,4.42,1.49,16.04,4.21
+367,189,"male","Chuck Palahniuk","American","Make Something Up",94717,13.14,13.88,1.64,0.25,1.05,5.4,1.27,4.26,6.47,3.8,1.69,14.34,4.36
+368,190,"male","Hugh Walpole","British","Fortitude",169233,17.05,16.65,1.78,0.2,1.26,6.76,0.83,5.8,8.77,5.53,1.64,16.59,4.72
+369,190,"male","Hugh Walpole","British","Jeremy",83942,17.23,14.93,1.02,0.21,0.94,7.08,0.85,4.82,8.36,5.09,1.98,15.99,5.09
+370,190,"male","Hugh Walpole","British","The Captives",191594,13.7,18.82,2.38,0.31,1.59,8.23,0.83,5.45,9.58,5.55,2.43,18.24,4.73
+371,190,"male","Hugh Walpole","British","The Cathedral",143003,13.64,17.8,2.26,0.41,1.47,7.08,0.79,5.77,9.48,5.54,2.16,17.4,4.79
+372,190,"male","Hugh Walpole","British","The Dark Forest",95268,15.15,17.82,4.77,1.55,0.88,4.51,0.8,5.27,8.41,5.47,1.88,15.77,4.95
+373,190,"male","Hugh Walpole","British","The Gods and Mr Perrin",68956,17.79,17.23,1.45,0.39,1.09,6.65,1.15,6.47,8.84,5.42,1.81,16.72,4.86
+374,190,"male","Hugh Walpole","British","The Prelude to Adventure",58122,13.75,18.14,2.89,0.22,1.66,6.4,0.76,6.2,9.57,5.36,1.89,17.83,4.45
+375,190,"male","Hugh Walpole","British","The Secret City",126341,13.58,18.7,4.66,0.74,1.46,5.32,0.85,5.65,8.86,5.45,2.19,17.07,4.67
+376,190,"male","Hugh Walpole","British","The Wooden Horse",89556,16.07,18.39,2.39,0.52,1.72,6.89,1.01,5.85,10.23,5.33,2.07,18.29,4.52
+377,191,"male","Denton Welch","British","A Voice Through a Cloud",89124,16.88,16.34,6.67,0.37,0.54,3.6,0.81,4.33,7.14,4.53,1.34,16.49,4.74
+378,191,"male","Denton Welch","British","In Youth is Pleasure",50619,14.92,13.76,0.79,0.09,0.66,7.42,1,3.8,5.64,3.91,1.07,14.93,4.56
+379,191,"male","Denton Welch","British","Maiden Voyage",93698,12.9,16.98,6.82,1.2,0.74,3.44,0.89,3.88,6.94,4.02,1.26,17.69,4.6
+380,192,"male","Angus Wilson","British","Hemlock and After",86873,15.78,16.05,2.29,0.42,1.65,5.66,0.91,5.11,8.5,4.95,1.92,16.8,5.11
+381,192,"male","Angus Wilson","British","The Old Men at the Zoo",119952,14.41,17.02,5.18,0.91,1.55,3.42,0.74,5.22,8.82,4.84,2,17.21,4.61
+382,193,"male","Desmond Hogan","Irish","The Ikon Maker",34443,8.07,15.84,1.21,0.22,0.88,8.17,1.18,4.12,8.37,4.56,1.52,18.21,4.05
+383,193,"male","Desmond Hogan","Irish","The Leaves on Grey",38712,16.07,12.2,3.01,0.81,0.32,3.94,0.76,3.32,5.61,3.48,0.93,12.91,4.07
+384,194,"male","Colm Tóibín","Irish","Brooklyn",86590,17.91,18.05,1.24,0.33,1.06,8.61,1.59,5.2,9,5.03,1.86,20.16,4.37
+385,194,"male","Colm Tóibín","Irish","Nora Webster",113331,14.85,17.28,1.64,0.5,1.12,7.23,1.43,5.35,9.73,5.31,1.94,20.81,3.83
+386,194,"male","Colm Tóibín","Irish","The South",58889,11.43,18.32,3.44,0.52,1.39,7.69,1.27,4,9.01,5.16,1.89,20.25,3.85
+387,195,"male","James Baldwin","American","Another Country",148941,12,19.44,2.83,0.43,2.09,7.77,1.29,5,8.71,5.35,2.34,19.58,4.02
+388,195,"male","James Baldwin","American","Giovanni's Room",55313,13.65,20.34,6.76,0.96,1.81,4.54,0.73,5.51,9.24,5.59,2.35,19.59,4.17
+389,195,"male","James Baldwin","American","Go Tell It on the Mountain",81237,18.5,17.86,1.34,0.17,1.39,8.91,1.19,4.84,7.76,4.71,2.59,18.2,3.88
+390,195,"male","James Baldwin","American","If Beale Street Could Talk",57177,11.79,21.23,5.48,1.14,2.11,5.81,0.88,5.78,9.39,5.58,2.75,20.48,3.69
+391,195,"male","James Baldwin","American","Tell Me How Long the Train's Been Gone",149389,12.82,20.51,7.05,1.48,1.97,3.56,1.14,5.29,9.34,5.36,2.51,19.95,4.06
+392,196,"male","Christopher Bram","American","Hold Tight",100667,10.15,15.3,1.66,0.5,2.02,5.86,0.92,4.33,7.9,4.79,2.04,17.46,4.13
+393,196,"male","Christopher Bram","American","In Memory of Angel Clare",76505,12.4,15.28,1.39,0.38,1.14,6.78,1.01,4.56,8.08,5.41,1.99,17.85,4.55
+394,196,"male","Christopher Bram","American","Surprising Myself",136860,9.37,20.3,6.73,1.06,2.38,4.47,0.42,5.22,9.47,5.63,2.62,19.53,3.91
+395,197,"male","John Horne Burns","American","The Gallery",147110,13.49,14.92,2,0.57,1.15,5.23,1.7,4.27,6.62,3.71,1.34,14.43,3.69
+396,198,"male","Truman Capote","American","Breakfast at Tiffany's",26756,12.02,17.79,4.88,0.51,1.61,5.66,0.65,4.47,8.18,4.6,2.18,16.86,4.07
+397,198,"male","Truman Capote","American","Other Voices, Other Rooms",55646,17.98,13.76,1.83,0.41,0.99,5.91,0.75,3.86,6.42,4.38,1.66,15.04,4.47
+398,198,"male","Truman Capote","American","Summer Crossing",29000,21.11,16.67,1.55,0.28,1.29,7.37,0.94,5.23,8.48,4.76,1.98,17.07,4.29
+399,199,"male","Michael Cunningham","American","A Home at the End of the World",116816,10.74,18.15,6.19,1.54,1.33,4.28,0.57,4.22,8.13,4.22,1.8,18,4.61
+400,199,"male","Michael Cunningham","American","By Nightfall",69829,12.55,16.12,1.84,0.41,1.68,5.08,0.95,6.13,9.79,5.22,2.5,17.57,4.83
+401,199,"male","Michael Cunningham","American","Specimen Days",101800,9.08,17.28,1.66,0.52,1.67,6.92,1.14,5.35,9.48,4.25,2.1,19.04,4.42
+402,199,"male","Michael Cunningham","American","The Hours",54307,13.53,15.03,1.06,0.31,0.98,6.52,0.72,5.42,8.49,4.91,1.75,15.94,5.04
+403,199,"male","Michael Cunningham","American","The Snow Queen",58770,13.07,15.47,1.54,0.35,1.15,5.03,0.85,6.53,9.25,5.05,2.33,17.36,5.05
+404,200,"male","Henry Blake Fuller","American","The Cliff-Dwellers",70086,14.48,14.98,1.59,0.41,1.08,6.36,0.74,4.78,7.66,4.3,1.56,14.91,4.65
+405,200,"male","Henry Blake Fuller","American","Under the Skylights",73239,15.25,13.77,1.47,0.56,0.99,5.27,0.94,4.54,7.3,4.35,1.5,14.64,4.96
+406,200,"male","Henry Blake Fuller","American","With the Procession",88311,16.35,14.5,1.82,0.42,1.01,5.81,0.78,4.63,7.04,4.57,1.63,13.88,4.89
+407,201,"male","Andrew Sean Greer","American","The Impossible Lives of Greta Wells",72462,12.03,18.83,6.22,0.92,1.43,4.21,0.66,5.36,7.73,4.79,1.84,17.59,4.32
+408,201,"male","Andrew Sean Greer","American","The Story of a Marriage",64341,14.11,18.11,5.04,1.13,1.3,4.24,0.98,5.41,7.42,4.08,1.95,16.69,4.22
+409,202,"male","E. Lynn Harris","American","Abide With Me",93909,11.52,17.66,4.08,0.52,2.62,5.47,0.67,4.29,9.2,4.99,1.94,20.44,4.48
+410,202,"male","E. Lynn Harris","American","If This World Were Mine",100973,11.7,19.57,7.67,0.78,2.01,4.3,0.58,4.21,9.23,4.94,2,20.58,4.3
+411,203,"male","Brent Hartinger","American","Three Truths and a Lie",47059,9.75,19.22,5.3,1.76,1.29,3.06,0.75,7.04,10.6,7.02,2.56,20.56,4.17
+412,204,"male","Adam Haslett","American","Imagine Me Gone",108401,14.92,17.94,5.16,1.1,0.97,4.47,0.87,5.36,8.38,4.97,2.13,17.24,4.23
+413,205,"male","James Leo Herlihy","American","Midnight Cowboy",68707,13.71,16.24,2.11,0.18,1.69,6.18,0.84,5.23,7.39,4.56,1.77,16.67,4.27
+414,206,"male","Bill Konigsberg","American","Honestly Ben",84995,9.46,21.46,8.91,0.98,2.12,3.2,0.41,5.82,9.37,5.59,2.33,20.25,4.2
+415,206,"male","Bill Konigsberg","American","Openly Straight",82893,9.82,20.69,7.96,1.13,1.95,3.32,0.58,5.74,9.21,5.79,2.29,20.42,4.57
+416,207,"male","David Leavitt","American","Equal Affections",91816,13.17,16.56,2.33,0.31,1.56,6.23,1.01,5.09,8.38,5.34,1.79,17.74,4.45
+417,207,"male","David Leavitt","American","The Body of Jonah Boyd",64212,15.39,17.22,4.65,0.62,0.97,4.51,0.75,5.7,8.43,5.59,1.77,16.8,4.09
+418,207,"male","David Leavitt","American","The Indian Clerk",161702,12.55,16.02,2.41,0.52,1.15,5.89,0.75,5.29,8.45,4.89,1.94,16.38,4.1
+419,207,"male","David Leavitt","American","The Lost Language of Cranes",103584,12.14,16.84,2.54,0.31,1.45,6.63,1.16,4.74,8.18,5.06,1.79,18.12,4.48
+420,207,"male","David Leavitt","American","The Two Hotel Francforts",69629,10.84,18.98,4.98,1.28,1.8,4.16,0.81,5.92,9.79,5.36,2.34,18.4,3.84
+421,208,"male","Paul Lisicky","American","Lawnboy",78911,10.49,19.71,7.54,0.94,1.27,4.52,0.62,4.79,7.42,4.25,1.81,16.34,4.43
+422,209,"male","Gregory Maguire","American","A Lion Among Men",92872,11.74,14.7,2.2,0.62,1.66,4.81,1.06,4.35,8.05,4.25,2.19,15.87,3.96
+423,209,"male","Gregory Maguire","American","Lost",98166,11.46,14.76,2.41,0.46,1.89,4.59,0.67,4.72,8.22,4.44,2.26,16.64,3.95
+424,209,"male","Gregory Maguire","American","Mirror, Mirror",72035,14.09,14.84,2.28,0.66,1.3,5.66,0.95,3.98,7.65,3.8,1.85,15.49,4.3
+425,210,"male","Thomas Mallon","American","Finale",154800,14.92,13.34,1.28,0.41,0.93,5.13,0.74,4.84,8.12,4.68,1.48,16.43,4.41
+426,210,"male","Thomas Mallon","American","Watergate",152256,16.57,13.75,1.19,0.28,0.91,5.88,0.82,4.66,8.39,4.69,1.56,16.65,4.31
+427,211,"male","Armistead Maupin","American","Babycakes",81702,7.04,18.45,2.9,0.54,2.13,7.15,0.68,5.03,8.24,4.96,2.08,17.45,3.78
+428,211,"male","Armistead Maupin","American","Further Tales of the City",81355,8.02,17.37,3.22,0.65,2.39,5.04,0.75,5.31,8.48,5.13,2,17.61,3.73
+429,211,"male","Armistead Maupin","American","Mary Ann in Autumn",71472,9.89,17.75,2.13,0.46,1.83,6.52,0.87,5.91,9.27,5.71,2.07,18.06,4.19
+430,211,"male","Armistead Maupin","American","Maybe the Moon",83157,10.22,19.35,6.42,0.74,1.57,4.36,0.57,5.68,8.36,5.71,2.14,17.56,4.62
+431,211,"male","Armistead Maupin","American","Michael Tolliver Lives",64104,9.02,18.81,5.72,1.03,1.85,4.4,0.55,5.24,8.46,5.26,2.06,17.76,4.53
+432,211,"male","Armistead Maupin","American","More Tales of the City",70615,7.78,17.81,3.59,0.56,2.72,5.26,0.62,5.05,8.51,4.72,2.38,17.36,3.67
+433,211,"male","Armistead Maupin","American","Significant Others",74313,7.51,17.45,2.63,0.55,2.11,6.68,0.74,4.73,7.7,4.76,2.04,17.98,3.86
+434,211,"male","Armistead Maupin","American","Sure of You",64220,7.09,18.48,2.62,0.53,2.29,6.75,0.75,5.53,8.68,5.3,2.25,18.76,4.03
+435,211,"male","Armistead Maupin","American","Tales of the City",71380,6.39,17.71,3.82,0.5,3.02,5.18,0.45,4.74,8.53,4.64,2.34,17.01,3.76
+436,211,"male","Armistead Maupin","American","The Days of Anna Madrigal",66334,9.57,16.59,2.05,0.45,1.73,5.83,0.88,5.63,8.97,5.16,2.12,17.48,4.23
+437,211,"male","Armistead Maupin","American","The Night Listener",86247,9.71,20.07,6.63,0.7,2,3.84,0.58,6.3,9.56,6.04,2.3,18.35,4.28
+438,212,"male","Joe Okonkwo","American","Jazz Moon",96695,9.01,15.19,1.84,0.28,1.66,6.09,1.3,3.99,6.15,4.31,1.92,14.34,4.19
+439,213,"male","Joseph Olshan","American","Black Diamond Fall",71169,11.69,16.08,2.2,0.48,1.79,5.83,0.99,4.75,7.82,5.59,1.76,17.49,3.57
+440,214,"male","Dale Peck","American","Martin and John",67221,15.94,19.86,7.65,0.81,0.84,5.04,0.66,4.84,6.23,4.93,1.81,16.23,3.94
+441,214,"male","Dale Peck","American","Night Soil",73881,27.05,13.61,3.12,0.29,0.52,3.25,1.1,5.33,6.58,4.28,1.68,12.7,5.13
+442,214,"male","Dale Peck","American","Now It's Time to Say Goodbye",184668,17.05,18.1,6.01,0.38,1.21,4.4,0.6,5.49,7.42,5.13,2.08,16.74,4.3
+443,214,"male","Dale Peck","American","The Garden of Lost and Found",113369,15.99,17.02,6.13,0.32,1.17,3.67,0.59,5.13,7.06,4.57,1.66,15.31,4.51
+444,214,"male","Dale Peck","American","The Law of Enclosures",109799,18.49,18.6,2.25,0.29,1.12,8.43,1.17,5.33,7.61,4.83,1.82,17.24,4.34
+445,215,"male","Felice Picano","American","Late in the Season",59480,11.08,16.57,1.57,0.17,1.33,7.54,0.98,4.95,8.94,5.97,1.99,18.26,4.82
+446,215,"male","Felice Picano","American","The Lure",125005,9.67,15.29,1.79,0.33,1.78,5.58,0.82,4.97,8.71,5.07,2.06,18.71,4.39
+447,216,"male","Darryl Pinckney","American","Black Deutschland",96880,15.61,15.07,4.13,0.55,0.35,5.01,1,4.02,8.04,3.88,1.96,16.22,4.07
+448,217,"male","John Rechy","American","City of Night",144466,15.31,17.05,4.88,0.53,1.45,4.5,0.68,4.97,6.72,5,1.31,15.63,4.27
+449,218,"male","Christopher Rice","American","Dance of Desire",43985,10.52,20.05,2.82,0.39,2.61,8.17,0.63,5.43,8.53,5.89,2.24,18.23,4.25
+450,218,"male","Christopher Rice","American","Kiss The Flame",40022,11.57,19.23,2.78,0.36,2.37,7.54,0.75,5.41,8.7,5.39,2.3,17.11,4.81
+451,218,"male","Christopher Rice","American","The Flame",31250,12.35,17.49,1.61,0.26,1.29,8.05,1.15,5.11,7.74,5.16,2.03,15.35,4.61
+452,219,"male","Paul Russell","American","Boys of Life",125272,15.2,22.28,6.84,0.8,1.38,4.27,0.83,8.12,9.84,7.11,2.21,21.23,3.48
+453,219,"male","Paul Russell","American","Immaculate Blue",72932,11.23,17.67,2.85,0.63,1.71,5.24,1.11,6.11,9.32,6.3,2.62,18.39,4.5
+454,219,"male","Paul Russell","American","The Unreal Life of Sergey Nabokov",105762,13.68,16.97,5.76,1.23,1.34,3.84,0.6,4.19,7.82,4.84,1.75,14.91,4.59
+455,220,"male","Steven Saylor","American","A Mist of Prophecies",92112,12.52,16.71,4.37,0.55,1.43,5.11,0.88,4.36,7.67,4.54,1.64,15.98,4.05
+456,220,"male","Steven Saylor","American","Arms of Nemesis",104984,13.81,14.37,3.93,0.61,1.12,3.86,0.83,4.01,6.74,4.32,1.54,14.25,4.38
+457,220,"male","Steven Saylor","American","Roman Blood",137616,12.78,15.31,3.97,0.52,1.29,4.67,0.83,4.01,6.92,4.61,1.7,14.82,4.59
+458,220,"male","Steven Saylor","American","The Venus Throw",121467,12.33,16.34,4.41,0.56,1.72,4.29,0.76,4.6,7.63,4.83,1.67,16.14,4.25
+459,221,"male","Michael Sledge","American","The More I Owe You",104104,12.92,13.93,1.68,0.32,1.39,5.31,1.15,4.08,8.33,4.95,1.81,16.15,4.54
+460,222,"male","Charles Warren Stoddard","American","For the Pleasure of His Company",61506,24.25,14.91,2.02,0.35,1.2,5.67,0.89,4.76,8.59,4.22,1.83,14.76,4.58
+461,223,"male","Glenway Wescott","American","Apartment in Athens",73514,20.88,17.07,1.26,0.39,0.93,7.31,1.49,5.67,7.39,4.56,2.01,14.54,5.05
+462,223,"male","Glenway Wescott","American","The Pilgrim Hawk",25288,17.45,16.29,3.22,0.71,0.79,5.19,1.09,5.28,6.92,4.6,1.7,14.14,5.07
+463,224,"male","Edmund White","American","A Boy's Own Story",74826,18.74,15.17,5.02,0.79,0.54,4.48,0.67,3.65,6.68,3.82,1.29,13.09,5.31
+464,224,"male","Edmund White","American","Our Young Man",83737,13.77,14.55,1.43,0.3,1.38,6.02,1.25,4.16,8.62,4.48,1.78,16.72,5.18
+465,225,"male","George Whitmore","American","Nebraska",42826,11.74,17.14,4.73,0.71,1.8,5.12,0.75,4.01,8.38,5.54,1.97,18.37,3.01
+466,226,"male","Mark Richard Zubro","American","An Echo of Death",62313,10.78,16.68,4.79,2.35,1.17,3.29,1.12,3.93,7.84,3.75,1.88,18.33,3.88
+467,226,"male","Mark Richard Zubro","American","Political Poison",59052,9.8,14.94,2.27,0.81,1.23,4.92,1.77,3.92,7.49,3.53,1.85,18.31,4.16
+468,226,"male","Mark Richard Zubro","American","Rust On the Razor",63414,9.97,16.88,5.33,1.33,1.64,3.73,0.78,4.06,8.35,4.07,2.08,18.2,4.34
+469,226,"male","Mark Richard Zubro","American","The Only Good Priest",61101,10.12,15.67,4.09,2.09,0.97,4.27,1.07,3.2,6.26,3.56,1.68,16.04,4.6
+470,226,"male","Mark Richard Zubro","American","The Principal Cause of Death",60519,10.36,18.49,5.99,1.51,1.63,4.56,0.83,3.95,8.12,3.85,2.06,18.95,3.9
+471,226,"male","Mark Richard Zubro","American","Why Isn't Becky Twitchell Dead",61116,9.47,18.02,5.16,1.75,1.26,5.04,1.08,3.73,7.31,3.63,1.8,17.28,4.43
+472,227,"female","Amber Dawn","Canadian","Sodom Road Exit",107567,9.92,16.74,6.93,0.85,1.45,3.35,0.53,3.62,7.02,4.29,1.69,14.96,4.64
+473,228,"female","Kristyn Dunnion","Canadian","Tarry This Night",55655,9.38,14.13,0.79,0.56,0.81,7.15,1.19,3.62,6.09,3.73,1.61,12.95,4.38
+474,229,"female","Helen Humphreys","Canadian","The Evening Chorus",54370,13.36,13.78,1.31,0.16,0.88,5.72,1.37,4.34,7.75,4.89,1.75,15.89,3.98
+475,229,"female","Helen Humphreys","Canadian","The Frozen Thames",26091,15.53,12.78,2.38,0.51,0.34,3.36,1.34,4.84,8.65,4.09,1.37,14.77,4.21
+476,229,"female","Helen Humphreys","Canadian","The Reinvention of Love",69987,12.36,18.55,7.34,1.11,1.01,3.82,0.6,4.66,9.14,4.69,1.84,16.94,3.95
+477,230,"female","Tamai Kobayashi","Canadian","Prairie Ostrich",51934,10.99,12.13,0.36,0.16,0.75,6.58,0.8,3.48,6.08,3.36,1.47,12.81,4.01
+478,231,"female","Lydia Kwa","Canadian","Oracle Bone",63214,11.65,14.65,1.77,0.34,1.24,6.35,0.78,4.17,6.61,3.99,1.33,13.97,4.05
+479,232,"female","Cheryl Rainfield","Canadian","Scars",52483,8.63,24.09,10.86,0.64,2.77,4.04,0.49,5.28,8.73,5.39,2.86,19.72,3.84
+480,232,"female","Cheryl Rainfield","Canadian","Stained",61525,8.85,22.72,10.54,0.65,1.95,4.07,0.86,4.65,8.56,5.22,2.48,19.56,4.01
+481,233,"female","Jane Rule","Canadian","Against the Season",73206,10.4,16.44,2.71,0.32,1.97,5.54,0.77,5.12,10.5,5.55,3.23,21.1,4.04
+482,233,"female","Jane Rule","Canadian","Contract With the World",104807,12.97,16.66,3.02,0.35,1.42,5.99,0.86,5.01,10.63,5.38,2.92,19.43,4.55
+483,233,"female","Jane Rule","Canadian","Desert of the Heart",72591,10.29,15.37,2.51,0.29,1.88,5.59,0.82,4.26,9.7,4.69,2.74,18.89,4.06
+484,233,"female","Jane Rule","Canadian","Inland Passage",79780,13.21,16.04,2.89,0.58,1.23,5.69,1.2,4.43,9.64,5.37,2.55,18.68,4.49
+485,233,"female","Jane Rule","Canadian","Memory Board",90137,13.41,16.55,2.03,0.46,1.52,6.31,1.35,4.86,10.28,5.38,2.51,19.65,4.5
+486,233,"female","Jane Rule","Canadian","This Is Not for You",92798,11.79,18.96,5.76,1.07,3.29,3.35,0.45,5.02,10.52,5.66,3.13,19.97,4.55
+487,234,"female","Karen X. Tulchinsky","Canadian","The Five Books of Moses Lapinsky",163512,8.98,13.86,1.54,0.35,1.17,6.34,1.05,3.38,7.27,4.07,1.65,15.4,4.16
+488,235,"female","Hilary Bonner","British","Deadly Dance",89537,11.25,18.12,5.28,0.54,1.26,5.17,0.65,5.17,10.51,5.99,2.47,18.95,4.74
+489,236,"female","Joanna Briscoe","British","Sleep With Me",84737,10.25,20.64,9.21,0.92,1.29,5.14,0.33,3.72,6.49,4.5,1.43,15.95,4.38
+490,236,"female","Joanna Briscoe","British","You",109538,10.46,17.94,2.25,0.22,1.6,9.43,0.68,3.74,6.56,4.35,1.47,15.79,3.71
+491,237,"female","Nicola Griffith","British","Always",168526,9.19,17.44,4.95,0.59,2.51,3.54,0.82,5.01,8.2,4.66,2.04,17.52,4.15
+492,237,"female","Nicola Griffith","British","So Lucky",39238,9.84,16.65,6.4,0.68,1.52,2.69,0.8,4.54,8.07,4.43,2.25,16.96,4.49
+493,238,"female","Radclyffe Hall","British","The Unlit Lamp",112804,14.9,17.55,2.52,0.25,1.74,6.83,1.08,5.11,9.06,4.97,2.08,18.27,4.54
+494,238,"female","Radclyffe Hall","British","The Well of Loneliness",165713,20.3,15.68,1.75,0.25,1.29,6.1,1.28,5,8.34,5.36,1.57,16.31,5.01
+495,239,"female","Amy Levy","British","The Romance of a Shop",50649,17.36,13.87,1.45,0.64,1.27,5.09,0.85,4.57,7.44,3.76,1.52,15.05,5.11
+496,240,"female","Maureen Duffy","British","The Microcosm",122616,14.81,17.72,3.54,1.03,2.64,3.35,1.48,5.64,9.31,5.85,2.57,18.54,4.64
+497,241,"female","Rosemary Manning","British","The Chinese Garden",41604,15.04,14.52,3.03,0.79,0.92,4.06,0.86,4.85,7.04,3.96,1.68,14.53,4.5
+498,242,"female","Valerie Mason-John","British","Borrowed Body",68010,13.34,17.7,7.58,1.63,1.45,3.04,0.68,3.32,6.69,3.83,1.44,16.61,3.97
+499,243,"female","Charlotte Mendelson","British","Almost English",90609,10.67,16.33,1.78,0.27,1.3,7.31,1.1,4.56,8.94,5.22,2.29,17.39,4.29
+500,244,"female","Stella Duffy","British","Beneath the Blonde",72033,15.34,14.34,2.42,0.43,1.09,5.08,1.2,4.1,7.71,5.25,1.92,15.97,5.3
+501,244,"female","Stella Duffy","British","Calendar Girl",53624,11,18.77,5.27,0.88,1.84,5.32,0.81,4.64,9.35,5.95,2.58,19.27,4.72
+502,244,"female","Stella Duffy","British","Fresh Flesh",80885,13.81,15.08,2.02,0.33,1.4,5.6,1.04,4.67,9.28,5.89,2.57,18,5.39
+503,244,"female","Stella Duffy","British","Mouths of Babes",67813,11.33,16.89,2.14,0.62,1.78,5.87,1.35,5.11,9.72,6.57,2.78,19.71,5.29
+504,244,"female","Stella Duffy","British","Wavewalker",70099,13.55,16.6,2.74,0.43,1.97,5.86,0.96,4.64,9.02,5.82,2.16,18.07,4.92
+505,245,"female","Shamim Sarif","British","Despite the Falling Snow",103413,12.5,19.32,1.8,0.32,1.31,9.84,0.97,5.06,8.32,5.37,1.75,17.26,4.16
+506,245,"female","Shamim Sarif","British","I Can't Think Straight",54744,14.51,15.76,1.08,0.19,1.04,8.04,0.72,4.7,7.45,4.34,1.55,15.96,4.3
+507,245,"female","Shamim Sarif","British","The World Unseen",85524,13.7,16.88,1.36,0.22,1.09,9.1,1.16,3.95,7.11,4.92,1.61,17.73,3.96
+508,246,"female","Renée Vivien","British","A Woman Appeared to me",30570,13.19,16.38,5.84,0.41,2.14,2.91,0.93,4.16,6.44,3.53,1.71,12.72,5.53
+509,247,"female","Sylvia Townsend Warner","British","Lolly Willowes",52311,16.07,13.74,0.74,0.08,0.55,6.81,1.3,4.26,7.96,4.33,1.5,15.84,4.8
+510,247,"female","Sylvia Townsend Warner","British","Summer Will Show",113283,16.63,14.34,1.9,0.28,1,5.5,1.06,4.61,7.89,4.29,1.51,14.88,4.29
+511,248,"female","Jeanette Winterson","British","Lighthousekeeping",35509,12.79,16.76,3.75,0.61,1.36,5.69,0.73,4.59,8.26,4.26,1.93,16.79,4.08
+512,248,"female","Jeanette Winterson","British","Oranges Are Not the Only Fruit",51576,12.13,17.51,5.17,0.96,1.29,4.3,0.98,4.8,8.71,4.4,2.02,18.38,4.22
+513,248,"female","Jeanette Winterson","British","Sexing the Cherry",45204,16.23,16.3,5.17,1.12,0.58,3.7,1.27,4.45,7.84,3.9,1.81,15.86,4.31
+514,248,"female","Jeanette Winterson","British","The Daylight Gate",33967,9.43,16.54,2.23,0.37,1.78,7.49,0.95,3.71,8.58,3.04,1.82,17.29,3.21
+515,248,"female","Jeanette Winterson","British","The Passion",50909,13.4,18.03,4.86,1.7,1.03,4.7,1.15,4.58,8.24,4.55,2.11,16.75,4.09
+516,248,"female","Jeanette Winterson","British","The Stone Gods",65926,11.96,15.45,4.03,1.38,1.54,2.07,0.9,5.51,9.11,4.15,2.35,17.12,4.54
+517,248,"female","Jeanette Winterson","British","Written on the Body",50603,11.1,17.51,5.87,0.73,2.22,3.44,0.69,4.55,9.21,3.82,2.27,17.36,4.11
+518,249,"female","Virginia Woolf","British","Between the Acts",45619,10.14,13.72,1.48,0.73,0.66,5.66,1.31,3.86,6.42,3.52,1.36,14.06,3.36
+519,249,"female","Virginia Woolf","British","Jacob's Room",55423,15.81,11.01,0.63,0.29,0.55,4.65,1,3.88,5.79,4.29,1.17,13.8,4.48
+520,249,"female","Virginia Woolf","British","Mrs Dalloway",64254,17.81,14.93,0.32,0.12,0.23,7.89,1.22,5.14,7.63,4.65,1.57,16.2,4.26
+521,249,"female","Virginia Woolf","British","Night and Day",167694,18.52,16.92,1.62,0.36,1.07,7.7,1.06,5.1,7.29,4.21,1.73,15.53,4.29
+522,249,"female","Virginia Woolf","British","Orlando: A Biography",79292,23.15,12.86,0.38,0.5,0.13,5.53,1.16,5.16,6.99,4.53,1.28,13.4,4.72
+523,249,"female","Virginia Woolf","British","The Voyage Out",137494,16.7,15.42,1.61,0.37,1.01,5.74,1.74,4.94,7.58,4.57,1.57,16.52,4.82
+524,249,"female","Virginia Woolf","British","The Waves",78010,15.14,14.35,5.09,1.42,0.56,1.62,1.13,4.53,6.45,4,1.24,13.54,4.04
+525,249,"female","Virginia Woolf","British","To the Lighthouse",69945,19.83,17,0.23,0.13,0.23,8.75,1.63,6.02,7.78,4.75,1.52,16.91,3.84
+526,250,"female","Emma Donoghue","Irish-Canadian","Frog Music",113400,11.51,14.75,1.11,0.26,1.22,6.7,0.76,4.69,6.93,4.42,1.91,14.77,3.84
+527,250,"female","Emma Donoghue","Irish-Canadian","Room",91723,9.77,20.01,7.15,1.32,1.6,4.08,0.68,5.16,9.59,5.62,2.75,20.1,3.94
+528,250,"female","Emma Donoghue","Irish-Canadian","The Sealed Letter",96074,12.49,15.72,2.53,0.39,1.75,5.8,0.59,4.66,7.41,4.18,1.82,15,3.96
+529,250,"female","Emma Donoghue","Irish-Canadian","The Wonder",82968,10.41,13.44,1.32,0.3,1.31,5.44,0.68,4.4,7.72,4.3,1.98,15.94,3.96
+530,251,"female","Ali Smith","Scottish","Artful",40090,20.2,14.99,3.18,0.86,1.96,2.08,0.6,6.3,7.6,5,1.48,15.83,3.96
+531,251,"female","Ali Smith","Scottish","Girl Meets Boy",28926,10.95,18.47,5.45,1.48,1.42,2.8,1.15,6.16,8.81,5.25,1.84,18.7,4.38
+532,251,"female","Ali Smith","Scottish","Hotel World",61160,14.99,16.52,2.53,0.28,1.19,5.07,1.13,6.29,8.51,4.9,1.62,17.22,4.05
+533,251,"female","Ali Smith","Scottish","How to Be Both",104533,16.18,17.02,3.53,0.46,1.48,4.41,1.04,6.07,7.98,5.02,1.61,17.4,4.14
+534,251,"female","Ali Smith","Scottish","The Accidental",86512,11.4,15.59,0.97,0.18,0.99,6.18,1.17,6.07,8.42,5.15,1.68,17.2,4.28
+535,251,"female","Ali Smith","Scottish","There But For The",78904,12.98,15.8,1.58,0.45,1.43,5.09,0.99,6.22,8.96,5.48,1.76,18.88,3.58
+536,251,"female","Ali Smith","Scottish","Winter",68471,12.02,16.67,1.99,0.49,1.51,5.41,1.08,6.16,8.12,5.35,1.84,17.69,3.98
+537,252,"female","Selma Lagerlöf","Swedish","Jerusalem",78132,15.87,15.85,1.85,0.48,1.11,5.78,1.4,5.23,8.85,4.9,1.76,18.52,4.36
+538,252,"female","Selma Lagerlöf","Swedish","The Story of Gösta Berling",129441,14.54,16.05,1.4,0.34,1.33,6.9,1.48,4.61,8.54,4.12,1.97,16.59,4.35
+539,253,"female","Laura Antoniou","American","The Killer Wore Leather",121680,12.39,15.4,2.12,0.59,1.65,5.03,1.17,4.82,7.56,4.79,1.67,16.28,4.16
+540,254,"female","Ellis Avery","American","The Teahouse Fire",151131,14.61,15.53,5.07,0.63,0.94,4.67,0.81,3.41,5.93,4.01,1.35,14.9,4.84
+541,255,"female","Lucy Jane Bledsoe","American","A Thin Bright Line",114813,10.08,16.1,2.63,0.43,1.88,5.96,1.04,4.15,7.88,4.7,1.95,17.2,4.35
+542,256,"female","Blanche McCrary Boyd","American","Tomb of the Unknown Racist",85059,12.5,18.19,5.96,0.85,2.01,3.98,0.76,4.61,9.25,4.86,1.97,18.72,4.03
+543,257,"female","Rita Mae Brown","American","In Her Day",51816,10.33,17.59,3.98,1.31,2.48,3.62,0.97,5.2,8.84,4.61,2.31,18.23,4.56
+544,257,"female","Rita Mae Brown","American","Rubyfruit Jungle",62287,11.29,19.43,6.28,1.13,2.85,3.5,0.65,5.01,9.2,4.73,2.51,19.31,4.35
+545,258,"female","Jessie Chandler","American","Bingo Barge Murder",61466,11.28,15.5,5.46,1.38,1.12,3.55,0.44,3.54,6.21,3.56,1.32,14.74,4.11
+546,258,"female","Jessie Chandler","American","Chip Off the Old Ice Block",81181,10.89,16.1,5.87,0.94,1.13,3.65,0.37,4.13,7.33,4.26,1.66,15.82,3.94
+547,258,"female","Jessie Chandler","American","Hide and Snake Murder",70822,10.43,15.34,5.43,1.31,1.25,3.37,0.52,3.42,6.45,3.62,1.36,14.95,4.2
+548,258,"female","Jessie Chandler","American","Pickle in the Middle Murder",68034,10.78,16.14,5.67,0.91,1.04,3.85,0.47,4.17,7.14,4.57,1.42,15.35,4.23
+549,259,"female","Florence Converse","American","Long Will",89629,13.98,14.44,2.66,0.44,1.56,5.25,1.3,3.23,6.56,3.78,1.63,14.35,3.35
+550,259,"female","Florence Converse","American","The Story of Wellesley",60432,26.85,8.59,0.66,0.63,0.16,2.3,0.82,4.02,6.17,2.58,0.96,10.81,4.53
+551,260,"female","Katherine V. Forrest","American","Amateur City",60126,10.83,15.11,2.67,0.47,1.81,5.49,0.53,4.12,7.29,4.03,1.7,15.61,4.01
+552,260,"female","Katherine V. Forrest","American","Apparition Alley",71715,11.94,16.57,2.8,0.42,2.68,5.23,0.58,4.85,7.93,3.92,1.81,16.26,3.76
+553,260,"female","Katherine V. Forrest","American","Curious Wine",50376,9.61,18.46,3.86,0.59,2.95,6.3,0.62,4.14,7.66,4.7,1.74,17.91,4.22
+554,260,"female","Katherine V. Forrest","American","Hancock Park",64693,11.84,16.27,2,0.71,2.04,5.92,0.76,4.82,8.55,4.32,1.99,16.94,3.86
+555,260,"female","Katherine V. Forrest","American","High Desert",76757,12.45,16.26,2.27,0.38,1.84,6.98,0.51,4.26,7.63,4.53,1.65,16.04,4
+556,260,"female","Katherine V. Forrest","American","Liberty Square",58055,13.03,15.18,1.96,0.74,1.62,5.49,0.86,4.5,7.39,4.33,1.63,16.14,3.89
+557,260,"female","Katherine V. Forrest","American","Murder At The Nightwood Bar",59501,13.06,15.65,2.19,0.75,1.63,6.17,0.7,4.19,7.16,4.38,1.58,15.69,3.75
+558,260,"female","Katherine V. Forrest","American","Murder By Tradition",59829,10.94,15.36,1.89,0.62,2.04,6.08,0.43,4.29,6.97,3.8,1.51,15.57,3.59
+559,260,"female","Katherine V. Forrest","American","Sleeping Bones",71292,12.29,15.72,2.19,0.82,1.82,5.62,0.6,4.65,7.1,3.95,1.62,15.22,3.75
+560,260,"female","Katherine V. Forrest","American","The Beverly Malibu",62340,11.55,15.26,2.01,0.79,1.53,6.28,0.51,4.13,6.89,3.93,1.52,14.98,3.86
+561,261,"female","Judith Frank","American","All I Love and Know",147382,14.69,16.57,1.23,0.28,1.02,7.99,1.54,4.5,7.27,4.22,1.4,17.38,3.82
+562,262,"female","Ellen Galford","American","The Fires of Bride",86266,12.77,13.6,2.41,0.52,2.25,3.19,0.99,4.24,7.18,4.5,1.76,13.9,4.53
+563,263,"female","Jewelle Gomez","American","The Gilda Stories",100217,13.78,15.54,1.52,0.47,1.15,7.25,1.2,3.92,7.03,4.49,1.54,16.13,4.62
+564,264,"female","Ellen Hart","American","Night Vision",95302,8.89,19.22,3.24,0.48,2.34,7.58,0.62,4.93,9.42,4.84,2.18,19.89,4.03
+565,264,"female","Ellen Hart","American","Sweet Poison",89732,9.29,18.92,3.48,0.51,2.47,6.9,0.53,5.02,9.29,5.04,2.16,19.78,3.98
+566,265,"female","Patricia Highsmith","American","Ripley Under Ground",92588,10.3,13.75,2.02,0.27,1.24,4.97,0.67,4.53,8.92,4.6,2.1,18.68,3.47
+567,265,"female","Patricia Highsmith","American","Ripley's Game",90519,11.21,13.16,1.6,0.25,1.3,4.87,0.65,4.47,8.94,4.38,1.97,18.48,3.72
+568,265,"female","Patricia Highsmith","American","Strangers on a Train",91337,11.25,16.89,1.4,0.16,1.3,8.87,0.61,4.55,8.33,4.79,2.13,18.18,4.11
+569,265,"female","Patricia Highsmith","American","The Price of Salt",90206,11.06,16.07,1.94,0.24,1.77,6.48,0.82,4.77,8.22,4.93,2.21,18.83,4.12
+570,265,"female","Patricia Highsmith","American","The Talented Mr. Ripley",94257,13.82,14.99,1.48,0.24,1.03,6.97,0.88,4.38,8.48,4.96,1.85,18.05,3.83
+571,266,"female","Helen Rose Hull","American","Islanders",86204,10,16.95,2.06,0.19,1.88,8.57,0.68,3.57,7.4,3.87,1.82,16.73,4.67
+572,267,"female","Karin Kallmaker","American","Above Temptation",82176,11.36,16.24,2.43,0.49,1.44,6.16,0.92,4.79,9.92,4.8,2.39,18.54,4.48
+573,267,"female","Karin Kallmaker","American","Captain of Industry",91292,10.94,15.61,2.48,0.38,1.73,5.33,0.73,4.95,9.4,4.55,2.14,17.91,4.64
+574,267,"female","Karin Kallmaker","American","Christabel",62516,11.38,17.98,3.45,0.44,1.33,7.68,0.77,4.3,9.23,4.53,2.35,18.58,4.53
+575,267,"female","Karin Kallmaker","American","Comfort and Joy",14894,11.49,15.96,2.83,0.4,1.28,5.84,1.08,4.52,9.42,4.92,2.33,18.45,5.34
+576,267,"female","Karin Kallmaker","American","Embrace in Motion",60674,11.35,16.47,3.35,0.53,1.68,5.74,0.73,4.43,9.23,4.84,2.09,19.23,4.22
+577,267,"female","Karin Kallmaker","American","Finders Keepers",81454,10.89,16.76,3.32,0.37,2.2,5.4,0.63,4.83,9.41,4.99,2.43,18.66,4.71
+578,267,"female","Karin Kallmaker","American","Just Like That",63718,10.8,16.96,3.26,0.53,2.04,5.38,0.78,4.96,10.09,5.03,2.59,19.46,4.42
+579,267,"female","Karin Kallmaker","American","Love by the Numbers",95173,12.24,14.86,1.84,0.44,1.23,6.09,0.88,4.38,9.16,4.48,2.09,17.58,4.73
+580,267,"female","Karin Kallmaker","American","Maybe Next Time",80233,9.83,17.37,2.36,0.24,1.65,7.11,0.75,5.25,10.01,5.36,2.86,19.8,4.06
+581,267,"female","Karin Kallmaker","American","One Degree of Separation",62610,8.96,16.75,3.51,0.39,1.75,5.47,0.57,5.05,9.87,5,2.49,19.46,4.53
+582,267,"female","Karin Kallmaker","American","Painted Moon",52772,10.16,17.01,2.67,0.22,1.68,7.68,0.67,4.07,9.02,4.66,2.14,18.72,4.09
+583,267,"female","Karin Kallmaker","American","Paperback Romance",60201,11.82,15.38,2.61,0.22,1.5,6.51,0.58,3.93,8.77,4.68,1.99,18.09,4.47
+584,267,"female","Karin Kallmaker","American","Stepping Stone",78596,12.62,15.88,2.12,0.45,1.5,6.22,0.8,4.78,9.43,5.11,2.23,18.27,4.38
+585,267,"female","Karin Kallmaker","American","Touchwood",70306,10.48,16.37,3.42,0.36,1.96,5.88,0.79,3.95,8.73,4.78,2.17,18.78,4.14
+586,267,"female","Karin Kallmaker","American","Unforgettable",71398,10.66,16.67,2.99,0.38,1.91,5.88,0.66,4.83,10,4.88,2.24,19.41,4.27
+587,267,"female","Karin Kallmaker","American","Warming Trend",86961,11.14,15.92,2.48,0.41,1.66,5.4,0.9,5.06,9.76,5.08,2.34,18.91,4.71
+588,267,"female","Karin Kallmaker","American","Wild Things",59187,11.22,19.51,7.96,0.56,1.45,4.64,0.49,4.4,9.44,4.59,2.36,19.25,4.15
+589,268,"female","Audre Lorde","American","Zami: A New Spelling of My Name",105824,17.52,15,5.86,1.34,0.68,2.43,0.61,4.08,6.51,4.34,1.59,14.42,5.07
+590,269,"female","B. K. Loren","American","Theft",77382,12.56,18.74,4.05,0.76,0.98,6.99,1.08,4.86,6.75,5.01,1.88,17.01,3.99
+591,270,"female","Paula Martinac","American","The Ada Decades",54109,12.94,15.69,2.09,0.44,1.63,6.45,0.8,4.27,8.08,4.91,1.95,17.44,4.27
+592,271,"female","Valerie Miner","American","All Good Women",167451,9.64,15.43,1.62,0.47,1.39,6.89,0.96,4.09,8.86,5.24,1.74,18.18,4.55
+593,271,"female","Valerie Miner","American","Murder in the English Department",60427,10.93,13.41,1.42,0.32,1.2,5.67,0.74,4.03,8.2,4.73,1.69,16.74,4.91
+594,272,"female","Vin Packer","American","5:45 to Surburbia",55041,12.13,18,2.89,0.52,1.9,6.36,0.81,5.52,8.87,5.16,2.28,18.97,4
+595,272,"female","Vin Packer","American","Come Destroy Me",45431,9.6,19.86,2.25,0.16,1.54,10.33,0.49,5.08,9.44,4.89,2.45,20.53,4.43
+596,272,"female","Vin Packer","American","Dark Don't Catch Me",66070,11.59,17.76,2.84,0.6,2.55,6.08,0.81,4.87,7.46,5.11,2.43,17.58,4.24
+597,272,"female","Vin Packer","American","Spring Fire",53150,11.08,16.71,2.69,0.49,1.92,6.44,0.94,4.22,7.95,4.42,1.89,18.95,4.12
+598,272,"female","Vin Packer","American","The Evil Friendship",47371,10.53,17.02,3,0.8,1.96,5.13,1.03,5.1,8.46,4.97,2.01,18,3.95
+599,272,"female","Vin Packer","American","The Girl on the Best Seller",52935,11.7,18.16,2.36,0.3,1.84,7.46,0.66,5.52,9.66,5.66,2.22,19.23,3.79
+600,273,"female","Nina Revoyr","American","The Age of Dreaming",110649,15.63,16.73,5.24,0.8,1.21,3.97,0.59,4.91,8.12,5.09,1.69,16.08,4.64
+601,273,"female","Nina Revoyr","American","The Necessary Hunger",126750,15.13,18.12,5.6,1.57,1.12,3.98,0.92,4.91,8.01,5.38,1.81,17.85,4.6
+602,273,"female","Nina Revoyr","American","Wingshooters",75184,16.44,17.34,4.78,0.66,0.72,5.11,1.16,4.9,8.17,5.32,1.88,17.79,4.31
+603,274,"female","May Sarton","Belgian-American","A Reckoning",71307,12.38,16.65,3.09,0.52,1.73,5.25,0.54,5.49,10.31,5.98,2.11,20.16,4.42
+604,274,"female","May Sarton","Belgian-American","A Shower of Summer Days",61190,15.42,15.78,1.31,0.36,1.06,6.7,0.93,5.4,9.01,5.53,2.07,18.53,5.71
+605,274,"female","May Sarton","Belgian-American","As We Are Now",35799,13.23,18.06,6.96,0.65,0.83,2.96,0.93,5.72,10.17,6.01,2.12,19.16,4.48
+606,274,"female","May Sarton","Belgian-American","Crucial Conversations",37998,11.59,17.86,3.04,0.57,2.04,5.7,0.64,5.85,10.68,5.57,2.52,19.9,4.46
+607,274,"female","May Sarton","Belgian-American","Kinds of Love",128288,13.02,15.34,2.49,0.82,1.15,4.7,0.94,5.22,9.14,5.91,1.8,18.72,4.63
+608,274,"female","May Sarton","Belgian-American","The Bridge of Years",116850,14.63,15.34,1.17,0.49,0.97,6.4,1.42,4.88,9.07,5.03,1.8,17.78,4.76
+609,274,"female","May Sarton","Belgian-American","The Small Room",58170,13.16,15.38,2.37,0.64,1.72,4.38,0.75,5.5,9.46,4.83,1.94,18.28,4.43
+610,275,"female","Sarah Schulman","American","After Delores",42350,11.58,18.9,5.79,0.51,1.78,4.28,0.94,5.58,8.93,5.67,1.91,19.05,4.3
+611,275,"female","Sarah Schulman","American","Empathy",38742,9.42,16.56,3.44,0.47,2.05,3.65,1.07,5.86,9.56,5.57,2.18,19.02,4.38
+612,275,"female","Sarah Schulman","American","Rat Bohemia",52893,11.01,16.82,5.1,1,1.35,2.88,1.11,5.35,8.37,5.65,1.72,17.75,4.28
+613,275,"female","Sarah Schulman","American","The Mere Future",43697,10.5,16.17,2.79,0.72,0.85,4.19,1.41,6.21,9.39,5.11,1.91,17.28,4.91
+614,276,"female","Sandra Scoppettone","American","Happy Endings Are All Alike",39264,8.06,20.77,3.24,0.41,2.4,7.52,0.98,6.21,10.9,5.6,2.85,22.53,3.8
+615,277,"female","Melissa Scott","American","Fairs' Point",96156,12.48,14.78,1.92,0.49,1.28,5.14,0.99,4.95,8.26,4.17,2.06,17.66,4.11
+616,277,"female","Melissa Scott","American","Ouroboros",91771,11.88,14.41,1.46,1.22,1.06,4.12,1.41,5.13,8.45,4.84,2.11,17.82,4.21
+617,277,"female","Melissa Scott","American","Point of Sighs",110618,12.55,14.49,1.86,0.63,1.21,5.17,0.97,4.65,8.08,4.1,1.85,17.19,4.18
+618,278,"female","Karin Slaughter","American","Broken",128465,9.47,16.44,1.75,0.25,1.41,8.11,0.68,4.22,10.03,4.54,2.01,19.73,3.71
+619,278,"female","Karin Slaughter","American","Cop Town",120711,8.34,16.45,1.37,0.31,1.58,7.73,1.13,4.31,9.01,4.49,2.05,18.54,3.67
+620,278,"female","Karin Slaughter","American","Criminal",135052,8.47,16.18,1.54,0.43,1.44,7.8,0.93,4.03,9.16,4.72,2.03,18.67,3.9
+621,278,"female","Karin Slaughter","American","Faithless",133783,10.54,18.02,2,0.43,1.57,8.85,0.76,4.39,8.79,4.78,1.95,20.06,3.85
+622,278,"female","Karin Slaughter","American","Fractured",126642,11.34,16.19,1.6,0.45,1.48,7.2,0.89,4.55,9.99,4.7,1.79,19.63,3.87
+623,278,"female","Karin Slaughter","American","Indelible",118674,10.79,18.2,1.94,0.29,1.54,9.14,0.75,4.52,8.39,4.82,2.06,19.98,3.73
+624,278,"female","Karin Slaughter","American","The Kept Woman",146462,8.95,16.09,1.49,0.35,1.35,7.87,0.65,4.38,9.74,4.33,1.96,19.39,3.41
+625,278,"female","Karin Slaughter","American","Triptych",129727,11.11,17.49,1.54,0.16,1.54,9.24,0.76,4.23,9.25,4.62,1.89,19.78,3.64
+626,279,"female","Gertrude Stein","American","Ida: A Novel",34533,14.93,19.6,1.57,0.18,0.85,8.46,2.07,6.45,11.95,7.19,3.81,23.68,3.57
+627,279,"female","Gertrude Stein","American","The Making of Americans",519287,30.95,17.84,1.29,0.07,0.1,5.17,3.86,7.34,13.21,6.14,1.87,21.2,3.98
+628,279,"female","Gertrude Stein","American","Three Lives",86044,21.11,17.84,2.31,0.1,2.1,6.77,1.01,5.55,9.79,8.21,2.96,19.56,4.71
+629,280,"female","Gale Wilhelm","American","Torchlight to Valhalla",33127,12.79,19.75,2.51,0.28,1.84,10.71,0.67,3.7,6.09,4.5,1.9,18.9,3.65
+630,281,"female","Andrea Goldsmith","Australian","The Memory Trap",100746,15.54,14.55,0.65,0.29,0.75,7.92,1.11,3.82,8.15,4.67,1.78,15.21,4.81
+631,282,"female","Henry Handel Richardson","Australian","Australia Felix",156036,17.11,13.85,1.39,0.2,1.02,6.2,0.79,4.24,7.59,4.2,1.72,14.68,4.58
+632,282,"female","Henry Handel Richardson","Australian","Maurice Guest",233602,16.87,17.67,1.71,0.15,1.54,8.37,0.78,5.12,8.36,4.57,2.1,16.71,4.68
+633,282,"female","Henry Handel Richardson","Australian","The Getting of Wisdom",73384,17.88,14.42,1.21,0.13,1.44,5.94,0.96,4.75,8.04,4.52,1.89,15.89,4.94
+634,282,"female","Henry Handel Richardson","Australian","The Way Home",111735,18.91,14.16,1.73,0.26,1.04,5.31,1.02,4.78,7.77,4.9,1.82,15.04,4.96
+635,282,"female","Henry Handel Richardson","Australian","Ultima Thule",115423,17.57,15.38,1.24,0.19,0.97,7.02,1.07,4.88,8.12,5.19,2.02,16.26,4.68
+636,284,"female","Mary MacLane","Canadian-American","I Await the Devil's Coming",46977,14.72,16.08,6.84,0.19,1.05,1.12,0.71,6.16,9,4.53,1.92,14.72,5.59
+637,283,"female","Catherine Hernandez","Canadian","Scarborough",55897,10.46,17.05,5.4,0.97,1.36,4.53,0.9,3.88,6.64,3.92,1.3,15.51,3.81
+638,285,"female","Aphra Behn","British","Oroonoko",29215,50.63,17.48,0.92,0.85,0.28,7.4,2.36,5.66,7.14,4.31,1.76,13.67,4.68
+639,285,"female","Aphra Behn","British","The Fair Jilt",18754,47.96,16.86,0.66,0.11,0.31,9.62,0.91,5.25,6.59,4.24,1.62,12.93,4.71
+640,285,"female","Aphra Behn","British","The History of the Nun: or, the Fair Vow-Breaker",22616,72.49,18.07,1.6,0.13,0.74,9.36,0.74,5.5,7.37,4.85,1.83,14.32,4.57
+641,286,"female","Vita Sackville-West","British","All Passion Spent",55766,19.81,14.93,1.2,0.21,0.76,6.6,1.41,4.74,8.02,4.74,1.77,14.87,4.63
+642,286,"female","Vita Sackville-West","British","Challenge",85719,16.62,15.68,1.99,0.32,1.72,7.02,1.21,3.43,6.37,3.54,1.45,13.37,4.4
+643,286,"female","Vita Sackville-West","British","Family History",87845,13.77,18.18,2.12,0.23,1.76,7.97,1.13,4.95,9.19,5.08,2.31,17.77,4.57
+644,286,"female","Vita Sackville-West","British","Passenger to Teheran",47136,30.41,10.5,1.87,1.14,0.21,1.63,1.3,4.33,6,4.07,1.41,11.54,5.19
+645,286,"female","Vita Sackville-West","British","Seducers in Ecuador",14755,16.75,14.14,0.98,0.16,0.67,6.57,1.31,4.45,7.8,4.36,1.95,15.2,4.23
+646,286,"female","Vita Sackville-West","British","The Heir",23273,18.57,13.05,0.81,0.25,0.62,5.84,1.15,4.39,6.96,3.98,1.53,14.07,4.3
+647,287,"female","Elizabeth Bowen","Irish-British","A World of Love",55354,13.69,14.82,1.65,0.26,1.49,5.18,0.91,5.3,8.81,5.58,2.5,17.91,3.99
+648,287,"female","Elizabeth Bowen","Irish-British","Friends and Relations",58236,12.96,14.76,1.92,0.5,1.31,5.92,1.26,3.83,9.5,5.17,2.63,18.32,4.23
+649,287,"female","Elizabeth Bowen","Irish-British","The Death of the Heart",120521,13.96,17.12,3.15,0.59,2.1,5.29,1.02,4.95,9.52,5.52,2.57,19.99,4.07
+650,287,"female","Elizabeth Bowen","Irish-British","The Heat of the Day",114576,15.49,17.47,2.73,0.49,2.06,5.16,0.83,6.16,10.55,5.52,2.77,19.71,4.18
+651,287,"female","Elizabeth Bowen","Irish-British","The Hotel",77106,16.58,15.84,2.15,0.37,1.35,5.99,1.35,4.62,8.81,4.99,2.15,18.29,4.16
+652,287,"female","Elizabeth Bowen","Irish-British","The Last September",80579,13.2,15.35,2.18,0.39,1.33,5.99,1.33,4.1,9.15,5.09,2.38,18.89,3.84
+653,287,"female","Elizabeth Bowen","Irish-British","The Little Girls",83052,10.52,16.02,2.51,0.58,2.17,4.15,1.09,5.49,9.64,5.69,2.75,19.03,4.33
+654,287,"female","Elizabeth Bowen","Irish-British","To the North",91512,15.38,15.12,1.98,0.4,1.38,6.3,1.03,4,8.54,4.82,2.41,17.82,4.67
+655,288,"female","Iris Murdoch","Irish-British","A Word Child",150683,11.47,18.69,7.11,0.66,2.08,3.22,0.32,5.28,10.27,5.59,2.6,19.25,4.36
+656,288,"female","Iris Murdoch","Irish-British","Bruno's Dream",93063,11.29,16.22,2.27,0.25,1.74,6.27,0.59,5.08,9.67,5.36,2.28,18.4,4.3
+657,288,"female","Iris Murdoch","Irish-British","The Italian Girl",47764,11.2,18.15,6.64,0.62,1.74,4.12,0.36,4.65,9.09,5.19,1.98,17.48,4.47
+658,288,"female","Iris Murdoch","Irish-British","The Sea, the Sea",200049,13.56,17.96,6.66,0.6,1.81,3.14,0.47,5.25,9.6,5.95,2.22,18.3,4.42
+659,288,"female","Iris Murdoch","Irish-British","The Time of the Angels",79842,10.99,16.8,2.19,0.28,1.6,6.77,0.57,5.38,9.78,5.52,2.15,18.02,4.47
+660,288,"female","Iris Murdoch","Irish-British","The Unicorn",92705,11.78,15.74,1.74,0.4,1.26,6.93,0.69,4.72,9.18,5.43,1.9,17.96,4.56
+661,288,"female","Iris Murdoch","Irish-British","Under the Net",99776,13.3,17.28,6.67,0.8,1.01,2.35,0.54,5.9,8.39,4.91,1.64,17.54,4
+662,289,"female","Kathy Acker","American","Blood and Guts in High School",39784,11.48,17.91,5.3,0.83,2.76,3.55,0.73,4.73,9.69,4.57,2.95,19.21,4.79
+663,290,"female","Djuna Barnes","American","Nightwood",49998,21.12,15.58,2.23,0.5,1.06,5.63,0.86,5.28,7.35,3.8,1.6,15.65,4
+664,291,"female","Cynthia Bond","American","Ruby",95874,12.43,14.55,0.67,0.14,0.79,8.21,1.2,3.52,5.53,3.82,1.4,14.56,4.52
+665,292,"female","Jane Bowles","American","Two Serious Ladies",65285,12.84,17.84,3.52,0.43,2.4,5.71,1.07,4.69,9.18,5.45,2.15,20.46,4.2
+666,293,"female","Elizabeth Gilbert","American","Stern Men",108918,10.5,15.27,1.69,0.25,1.59,5.87,1.01,4.86,8.66,4.47,2.13,17.69,4.06
+667,293,"female","Elizabeth Gilbert","American","The Signature of All Things",190524,14.42,14.57,1.44,0.33,1.12,5.95,0.87,4.86,8.43,4.81,2.07,15.75,4.69
+668,294,"female","Doris Grumbach","American","Chamber Music",56757,15.98,16.05,4.54,1.21,0.49,5.24,0.58,3.99,6.91,4.29,1.45,15,4.65
+669,294,"female","Doris Grumbach","American","The Book of Knowledge",72546,13.42,15.37,1.57,0.27,0.73,6.87,1.87,4.04,7.13,3.93,1.58,15.87,4.55
+670,294,"female","Doris Grumbach","American","The Ladies",56460,15.78,13.31,1.11,0.56,0.44,5.77,2.51,2.93,5.95,3.27,1.25,13.01,4.5
+671,294,"female","Doris Grumbach","American","The Magicians Girl",64852,14.68,14.65,1.49,0.38,0.71,6.9,1.47,3.7,6.19,3.75,1.36,14.7,4.41
+672,294,"female","Doris Grumbach","American","The Missing Person",75556,14.95,15.54,1.23,0.14,0.68,8.27,1.21,3.99,6.34,3.86,1.48,15.41,4.45
+673,295,"female","Ann Herendeen","American","Pride/Prejudice",119955,13.01,16.14,2.7,0.44,2.21,5.59,0.55,4.64,8.65,4.76,2.31,16.57,4.98
+674,296,"female","Carson McCullers","American","The Heart Is a Lonely Hunter",122637,11.6,15.13,1.44,0.4,0.93,7.36,1.15,3.84,7.3,4.69,1.53,16.45,4.34
+675,296,"female","Carson McCullers","American","The Member of the Wedding",57875,12.91,14.4,1.71,0.23,1.27,5.97,1.03,4.17,7.49,5.08,1.65,17.11,4.38
+676,297,"female","Anaïs Nin","American","A Spy In the House of Love",34511,18.97,15.64,1.47,0.21,1.13,7.62,0.78,4.43,6.85,3.68,1.71,14.15,4.23
+677,298,"female","Sara Ryan","American","Empress of the World",45490,10.44,20.22,6.87,0.99,2.23,3.61,0.68,5.83,9.62,5.78,2.24,20.52,4.23
+678,299,"female","Sapphire","American","The Kid",135323,9.76,20.03,8.02,0.65,2.3,3.31,0.57,5.16,8.6,4.94,2.61,19.23,3.96
+679,300,"female","Susan Sontag","American","The Volcano Lover",139928,16.84,14.01,1.91,0.29,0.67,5.79,0.98,4.36,7.94,3.91,1.78,14.47,4.59
+680,301,"female","Valerie Taylor","American","Return to Lesbos",44001,11.07,16.89,2.57,0.29,1.95,6.32,0.75,4.99,9.2,4.62,2.46,19.63,4.79
+681,301,"female","Valerie Taylor","American","Unlike Others",56182,11.01,17.17,2.65,0.28,1.74,6.58,0.72,5.18,9.08,4.63,2.32,19.81,4.95
+682,301,"female","Valerie Taylor","American","Whisper Their Love",66244,12.08,15.91,1.76,0.28,1.59,6.5,0.82,4.95,8.47,4.73,2.19,18.51,4.6
+683,302,"female","Mary Eleanor Wilkins Freeman","American","By the Light of the Soul",152707,14.06,17.26,1.92,0.14,1.42,8.72,0.49,4.57,8.53,4.5,2.21,17.95,4.69
+684,302,"female","Mary Eleanor Wilkins Freeman","American","Evelina's Garden",17879,21.65,16.11,1.26,0.07,0.73,8.68,1.11,4.25,7.36,3.72,2.15,15.6,5.11
+685,302,"female","Mary Eleanor Wilkins Freeman","American","Jane Field",49118,12.66,17.18,3.39,0.28,1.8,6.54,0.93,4.24,8.86,4.4,2.66,18.69,4.4
+686,302,"female","Mary Eleanor Wilkins Freeman","American","Jerome, A Poor Man",139132,17.37,15.71,1.94,0.18,1.44,7.24,0.63,4.26,7.49,3.93,2.2,15.93,4.85
+687,302,"female","Mary Eleanor Wilkins Freeman","American","Madelon",85280,16.69,16.94,1.99,0.12,1.63,8.41,0.78,4.01,6.98,3.71,2.12,15.79,4.7
+688,302,"female","Mary Eleanor Wilkins Freeman","American","Pembroke",80865,14.61,16.87,2.2,0.13,1.69,8.17,0.74,3.94,7.85,4.08,2.5,17.56,4.7
+689,302,"female","Mary Eleanor Wilkins Freeman","American","The Butterfly House",54226,15.92,15.73,2.01,0.11,1.28,6.88,0.58,4.87,8.75,4.34,2.11,16.49,4.84
+690,302,"female","Mary Eleanor Wilkins Freeman","American","The Debtor",169371,14.65,16.08,2.07,0.24,1.31,7.16,0.75,4.54,8.16,4.39,2.01,16.77,4.4
+691,302,"female","Mary Eleanor Wilkins Freeman","American","The Heart's Highway",74750,31.13,16.17,4.97,0.41,0.95,4.37,0.71,4.76,6.76,4.06,1.78,13.35,4.6
+692,302,"female","Mary Eleanor Wilkins Freeman","American","The Jamesons",29133,22.96,16.04,2.55,1.97,0.36,4.89,1.18,5.08,8.69,4.5,2.07,16.95,4.62
+693,302,"female","Mary Eleanor Wilkins Freeman","American","The Portion of Labor",165876,15.78,16.69,1.94,0.2,1.44,7.76,0.66,4.67,8.09,3.96,2.15,17.19,4.7
+694,302,"female","Mary Eleanor Wilkins Freeman","American","The Shoulders of Atlas",78305,12.88,17.55,2.91,0.22,1.61,6.92,0.72,5.16,9.24,4.65,2.45,19.47,4.66
