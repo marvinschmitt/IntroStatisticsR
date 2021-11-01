@@ -22,7 +22,7 @@ knitr::opts_chunk$set(fig.height = 3, fig.width = 6)
 library(tidyverse)
 library(ggplot2)
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
-set.seed(61)
+set.seed(42)
 ```
 
 ## Prequel: The pipe operator `%>%`
@@ -40,7 +40,7 @@ The ` %>% ` operator works like a **pipe** and passes the left-hand-side as the 
 ## Sampling from a distribution
 `rnorm(n=n, mean=mu, sd=sigma)` draws `n` samples from the normal distribution $\mathcal{N}(\mu, \sigma)$:
 ```{r}
-IQ_values = rnorm(n=200, mean=100, sd=15) %>% round()
+IQ_values = rnorm(n=200, mean=87, sd=10) %>% round()
 print(IQ_values)
 ```
 
@@ -56,7 +56,9 @@ max(IQ_values) - min(IQ_values)  # Range
 
 ## Plots: Histogram in base `R`
 ```{r}
-hist(IQ_values, main="IQ Distribution", xlab = "IQ", breaks = 5)
+hist(IQ_values, breaks = 20,
+     main="IQ Distribution", xlab = "Intelligenzquotient"
+     )
 ```
 
 ## Plots: `ggplot2` introduction
@@ -74,7 +76,8 @@ df_IQ = data.frame(IQ_values)
 
 ```{r}
 ggplot(data=df_IQ, aes(x=IQ_values)) +
-  geom_histogram(fill="pink", color="black")
+  geom_histogram(fill="pink", color="black") +
+  labs(title="IQ distribution", x="IQ")
 ```
 
 *** 
@@ -89,7 +92,7 @@ ggplot(data=df_IQ, aes(x=IQ_values)) +
 
 ```{r}
 ggplot(data=df_IQ, aes(x=IQ_values)) +
-  geom_histogram(binwidth=10, fill="pink", color="black")
+  geom_histogram(binwidth=5, fill="pink", color="black")
 ```
 
 
@@ -98,9 +101,10 @@ ggplot(data=df_IQ, aes(x=IQ_values)) +
 
 ```{r}
 ggplot(data=df_IQ, aes(x=IQ_values)) +
-  geom_histogram(aes(y=..density..), binwidth=10, fill="pink", 
+  geom_histogram(aes(y=..density..), binwidth=5, fill="pink", 
                  color="black", alpha=.50) +
-  geom_density(fill="firebrick", alpha = .50)
+  geom_density(fill="firebrick", alpha = .50) +
+  labs(title="IQ histogram and density", x = "IQ")
 ```
 
 
@@ -109,7 +113,11 @@ ggplot(data=df_IQ, aes(x=IQ_values)) +
 ```{r}
 ggplot(data=df_IQ, aes(x=IQ_values)) +
   geom_density(fill="firebrick", alpha = .30) +
-  geom_vline(aes(xintercept = mean(IQ_values)), size=1, col="firebrick")
+  geom_vline(aes(xintercept = 130), size=3, col="blue") +
+  geom_vline(aes(xintercept = 70), size=3, col="firebrick") +
+  geom_vline(aes(xintercept = 100), size=3, col="yellow") + 
+  geom_vline(aes(xintercept = mean(IQ_values)), size=1, col="orange") +
+  labs(title="IQ density with annotations", x="IQ")
 ```
 
 
@@ -117,9 +125,12 @@ ggplot(data=df_IQ, aes(x=IQ_values)) +
 
 ```{r}
 ggplot(data=df_IQ, aes(x=IQ_values)) +
-  geom_density(fill="firebrick", alpha = .30) +  
+  geom_density(fill="yellow", alpha = .30) +  
   stat_function(fun = dnorm, n = 101, args = list(mean = 100, sd = 15), 
-                col="blue", size=1)
+                col="firebrick", size=2) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = mean(IQ_values), sd = sd(IQ_values)), 
+                col="orange", size=2) + 
+  xlim(50, 150)
 ```
 
 ## Plots: `ggplot2` histogram with normal distribution
@@ -138,15 +149,17 @@ We will add a group variable `school` and simulate data:
 ```{r}
 IQ_1 = rnorm(n=100, mean=105, sd=10) %>% round()
 IQ_2 = rnorm(n=100, mean=120, sd=16) %>% round()
+IQ_3 = rnorm(n=100, mean=95, sd=8) %>% round()
 df_1 = data.frame(school="school1", IQ=IQ_1)
 df_2 = data.frame(school="school2", IQ=IQ_2)
-df_schools = rbind(df_1, df_2)
+df_3 = data.frame(school="school3", IQ=IQ_3)
+df_schools = rbind(df_1, df_2, df_3)
 ```
 
 ## Plots: `ggplot2` density plot with 2 groups
 ```{r}
 ggplot(data=df_schools, aes(x=IQ, fill=school)) +
-  geom_density(alpha = .50)
+  geom_density(alpha=.50)
 ```
 
 ## Plots: `ggplot2` barplot

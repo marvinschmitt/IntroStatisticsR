@@ -1,0 +1,275 @@
+---
+title: "Introduction to Statistics with R"
+subtitle: "Session R02: Correlation"
+author: "Marvin Schmitt"
+output:
+  beamer_presentation:
+    slide_level: 2
+    toc: no
+    theme: Berlin
+    includes:
+      in_header: ../../config-files/notes-config.tex
+header-includes: \setbeamertemplate{footline}[]{}
+---
+
+
+
+
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+knitr::opts_chunk$set(fig.height = 3, fig.width = 6)
+
+library(tidyverse)
+library(ggplot2)
+library(ggpubr)
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+set.seed(42)
+options(scipen=10000)
+options(warn=-1)
+```
+
+## The example data set
+
+We analyze structures in the **Chicago Face Database** (Ma et al., 2015). Each row refers to a portrait which was rated with respect to different categories by a sample of raters.
+
+```{r}
+df = read.csv("R02_notes_dataset.csv")
+nrow(df)
+colnames(df)
+```
+
+## Scatterplots
+
+```{r warnings=FALSE}
+ggplot(df, aes(x=Masculine, y=Attractive))+
+geom_point() +
+ylim(1,5) + xlim(1,5)
+```
+
+***
+
+**Digression I: `filter`**
+
+```{r}
+df %>% filter(Gender=="M")
+```
+
+***
+
+**Digression II: `select`**
+```{r}
+df %>% 
+  select(Attractive)
+```
+
+***
+
+```{r}
+df %>% filter(Gender=="M") %>% 
+  ggplot(., aes(x=Masculine, y=Attractive))+
+  geom_point() +
+  ylim(1,5) + xlim(1,5)
+```
+
+***
+```{r}
+df %>% filter(Gender=="F") %>% 
+  ggplot(., aes(x=Masculine, y=Attractive))+
+  geom_point() +
+  ylim(1,5) + xlim(1,5)
+```
+
+## Scatterplots: Group variables
+
+```{r}
+ggplot(df, aes(x = Masculine, y = Attractive, color=Gender))+
+  geom_point() +
+  ylim(1, 5) + xlim(1, 5)
+```
+
+## Scatterplots: Print correlation coefficients
+
+```{r}
+ggplot(df, aes(x=Masculine, y=Attractive))+
+geom_point() +
+ylim(1, 6) + xlim(1, 5) +
+stat_cor(p.accuracy = 0.01)
+```
+
+
+
+***
+
+```{r}
+ggplot(df, aes(x=Masculine, y=Attractive, color=Gender))+
+geom_point() +
+ylim(1, 6.5) + xlim(1, 5) +
+stat_cor(p.accuracy = 0.01)
+```
+
+## Correlation matrices: Computation
+
+
+```{r}
+df %>% 
+  select(Angry, Disgusted, Happy, Sad, Surprised, Attractive, Threatening) %>% 
+  cor() %>% 
+  round(3)
+```
+
+## Correlation matrices: Visualization
+
+We can visually encode the entries in a **correlation matrix** while maintaining the matrix structure:
+
+- Color coding
+- Circles
+- Ellipses
+- Correlation coefficients $r_{xy}$
+- ...
+
+We can use the function `corrplot::corrplot` to visualize correlation matrices. 
+
+***
+
+```{r out.width = "50%"}
+df %>% 
+  select(Angry, Disgusted, Happy, Sad, Surprised, Attractive, Threatening) %>% 
+  cor() %>% 
+  corrplot::corrplot()
+```
+
+***
+
+```{r out.width = "50%"}
+df %>% 
+  select(Angry, Disgusted, Happy, Sad, Surprised, Attractive, Threatening) %>% 
+  cor() %>% 
+  corrplot::corrplot(method="ellipse")
+```
+
+***
+
+```{r out.width = "50%"}
+df %>% 
+  select(Angry, Disgusted, Happy, Sad, Surprised, Attractive, Threatening) %>% 
+  cor() %>% 
+  corrplot::corrplot(method="number", number.cex = 0.7)
+```
+
+***
+
+**Important arguments for `corrplot::corrplot`**:
+
+- `method`: cell content
+- `tl.col='black'`: black labels
+- `cl.pos='n'`: remove colorbar
+- `type`: display entire/lower/upper matrix
+- `number.cex`: size of numbers if `method=number`
+
+
+## Testing assumptions 
+
+In order to ease interpretation of a correlation coefficient $r_{xy}$, the variables $X, Y$ should be:
+
+- **metric**,
+- **normal**, and
+- **homoscedastic**.
+
+*** 
+
+We can use the function `shapiro.test(x)` to test `x` for **normality**.
+
+**Interpretation:**
+
+- if $p\geq.05$: normality assumption not violated
+- if $p<.05$: normality assumption violated
+
+```{r}
+shapiro.test(df$Trustworthy)
+shapiro.test(df$Attractive)
+```
+
+***
+
+The scatterplot allows for a visual inspection of **homoscedasticity**:
+
+```{r echo=FALSE}
+x = seq(1, 100, length.out=500)
+y = rnorm(n=500, mean=0.5*x, sd=x/10)
+
+data.frame(x,y) %>% 
+  ggplot(aes(x=x, y=y)) +
+  geom_point()
+```
+
+***
+
+**Another caveat:**
+
+```{r echo=FALSE}
+x = seq(1, 10, length.out=100)
+y = rnorm(n=100, mean=(x-5.5)**2, sd=0.1)
+z = rnorm(n=100, mean=10-(x-5.5)**2, sd=1)
+```
+
+```{r echo=FALSE}
+data.frame(x,y,z) %>% 
+  ggplot(aes(x=x)) +
+  geom_point(aes(y=y), col="red") + 
+  stat_cor(aes(y=y), col="red", p.accuracy = 0.01, label.x = 3) +
+  ylim(-10, 20)
+```
+
+***
+
+```{r echo=FALSE}
+data.frame(x,y,z) %>% 
+  ggplot(aes(x=x)) +
+  geom_point(aes(y=y), col="red") + 
+  geom_point(aes(y=z), col="blue") +
+  stat_cor(aes(y=y), col="red", p.accuracy = 0.01, label.x = 3) +
+  stat_cor(aes(y=z), col="blue", p.accuracy = 0.01, label.x = 6)
+```
+
+
+*** 
+
+```{r echo=FALSE}
+x = seq(1, 10, length.out=50)
+y = rnorm(n=50, mean=(x-5.5)**2, sd=0.5)
+w = rnorm(n=50, mean=(x-5.3)**2, sd=0.5)
+z = rnorm(n=50, mean=(x-5.0)**2, sd=0.5)
+
+data.frame(x,y,w,z) %>% 
+  ggplot(aes(x=x)) +
+  geom_point(aes(y=y), col="darkorange") + 
+  stat_cor(aes(y=y), col="darkorange", p.accuracy = 0.01, label.x = 3, label.y=24)+
+  geom_point(aes(y=w), col="forestgreen") + 
+  stat_cor(aes(y=w), col="forestgreen", p.accuracy = 0.01, label.x = 3, label.y=20)+
+  geom_point(aes(y=z), col="brown") + 
+  stat_cor(aes(y=z), col="brown", p.accuracy = 0.01, label.x = 3, label.y=16)
+
+```
+
+
+***
+
+```{r echo=FALSE}
+x = seq(1, 10, length.out=100)
+y = rnorm(n=100, mean=sin(x), sd=0.1)
+z = rnorm(n=100, mean=cos(x), sd=0.1)
+
+
+data.frame(x,y,z) %>% 
+  ggplot(aes(x=x)) +
+  geom_point(aes(y=y), col="red") + 
+  geom_point(aes(y=z), col="blue") +
+  ylim(-2, 2) +
+  stat_cor(aes(y=y), col="red", p.accuracy = 0.01, label.x = 5) +
+  stat_cor(aes(y=z), col="blue", p.accuracy = 0.01, label.x = 0)
+```
+
+```{r echo=FALSE, include=FALSE}
+# cleanup here
+```
