@@ -1,0 +1,135 @@
+\documentclass[paper=a4, fontsize=12pt, parskip=half]{scrartcl}
+
+%%%%% SET ATTRIBUTES!!! %%%%%
+\newcommand{\assignmentnumber}{2}
+\newcommand{\assignmentformat}{PDF}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+\usepackage{amsmath, amssymb}
+\usepackage{tcolorbox}
+\usepackage[normalem]{ulem}
+\usepackage{enumitem}
+
+\usepackage{float}
+
+\usepackage{wasysym}
+
+\usepackage[
+paper=a4paper,
+left=3cm,
+right=3cm,
+top=3cm,
+bottom=3cm
+]{geometry}
+\usepackage{graphicx}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{\large\texttt{Introduction to Statistics with R}}
+\rhead{\bfseries Assignment 0\assignmentnumber}
+\rfoot{Marvin Schmitt}
+\setlength\parindent{0pt}
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\newcommand{\twodigit}[1]{\two@digits{#1}}
+
+
+
+% Automatische Nummerierung
+\newcounter{tasknumber}
+\setcounter{tasknumber}{1}
+\newcommand{\task}[1]{
+	\vspace*{0.5cm}
+	\textbf{Task \assignmentnumber.\arabic{tasknumber} (#1).}
+	\stepcounter{tasknumber}
+}
+
+
+\newcommand{\footer}{
+	\vfill
+	
+	\par\noindent\rule{\textwidth}{0.4pt}
+
+	Please solve the assignment in the \texttt{.Rmd} format and export it as \\
+	\texttt{R0\assignmentnumber-<LastName><FirstName>.\assignmentformat}
+}
+
+
+
+\newcommand{\notetop}[1]{
+	\par\noindent\rule{\textwidth}{0.4pt}
+	\textbf{Note:\\}
+	#1
+	\par\noindent\rule{\textwidth}{0.4pt}
+}
+
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\SweaveOpts{keep.source=TRUE}
+
+
+<<echo=FALSE,eval=TRUE>>=
+options(continue="...", prompt="> ")
+knitr::opts_chunk$set(size = "small")
+#setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+@
+
+\renewcommand{\arraystretch}{1.2}
+
+Please download the extended data set \texttt{R02\_assignment\_dataset.csv}. Load it into your \texttt{R} session as a data frame \texttt{df}:
+  
+<<echo=TRUE,eval=FALSE>>=
+df = read.csv("R02_assignment_dataset.csv")
+@
+
+
+\task{Exploring bivariate structures}
+
+In this task, we will perform an exploratory analysis of the correlation structure in the data set.
+
+\begin{enumerate}
+  \item Choose \textbf{ten} metric variables that are of interest to you. Use the function \texttt{select()} to create a new data frame \texttt{df\_exp} that contains only these ten variables. This will be your data frame for the subsequent exploratory analyses.
+  \item Investigate the correlation matrix of \texttt{df\_exp} with the functions \texttt{cor()} and \texttt{corrplot()}:
+  \begin{enumerate}[label=(\roman*)]
+    \item Create a black-and-white \texttt{corrplot} that shows the correlation coefficients $r_{xy}$ and no colorbar.
+    \item Create a \texttt{corrplot} that shows the bivariate correlations as colored ellipses.
+    \item Use the internet to create another variant of a \texttt{corrplot} for the task at hand.
+  \end{enumerate}
+  \item Identify two variables with a \textbf{large positive} or a \textbf{large negative} correlation and plot them in a scatterplot.
+  \item Identify two variables with a \textbf{small} correlation (close to zero) and plot them in a scatterplot.
+\end{enumerate}
+  
+\newpage
+\task{Word Counts}
+
+In this task, we will explore patterns in the average word count per sentence.
+
+\begin{enumerate}
+  \item Use the function \texttt{filter} to create a new data frame \texttt{df\_wc} that contains only data from American and British authors. \textbf{Hint:} The author's nationality can be found in the variable \texttt{Nationality}.
+  \item How does the publication year relate to the average number of words per sentence?
+  \begin{enumerate}[label=(\roman*)]
+    \item Check the variables \texttt{PublicationYear} and \texttt{WordsPerSentence} for normality.
+    \item Use \texttt{ggplot2} to create a scatterplot with \texttt{PublicationYear} on the $x-$axis and \texttt{WordsPerSentence} on the $y-$axis.
+    \item Compute the correlation coefficient between \texttt{PublicationYear} and \texttt{WordsPerSentence}.
+    \item Use all available information to interpret the results and answer the question: \emph{Does the average number of words decrease over time?}
+  \end{enumerate}
+\end{enumerate}
+  
+  
+	\footer
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End
