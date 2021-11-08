@@ -12,7 +12,7 @@ The assignments are available in the corresponding GitHub repository at <https:/
 The participants will receive all non-public information (in-person meeting locations, online meeting login data, video material) via e-mail.
 
 ## Course Outline
-The course features five lessons `R01` -- `R05`, each with a focus topic covering the essentials of one fundamental statistical method. Before the first lesson, we will make sure that all software is well set-up (`R00`). After the last lesson, we will meet for a conclusion and outlook on how to apply the statistical methods in your own research (`R06`).
+The course features five lessons `R01` -- `R05`, each with a focus topic covering the essentials of one fundamental statistical method. The sixth lesson `R06` will give a brief introduction to handling complex and unhandy data (i.e., eye-tracking data). Before the first lesson, we will make sure that all software is well set-up (`R00`). After the last lesson, we will meet online for a conclusion and outlook on how to apply the statistical methods in your own research (`R07`).
 
 Week    | Topic     | Lecture notes   |  Assignment
 ---     | ---       | ---             | --- 
@@ -22,7 +22,8 @@ Week    | Topic     | Lecture notes   |  Assignment
 [R03](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R03_regression)     | Regression     |[R03_notes.pdf](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R03_regression/R03_notes.pdf) | [R03_assignment.pdf](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R03_regression/R03_assignment.pdf)
 [R04](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R04_ttest)     | t-Test     |[R04_notes.pdf](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R04_ttest/R04_notes.pdf) | [R04_assignment.pdf](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R04_ttest/R04_assignment.pdf)
 [R05](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R05_anova)     | ANOVA     |[R05_notes.pdf](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R05_anova/R05_notes.pdf) | [R05_assignment.pdf](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R05_anova/R05_assignment.pdf)
-[R06](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R05_conclusion)     | Conclusion     |[R06_notes.pdf](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R06_conclusion/R06_notes.pdf) | [R06_assignment.pdf](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R06_conclusion/R06_assignment.pdf)
+[R06](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R06_eyetracking)     | Eye-Tracking     |[R06_notes.pdf](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R06_eyetracking/R06_notes.pdf) | [R06_assignment.pdf](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R06_eyetracking/R06_assignment.pdf)
+[R07](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R07_conclusion)     | Conclusion |[R07_notes.pdf](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R07_conclusion/R07_notes.pdf) | [R07_assignment.pdf](https://github.com/marvinschmitt/IntroStatisticsR/tree/main/material/R07_conclusion/R07_assignment.pdf)
 
 
 ## Teaching mode
@@ -36,7 +37,8 @@ Date | Topic | Location
 09.11.2021, 09:15 - 10:45 | Regression | Online
 16.11.2021, 09:15 - 10:45 | t-Test | Online
 23.11.2021, 09:15 - 10:45 | ANOVA | Online
-30.11.2021, 09:15 - 12:45 | Conclusion | in-person
+30.11.2021, 09:15 - 11:15 | Eye-Tracking | Online
+30.11.2021, 11:30 - 12:30 | Conclusion | Online
 
 During each synchronous online lesson (`R01`-`R05`), we will focus on discussing a statistical method from a conceptual point of view.
-In addition, each lesson (`R01`-`R05`) will feature an asynchronous **video** that introduces the implementation of the corresponding method in `R`. Past experience has shown that asynchronous teaching of programming methods was perceived as superior to _live teaching_. That's for one simple reason: Participants reported that they could simply pause or replay parts of the video in order to assure that they can follow the course. The link to the teaching videos will be provided to the participants via e-mail.
+In addition, each lesson (`R01`-`R05`) will feature an asynchronous **video** that introduces the implementation of the corresponding method in `R`. Past experience has shown that asynchronous teaching of programming methods was perceived as superior to _live teaching_. That's for one simple reason: Participants reported that they could simply pause or replay parts of the video in order to assure that they can follow the course. The link to the teaching videos will be provided to the participants via e-mail. The session on eye-tracking (`R06`) will be synchronous-only and give a brief introduction to handling more complex data from multiple source files. 
