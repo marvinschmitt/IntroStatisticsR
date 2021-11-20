@@ -1,0 +1,140 @@
+\documentclass[paper=a4, fontsize=12pt, parskip=half]{scrartcl}
+
+%%%%% SET ATTRIBUTES!!! %%%%%
+\newcommand{\assignmentnumber}{4}
+\newcommand{\assignmentformat}{HTML}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+\usepackage{amsmath, amssymb}
+\usepackage{tcolorbox}
+\usepackage[normalem]{ulem}
+\usepackage{enumitem}
+
+\usepackage{float}
+
+\usepackage{wasysym}
+
+\usepackage[
+paper=a4paper,
+left=3cm,
+right=3cm,
+top=3cm,
+bottom=3cm
+]{geometry}
+\usepackage{graphicx}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{\large\texttt{Introduction to Statistics with R}}
+\rhead{\bfseries Assignment 0\assignmentnumber}
+\rfoot{Marvin Schmitt}
+\setlength\parindent{0pt}
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\newcommand{\twodigit}[1]{\two@digits{#1}}
+
+
+
+% Automatische Nummerierung
+\newcounter{tasknumber}
+\setcounter{tasknumber}{1}
+\newcommand{\task}[1]{
+	\vspace*{0.5cm}
+	\textbf{Task \assignmentnumber.\arabic{tasknumber} (#1).}
+	\stepcounter{tasknumber}
+}
+
+
+\newcommand{\footer}{
+	\vfill
+	
+	\par\noindent\rule{\textwidth}{0.4pt}
+
+	Please solve the assignment in the \texttt{.Rmd} format and export it in a suitable format (e.\,g. \texttt{pdf} or \texttt{html})
+}
+
+
+
+\newcommand{\notetop}[1]{
+	\par\noindent\rule{\textwidth}{0.4pt}
+	\textbf{Note:\\}
+	#1
+	\par\noindent\rule{\textwidth}{0.4pt}
+}
+
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\SweaveOpts{keep.source=TRUE}
+
+
+<<echo=FALSE,eval=TRUE>>=
+options(continue="...", prompt="> ")
+knitr::opts_chunk$set(size = "small")
+#setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+@
+
+\renewcommand{\arraystretch}{1.2}
+
+Please download the data set \texttt{R04\_assignment\_dataset.csv}. Load it into your \texttt{R} session as a data frame \texttt{df}:
+  
+<<echo=TRUE,eval=FALSE>>=
+df = read.csv("R04_assignment_dataset.csv")
+@
+
+
+\task{Exploring and visualizing the data set}
+
+\begin{enumerate}
+  \item How many observations does the data set contain?
+  \item Which variables (columns) does the data set contain?
+  \item Plot the distribution of the variable \texttt{sustainability} as a density plot. What do you observe?
+  \item Plot the distribution of the variable \texttt{sustainability} as a density plot again, but this time draw separate density plots for each \texttt{diet} type\footnote{\textbf{Hint:} Use the \texttt{fill} aesthetic in the initial \texttt{ggplot} call}. What do you observe?
+  \item Extend the previous plot with proper axes labels, a title, and a suitable theme.
+  \item Based on your insights from the visualization: Briefly describe the data and derive statistical hypotheses for the $t-$test in the following task.  
+\end{enumerate}
+
+\newpage
+\task{Exploring group differences}
+
+In this task, you will test the hypothesis whether the subjects' sustainability scores differ with respect to their diets (meat vs. vegetarian vs. vegan).
+
+\begin{enumerate}
+  \item Create three vectors \texttt{sustainability\_meat}, \texttt{sustainability\_vegetarian}, and \texttt{sustainability\_vegan} that contain only the sustainability score of the respective group.\\
+  \textbf{Hint:} You can use the following approach to extract the data as separate vectors (replace the ... parts accordingly):
+<<echo=TRUE,eval=FALSE>>=
+sustainability_... = df %>% filter(diet == "...") %>% select(...)
+@  
+  \item Choose one pairwise comparison (e.\,g. meat vs.\ vegetarian) and perform the complete $t-$test:
+  \begin{enumerate}[label=(\roman*)]
+    \item Formulate the null hypothesis $H_0$ and the alternative hypothesis $H_1$.
+    \item Calculate the appropriate $t-$test for your question numerically with the function \texttt{t.test()}.
+    \item Interpret the result and decide on one of the hypothesis.
+    \item Calculate and interpret\footnote{you can find the conventions on the internet} the effect size as Cohen's $d$.
+    \item Are your results congruent with the plot from the previous task?
+  \end{enumerate}
+  \item \textbf{Optional:} Repeat the hypothesis test for another pairwise comparison (e.\,g. vegetarian vs.\ vegan). 
+  \item \textbf{Bonus:} The \texttt{t.test()} function also supports a formula syntax to work with data in long format:
+<<echo=TRUE,eval=FALSE>>=
+t.test(outcome ~ group_variable, data = df)
+@ 
+Prepare the data frame \texttt{df} accordingly to use this syntax instead of extracting the outcome variable data as separate vectors.
+\end{enumerate}
+
+  
+\footer
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End

@@ -1,0 +1,177 @@
+---
+title: "Introduction to Statistics with R"
+subtitle: "Session R04: t-Test"
+author: "Marvin Schmitt"
+output:
+  beamer_presentation:
+    slide_level: 2
+    toc: no
+    theme: Berlin
+    includes:
+      in_header: ../../config-files/notes-config.tex
+header-includes: \setbeamertemplate{footline}[]{}
+---
+
+
+
+
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+knitr::opts_chunk$set(fig.height = 3, fig.width = 6)
+
+library(tidyverse)
+library(ggplot2)
+library(ggpubr)
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+set.seed(42)
+options(warn=-1)
+```
+
+## The example data set
+
+This example data set contains depression measures before (`MZP1`) and after (`MZP2`) a novel therapy.
+
+```{r}
+df = read.csv("R04_notes_dataset.csv")
+nrow(df)
+colnames(df)
+```
+
+## Data formats: `wide` and `long`
+
+Data sets can come in `wide` format:
+
+```{r echo=FALSE}
+df %>% head(3)
+```
+
+or `long` format:
+
+```{r echo=FALSE}
+df %>% 
+  gather(., mzp, depr, MZP1:MZP2) %>% 
+  filter(ID %in% 1:3) %>% 
+  arrange(ID)
+```
+
+## Data formats: conversion `wide` to `long`
+
+```{r}
+df %>% head(3)
+
+df %>% 
+  gather(., mzp, depr, MZP1:MZP2) -> df_long
+
+df_long %>% arrange(ID) %>% head(6)
+```
+
+## Data formats: conversion `long` to `wide`
+
+```{r}
+df_long %>% arrange(ID) %>% head(6)
+
+df_long %>%
+  spread(., mzp, depr) -> df_wide
+
+df_wide %>% head(3)
+```
+
+
+## `ggplot2`: Barplot with error bars
+
+```{r}
+ggplot(data = df_long, aes(y=depr, x=mzp, fill=mzp)) +     # long format!
+  stat_summary(fun = mean, geom = "bar", width=0.5) +
+  stat_summary(fun.data = mean_se, geom = "errorbar", width=0.2)
+```
+
+## t-test syntax
+
+The function `t.test()` implements several versions of the $t-$test:
+
+- One sample:
+  - The first argument is the data, `mu` is the constant (aka. $\lambda$)
+  - Example: `t.test(IQ_values, mu=100)`
+- Two samples:
+  - The first two arguments are $x_1$ and $x_2$
+  - `paired` controls if the samples are paired (`TRUE`) or independent (`FALSE`, default)
+  - `var.equal` controls if variances are assumed to be equal
+  - Example: `t.test(x1, x2, var.equal=TRUE)`
+  
+## Effect size calculations
+
+The library `effsize` provides the function `cohen.d()` to estimate the effect size of a $t-$test:
+
+```{r echo=FALSE}
+library(effsize)
+```
+
+```{r, eval=FALSE}
+library(effsize)
+cohen.d(IQ_values, NA, mu=100)  # no second sample -> NA
+cohen.d(x1, x2)
+```
+
+If we want a shorter output with only the estimated effect size $d$, we can extract that information with the `$` operator:
+
+```{r eval=FALSE}
+effect_size_result = cohen.d(x1, x2)
+effect_size_result$estimate   # print only the estimate of d
+
+cohen.d(x1, x2)$estimate   # short form
+```
+
+## t-test (one sample)
+
+We test whether the average depression score `depr` at $T_1$ differs from $\lambda=19$:
+
+$H_0: \mu = 19, \quad H_1:\mu\neq 19$
+
+```{r}
+t.test(df_wide$MZP1, mu=19)
+
+cohen.d(df$MZP1, NA, mu=19)$estimate
+```
+
+
+## t-test (paired variables)
+
+We test whether the patient's depression scores `depr` _change_ between $T_1$ and $T_2$:
+
+
+$H_0: \bar{x_d} = 0, \quad H_1:\bar{x_d}\neq 0$
+
+```{r}
+t.test(df_wide$MZP1, df_wide$MZP2, paired=TRUE)
+```
+
+***
+
+We test whether the patient's depression scores `depr` _decrease_ between $T_1$ and $T_2$:
+
+
+$H_0: \bar{x_d}<0, \quad H_1:\bar{x_d}>0$
+
+```{r}
+t.test(df_wide$MZP2, df_wide$MZP1, paired=TRUE, alternative="less")
+```
+
+## t-test (two sample)
+
+We test whether the means of $x_1$ and $x_2$ differ:
+
+$H_0: \bar{x_1}=\bar{x_2}, \quad H_1:\bar{x_1}\neq \bar{x_2}$
+
+```{r}
+x1 = rnorm(n=20, mean=98, sd=15)
+x2 = rnorm(n=20, mean=100, sd=15)
+t.test(x1, x2, var.equal = TRUE)
+
+cohen.d(x1, x2)$estimate
+```
+
+
+```{r echo=FALSE, include=FALSE}
+# cleanup here
+```

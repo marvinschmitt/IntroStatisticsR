@@ -1,0 +1,203 @@
+---
+title: "Introduction to Statistics with R"
+subtitle: "Session R03: Regression"
+author: "Marvin Schmitt"
+output:
+  beamer_presentation:
+    slide_level: 2
+    toc: no
+    theme: Berlin
+    includes:
+      in_header: ../../config-files/notes-config.tex
+header-includes: \setbeamertemplate{footline}[]{}
+---
+
+
+
+
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+knitr::opts_chunk$set(fig.height = 3, fig.width = 6)
+
+library(tidyverse)
+library(ggplot2)
+library(ggpubr)
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+set.seed(42)
+options(warn=-1)
+```
+
+## The example data set
+
+We analyze structures in the **Chicago Face Database** (Ma et al., 2015). Each row refers to a portrait which was rated with respect to different categories by a sample of raters.
+
+```{r}
+df = read.csv("R03_notes_dataset.csv")
+nrow(df)
+colnames(df)
+```
+
+## `ggplot2`: Scatterplots with fitted line
+
+We can fit (linear) regression curves in `ggplot` scatterplots with `geom_smooth()`.
+
+- `method='lm'` uses a **linear model**
+- `se=FALSE` does not print the confidence interval around the fitted line
+- `fullrange=TRUE` continues the line beyond the data range
+
+```{r warnings=FALSE, echo=FALSE, message=FALSE, out.width="50%"}
+ggplot(df, aes(x=Happy, y=Attractive)) + xlim(1,7) + ylim(1,7) +
+  geom_point(alpha=.30) +
+  geom_smooth(method="lm", se=FALSE, fullrange=TRUE)
+```
+
+***
+
+
+```{r warnings=FALSE, message=FALSE}
+ggplot(df, aes(x=Happy, y=Attractive)) + xlim(1,7) + ylim(1,7) +
+  geom_point(alpha=.30) +
+  geom_smooth(method="lm")
+```
+
+***
+
+```{r warnings=FALSE, message=FALSE}
+ggplot(df, aes(x=Happy, y=Attractive)) + xlim(1,7) + ylim(1,7) +
+  geom_point(alpha=.30) +
+  geom_smooth(method="lm", se=FALSE)
+```
+
+***
+
+```{r warnings=FALSE, message=FALSE}
+ggplot(df, aes(x=Happy, y=Attractive)) + xlim(1,7) + ylim(1,7) +
+  geom_point(alpha=.30) +
+  geom_smooth(method="lm", se=FALSE, fullrange=TRUE)
+```
+
+***
+
+Again, we can fit separate regression lines based on a grouping variable, i.e. `Gender`:
+
+```{r, message=FALSE}
+ggplot(df, aes(x=Masculine, y=Attractive, color=Gender))+xlim(1,7)+ylim(1,7)+
+  geom_point(alpha=.30) +
+  stat_cor(p.accuracy = 0.01) +
+  geom_smooth(method="lm")
+```
+
+
+## Calculating multiple regression numerically: `lm`
+
+The `lm()` function fits a **linear model** to the data. It uses the formula syntax `y ~ x_1 + x_2 + ... + x_k`.
+
+```{r}
+model = lm(Attractive ~ Feminine + Happy + Afraid, data=df)
+summary(model)
+
+summary(lm(Attractive ~ Feminine + Happy + Afraid, data=df))
+# equivalent to:
+lm(Attractive ~ Feminine + Happy + Afraid, data=df) %>% summary()
+
+```
+
+```{r}
+model_2 = lm(Attractive ~ Feminine + Happy, data=df)
+summary(model_2)
+
+```
+
+
+
+## Testing assumptions 
+
+In order to yield interpretable results, the data for a regression analysis should fulfil the following criteria:
+
+- No multivariate outliers
+- No multicollinearity or singularity
+- Homoscedasticity (w.r.t. the residuals)
+- Normal residuals
+- Linear relation between predictor(s) and criterion
+
+We save the linear model as an object:
+
+```{r}
+model = lm(Attractive ~ Feminine + Happy + Afraid, data=df)
+```
+
+
+## Multivariate outliers
+
+Values with standardized residuals $>3$ or $<-3$ are possible outliers (James et al., 2014).
+
+The **leverage statistic** quantifies if points have extreme predictor values. A leverage above $\frac{2(k+1)}{N}$ indicates observations with high leverage (Bruce & Bruce, 2017). $k$ is the number of predictors, $N$ is the sample size.
+
+```{r}
+k = length(model$coefficients) - 1 # number of predictors = 3
+N = nobs(model)   # number of observations = 597
+critical_leverage = (2 * (k + 1)) / N
+
+print(critical_leverage)
+```
+***
+
+```{r}
+plot(model, 5)
+```
+
+## Multicollinearity
+
+```{r}
+df %>% 
+  select(Attractive, Feminine, Happy, Afraid) %>% 
+  cor() %>% 
+  round(2)
+```
+
+## Homoscedasticity
+
+```{r}
+plot(model, 3)
+```
+
+
+## Normal residuals
+
+```{r}
+plot(model, 2)
+```
+
+## Linearity
+
+```{r}
+plot(model, 1)
+```
+
+
+***
+
+**Addressing the correlation's 'other caveat':**
+
+```{r echo=FALSE}
+x = seq(1, 10, length.out=100)
+y = rnorm(n=100, mean=(x-5.5)**2, sd=1)
+df_xy = data.frame(x,y)
+```
+
+```{r}
+  ggplot(df_xy, aes(x=x, y=y)) + geom_point(alpha=.30) + ylim(-10, 20) + 
+  geom_smooth(method="lm")
+```
+
+*** 
+
+```{r}
+  ggplot(df_xy, aes(x=x, y=y)) + geom_point(alpha=.30) + ylim(-10, 20) + 
+  geom_smooth(method="lm", formula="y~x+I(x^2)")
+```
+
+```{r echo=FALSE, include=FALSE}
+# cleanup here
+```

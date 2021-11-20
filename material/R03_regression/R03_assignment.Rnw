@@ -1,0 +1,153 @@
+\documentclass[paper=a4, fontsize=12pt, parskip=half]{scrartcl}
+
+%%%%% SET ATTRIBUTES!!! %%%%%
+\newcommand{\assignmentnumber}{3}
+\newcommand{\assignmentformat}{HTML}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+\usepackage{amsmath, amssymb}
+\usepackage{tcolorbox}
+\usepackage[normalem]{ulem}
+\usepackage{enumitem}
+
+\usepackage{float}
+
+\usepackage{wasysym}
+
+\usepackage[
+paper=a4paper,
+left=3cm,
+right=3cm,
+top=3cm,
+bottom=3cm
+]{geometry}
+\usepackage{graphicx}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{\large\texttt{Introduction to Statistics with R}}
+\rhead{\bfseries Assignment 0\assignmentnumber}
+\rfoot{Marvin Schmitt}
+\setlength\parindent{0pt}
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\newcommand{\twodigit}[1]{\two@digits{#1}}
+
+
+
+% Automatische Nummerierung
+\newcounter{tasknumber}
+\setcounter{tasknumber}{1}
+\newcommand{\task}[1]{
+	\vspace*{0.5cm}
+	\textbf{Task \assignmentnumber.\arabic{tasknumber} (#1).}
+	\stepcounter{tasknumber}
+}
+
+
+\newcommand{\footer}{
+	\vfill
+	
+	\par\noindent\rule{\textwidth}{0.4pt}
+
+	Please solve the assignment in the \texttt{.Rmd} format and export it in a suitable format (e.\,g. \texttt{pdf} or \texttt{html})
+}
+
+
+
+\newcommand{\notetop}[1]{
+	\par\noindent\rule{\textwidth}{0.4pt}
+	\textbf{Note:\\}
+	#1
+	\par\noindent\rule{\textwidth}{0.4pt}
+}
+
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\SweaveOpts{keep.source=TRUE}
+
+
+<<echo=FALSE,eval=TRUE>>=
+options(continue="...", prompt="> ")
+knitr::opts_chunk$set(size = "small")
+#setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+@
+
+\renewcommand{\arraystretch}{1.2}
+
+Please download the data set \texttt{R03\_assignment\_dataset.csv}. Load it into your \texttt{R} session as a data frame \texttt{df}:
+  
+<<echo=TRUE,eval=FALSE>>=
+df = read.csv("R03_assignment_dataset.csv")
+@
+
+
+\task{Visualization}
+
+In this task, we will visualize simple linear regression analyses in the data set.
+
+\begin{enumerate}
+  \item From the data set, choose \textbf{one} metric variable as a predictor $x$ and \textbf{one} metric variable as a criterion $y$.
+  \item Calculate the bivariate correlation $r_{xy}$ between $x$ and $y$. Is the relation between $x$ and $y$ positive, negative, or near zero?
+  \item Calculate the explained variance $r^2_{xy}$.
+  \item Create a publication-ready plot for the simple linear regression analysis\footnote{We won't test the assumptions for the underlying regression in this task. However, if you want to be thorough and test the discussed assumptions, feel free to do it in this task as well!}:
+  \begin{enumerate}[label=(\roman*)]
+    \item Create a scatterplot to visualize the relation between $x$ and $y$.
+    \item Set labels for the x-axis, the y-axis, and the title.
+    \item Adjust the range of the axes with \texttt{xlim(lower, upper)} and \texttt{ylim(lower, upper)}.
+    \item For global styling, add a \emph{theme} to your plot\footnote{visit \url{https://ggplot2.tidyverse.org/reference/ggtheme.html} for more info on themes.}:
+    
+<<echo=TRUE, eval=FALSE>>=
+ggplot(...) + ... + theme_classic()
+@
+
+    Common choices are \texttt{theme\_classic()} or \texttt{theme\_minimal()}, but you can use any theme you like for this task.
+    \item Add a linear regression line to the scatterplot using the function \texttt{geom\_smooth}.
+    \item Lower the \texttt{alpha} value of the points in the scatterplot to increase the visibility of the regression line.
+    \item \textbf{Optional:} Use the internet to find out to save the plot as a file (e.g. in \texttt{png} or \texttt{pdf} format).
+  \end{enumerate}
+  \item \textbf{Optional:} Repeat the above tasks with an additional \emph{grouping variable} to get separate analyses for each value of that grouping variable. 
+\end{enumerate}
+  
+\newpage
+\task{Multiple Regression}
+
+In this task, we will perform a multiple regression analysis.
+
+\begin{enumerate}
+  \item From the data set, choose \textbf{one} metric variable as a criterion $y$ and \textbf{five} metric variables as potential predictors $x_1, \ldots, x_5$.
+  \item Fit a multiple linear regression to the data with the function \texttt{lm()}:
+<<echo=TRUE, eval=FALSE>>=
+model = lm(y ~ x1 + x2 + x3 + x4 + x5, data = df) # replace y ... x5
+@  
+  \item Remove non-significant predictors and repeat the analysis. If you have no predictors left, choose new ones from the data set until you have a model with 3--4 statistically significant predictors ($p<.05$)\footnote{Please don't to that in real research applications\ldots}.
+  \item Check the assumptions of the multiple linear regression. If assumptions are violated, use the internet to estimate the severity of the violation and find out how to proceed with the analysis.
+  \item Report the adjusted explained variance $R^2_{adj}$ for your model.
+  \item Report whether the \emph{entire} model is statistically sigificant based on the $F-$statistic.
+  \item \textbf{Optional:} Use your usual text-processing program (e.\,g. Word) to create a table of the results that contains the following information from the output of \texttt{summary(model)}:
+  \begin{itemize}
+  \item Predictor names and intercept
+  \item $b-$value (regression weights) for each predictor and intercept
+  \item $t-$value for each predictor and intercept
+  \item $p-$value for each predictor and intercept
+  \end{itemize}
+\end{enumerate}
+  
+  
+	\footer
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End
