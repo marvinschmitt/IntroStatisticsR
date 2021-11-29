@@ -1,0 +1,309 @@
+---
+title: "Introduction to Statistics with R"
+subtitle: "Session R06: Eye Tracking"
+author: "Marvin Schmitt"
+output:
+  beamer_presentation:
+    slide_level: 2
+    toc: no
+    theme: Berlin
+    includes:
+      in_header: ../../config-files/notes-config.tex
+header-includes: \setbeamertemplate{footline}[]{}
+---
+
+
+
+
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+knitr::opts_chunk$set(fig.height = 3, fig.width = 6)
+
+library(tidyverse)
+library(ggplot2)
+library(ggpubr)
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+set.seed(42)
+options(warn=-1)
+options(tinytex.verbose = TRUE)
+```
+
+
+## List files
+
+```{r}
+filenames = list.files(path = "R06_notes_dataset")
+filenames
+```
+
+## Construct custom text
+
+```{r}
+group = "R seminar group"
+paste("Hello", "dear", group, "!!", sep="___")
+```
+
+***
+
+```{r}
+filename = "data_1.csv"
+paste("data/", filename, sep="")
+```
+
+## `for` loops
+
+```{r}
+for (letter in c("A", "b", "C")){
+  print(letter)
+}
+```
+
+```{r}
+for (i in 1:10){
+  print(i ** 2)
+}
+```
+
+***
+
+```{r}
+values = 1:10
+values_sum = 0
+for (value in values){
+  values_sum = values_sum + value
+}
+print(values_sum)
+print(sum(values))     # check that result is equal to sum(...)
+```
+
+## Putting it all together
+
+```{r}
+filenames = list.files(path = "R06_notes_dataset")
+for (filename in filenames){
+  full_filename = paste("R06_notes_dataset", filename, sep="")
+  print(full_filename)
+}
+```
+
+***
+
+```{r}
+filenames = list.files(path = "R06_notes_dataset")
+first_full_filename = paste("R06_notes_dataset/", filenames[1], sep="")
+df = read.csv(first_full_filename) # start off with first data set
+for (filename in filenames[-1]){   # exclude first data set
+  full_filename = paste("R06_notes_dataset/", filename, sep="") # construct name
+  df_temp = read.csv(full_filename)  # read in the current "temporary" data
+  df = rbind(df, df_temp)    # append current data
+}
+```
+
+***
+
+**Remove** the temporaty data and **select** only relevant columns.
+
+```{r}
+remove(df_temp)
+```
+
+```{r}
+df = df %>% 
+  select(trial, TIMESTAMP, TRIAL_START_TIME, sound, condition, direction, 
+         AVERAGE_GAZE_X, AVERAGE_GAZE_Y)
+```
+
+
+## Inspecting the (huge) data
+
+```{r}
+str(df)
+```
+
+**Issues:**
+
+
+## Convert coordinates to numbers
+
+```{r}
+as.numeric(df$AVERAGE_GAZE_X) %>% head()
+```
+
+***
+```{r}
+na_mask = as.numeric(df$AVERAGE_GAZE_X) %>% is.na()
+df[na_mask, ] %>% head()
+```
+
+***
+
+```{r}
+df$AVERAGE_GAZE_X = as.numeric(df$AVERAGE_GAZE_X)
+df$AVERAGE_GAZE_Y = as.numeric(df$AVERAGE_GAZE_Y)
+```
+
+***
+
+```{r}
+is.na(df) %>% head()
+is.na(df) %>% sum()
+```
+
+***
+
+```{r}
+df = na.omit(df)
+is.na(df) %>% sum()
+```
+
+***
+
+```{r}
+xtabs(~ trial + condition, df)
+```
+
+***
+
+```{r}
+xtabs(~ condition + direction, df)
+```
+
+
+## Turn factors into `factor`s
+
+```{r}
+df$sound = as.factor(df$sound)
+df$condition = as.factor(df$condition)
+df$direction = as.factor(df$direction)
+```
+
+## Normalize `XY` coordinates
+
+```{r}
+min_X = 0    # customize to match window width!
+max_X = 1920    # customize to match window width!
+df$AVERAGE_GAZE_X = (df$AVERAGE_GAZE_X - min_X) / (max_X - min_X)
+
+min_Y = 0    # customize to match window height!
+max_Y = 1080    # customize to match window height!
+df$AVERAGE_GAZE_Y = (df$AVERAGE_GAZE_Y - min_Y) / (max_Y - min_Y)
+```
+
+
+## Visualize a path
+
+```{r}
+df_path = df %>% 
+  filter(trial==1)
+
+df_path$TIMESTAMP = df_path$TIMESTAMP - df_path$TRIAL_START_TIME
+df_path$TIMESTAMP[1:20]
+```
+
+***
+
+```{r message=FALSE}
+library(viridis)
+ggplot(df_path, aes(x=AVERAGE_GAZE_X, y=AVERAGE_GAZE_Y)) +
+  geom_point(aes(color=TIMESTAMP)) + xlim(-0.5, 1) + ylim(0, 2) +
+  geom_rect(xmin=0, xmax=1, ymin=0, ymax=1, alpha=0.0, color="firebrick")+
+  scale_color_viridis() + theme_classic() + labs(x="X", y="Y")
+```
+
+## The `eyetrackingR` library
+
+The library `eyetrackingR` provides numerous functions for common eye-tracking analyses. The documentation with many examples is hosted at <http://www.eyetracking-r.com/>. The library comes with an example data set `word_recognition`. That data comes from a 2-alternative forced choice word recognition task of infants who looked at animate vs. inanimate objects.
+
+```{r}
+library(eyetrackingR)
+data("word_recognition")
+nrow(word_recognition)
+colnames(word_recognition)
+```
+
+
+***
+
+We can turn observational eye-tracking data into a well-specified format for `eyetrackingR` with the function `make_eyetrackingr_data`:
+
+```{r}
+data = make_eyetrackingr_data(word_recognition, 
+                       participant_column = "ParticipantName",
+                       trial_column = "Trial",
+                       time_column = "TimeFromTrialOnset",
+                       trackloss_column = "TrackLoss",
+                       aoi_columns = c('Animate','Inanimate'),
+                       treat_non_aoi_looks_as_missing = TRUE
+)
+```
+
+More info is documented at <http://www.eyetracking-r.com/vignettes/preparing_your_data>
+
+***
+
+A *response window analyses* assesses eye-movements in a fixed time window, e.g. between 15.5 and 21 seconds after the trial started:
+
+```{r}
+response_window <- subset_by_window(data, 
+                                    window_start_time = 15500, 
+                                    window_end_time = 21000, 
+                                    rezero = FALSE) # first frame in window = 0?
+
+```
+
+***
+
+We can exclude trials that have more trackloss than a defined threshold:
+
+```{r}
+response_window_clean <- clean_by_trackloss(data = response_window,
+                                            trial_prop_thresh = .25)
+```
+
+***
+
+We recode the `Target` variable to give information on congruency with the instruction:
+
+```{r}
+response_window_clean$Target = as.factor( 
+  ifelse(test = grepl('(Spoon|Bottle)', 
+                      response_window_clean$Trial), 
+         yes = 'Inanimate', 
+         no  = 'Animate') )
+```
+
+***
+
+We can briefly visualize the average looking time at the animate objects depending on what object type was named:
+
+```{r}
+data_summary = describe_data(response_window_clean, describe_column='Animate', group_columns=c('Target','ParticipantName'))
+plot(data_summary)
+```
+
+***
+
+```{r}
+# aggregate across trials within subjects in time analysis
+response_time = make_time_sequence_data(response_window_clean, time_bin_size=100, 
+  predictor_columns = c("Target"), aois = "Animate")
+# visualize time results
+plot(response_time, predictor_column = "Target") + 
+  theme_light() + coord_cartesian(ylim = c(0,1))
+```
+
+## Summary
+
+- In order to read data from multiple input files, we can use a combination of
+  - `list.files()` to dynamically find all files in a given directory,
+  - `paste()` to construct the file names, and
+  - `for`-loops to sequentially bind the individual files to a joint data frame.
+  
+- For visualization and statistical analyses, the `eyetrackingR` library implements numerous analyses
+  - The data set needs to meet a defined format
+  - You can use your acquired data manipulation skills (and Google) to prepare your data set accordingly
+
+```{r echo=FALSE, include=FALSE}
+# cleanup here
+```

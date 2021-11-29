@@ -1,0 +1,141 @@
+\documentclass[paper=a4, fontsize=12pt, parskip=half]{scrartcl}
+
+%%%%% SET ATTRIBUTES!!! %%%%%
+\newcommand{\assignmentnumber}{5}
+\newcommand{\assignmentformat}{HTML}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+\usepackage{amsmath, amssymb}
+\usepackage{tcolorbox}
+\usepackage[normalem]{ulem}
+\usepackage{enumitem}
+
+\usepackage{float}
+
+\usepackage{wasysym}
+
+\usepackage[
+paper=a4paper,
+left=3cm,
+right=3cm,
+top=3cm,
+bottom=3cm
+]{geometry}
+\usepackage{graphicx}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{\large\texttt{Introduction to Statistics with R}}
+\rhead{\bfseries Assignment 0\assignmentnumber}
+\rfoot{Marvin Schmitt}
+\setlength\parindent{0pt}
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\newcommand{\twodigit}[1]{\two@digits{#1}}
+
+
+
+% Automatische Nummerierung
+\newcounter{tasknumber}
+\setcounter{tasknumber}{1}
+\newcommand{\task}[1]{
+	\vspace*{0.5cm}
+	\textbf{Task \assignmentnumber.\arabic{tasknumber} (#1).}
+	\stepcounter{tasknumber}
+}
+
+
+\newcommand{\footer}{
+	\vfill
+	
+	\par\noindent\rule{\textwidth}{0.4pt}
+
+	Please solve the assignment in the \texttt{.Rmd} format and export it in a suitable format (e.\,g. \texttt{pdf} or \texttt{html})
+}
+
+
+
+\newcommand{\notetop}[1]{
+	\par\noindent\rule{\textwidth}{0.4pt}
+	\textbf{Note:\\}
+	#1
+	\par\noindent\rule{\textwidth}{0.4pt}
+}
+
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\SweaveOpts{keep.source=TRUE}
+
+
+<<echo=FALSE,eval=TRUE>>=
+options(continue="...", prompt="> ")
+knitr::opts_chunk$set(size = "small")
+#setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+@
+
+\renewcommand{\arraystretch}{1.2}
+
+Please download the data set \texttt{R05\_assignment\_dataset.csv}. Load it into your \texttt{R} session as a data frame \texttt{df}. Use the parameter \texttt{stringsAsFactors} to convert character strings to factors automatically:
+  
+<<echo=TRUE,eval=FALSE>>=
+df = read.csv("R05_assignment_dataset.csv", stringsAsFactors=TRUE)
+@
+
+The data set contains the perceived stress of a random German sample of working citizens. The perceived (subjective) stress of each subject was measured at multiple measure time points:
+
+\begin{itemize}
+  \item October 28, 2019
+  \item December 28, 2019
+  \item February 28, 2020
+  \item April 28, 2020
+\end{itemize}
+
+\task{Exploring the data set and transforming formats}
+
+\begin{enumerate}
+  \item How many subjects does the data set contain?
+  \item How are the different measure time points encoded?
+  \item Briefly explain why the data set \texttt{df} is in \textbf{long} format.
+  \item Transform the data frame \texttt{df} into a new data frame \texttt{df\_wide} which has \textbf{wide} format.
+  \item Transform the new data frame \texttt{df\_wide} into another new data frame \texttt{df\_long} that has \textbf{long} format again. Verify that \texttt{df} and \texttt{df\_long} are equal with the following line of code:
+<<echo=TRUE,eval=FALSE>>=
+all(df == df_long)     # should return TRUE
+@  
+\end{enumerate}
+
+\newpage
+\task{within-subject ANOVA}
+
+In this task, you will investigate the subjects' perceived stress in the sample with a repeated measures within subject ANOVA. Keep in mind that you have the data in both \textbf{long} and \textbf{wide} format. Choose the appropriate (or more convenient) format for each subtask as you please.
+
+\begin{enumerate}
+  \item Perform the ANOVA with \texttt{afex::aov\_ez()}.
+  \item Interpret the results.
+  \item Create a visual report using \texttt{ggplot2} with:
+  \begin{itemize}
+    \item Bars for the mean of each measure time point (without error bars),
+    \item proper axes labels,
+    \item appropriate limits of the $y-$axis,
+    \item a descriptive title, and
+    \item a neutral theme.
+  \end{itemize}
+\end{enumerate}
+
+  
+\footer
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End

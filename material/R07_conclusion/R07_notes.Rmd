@@ -1,0 +1,84 @@
+---
+title: "Introduction to Statistics with R"
+subtitle: "Session R07: Conclusion"
+author: "Marvin Schmitt"
+output:
+  beamer_presentation:
+    slide_level: 2
+    toc: no
+    theme: Berlin
+    includes:
+      in_header: ../../config-files/notes-config.tex
+header-includes: \setbeamertemplate{footline}[]{}
+---
+
+
+
+
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggplot2)
+library(ggpubr)
+library(mlbench)
+```
+
+## Admin: Certificates
+
+- What kind of certificate do you need?
+- Who needs ECTS credits?
+
+
+## Recap: syllabus
+
+Date | Topic | Location
+--- | --- | ---
+19.10.2021, 09:15 - 12:45 | Kickoff and setup | in-person   
+26.10.2021, 09:15 - 10:45 | Basics and diagrams | Online
+02.11.2021, 09:15 - 10:45 | Correlation | Online
+09.11.2021, 09:15 - 10:45 | Regression | Online
+16.11.2021, 09:15 - 10:45 | t-Test | Online
+23.11.2021, 09:15 - 10:45 | ANOVA | Online
+30.11.2021, 09:15 - 11:15 | Eye-Tracking | Online
+30.11.2021, 11:30 - 12:30 | Conclusion | Online
+
+
+## Potential applications: Think, pair, share!
+
+**How can and will I apply the content of this seminar to my own research?**
+
+1. **Think** about the question alone for *3 minutes*.
+2. **Pair** up with someone and talk about the question for *15 minutes*.
+3. **Share** one highlight of your pair-talks with the entire group.
+
+
+## Feedback
+
+Looking back at the seminar retrospectively:
+
+- What do you pack in your **suitcase**?
+- What do you toss in the **bin**?
+- Anything that you want to let me know?
+
+***
+
+```{r}
+text = c("!", "goodbye", "you", "Thank" , "and")
+indices = c(4, 3, 5, 2, 1)
+for (idx in indices){
+  print(text[idx])
+}
+```
+
+```{r, echo=FALSE, out.width="60%", fig.align = 'center'}
+d = mlbench.smiley(n=1000, sd1 = 0.1, sd2 = 0.1)
+data.frame(
+  x = d$x[, 1],
+  y = d$x[, 2],
+  class = d$classes
+) %>% 
+  filter(class != 3) %>% 
+  ggplot(., aes(x = x, y=y, color=class)) +
+  geom_point() + theme_bw() + theme(legend.position="none")
+```
+

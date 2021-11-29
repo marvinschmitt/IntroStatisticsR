@@ -1,0 +1,215 @@
+---
+title: "Introduction to Statistics with R"
+subtitle: "Session R05: ANOVA"
+author: "Marvin Schmitt"
+output:
+  beamer_presentation:
+    slide_level: 2
+    toc: no
+    theme: Berlin
+    includes:
+      in_header: ../../config-files/notes-config.tex
+header-includes: \setbeamertemplate{footline}[]{}
+---
+
+
+
+
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+knitr::opts_chunk$set(fig.height = 3, fig.width = 6)
+
+library(tidyverse)
+library(ggplot2)
+library(ggpubr)
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+set.seed(42)
+options(warn=-1)
+```
+
+## The example data set
+
+This example data set contains scores on a sustainability scale for three groups, each with a distinct diet: meat-eating (`meat`), vegetarian (`vegetarian`) and plant-based (`vegan`). Furthermore, each participant's self-reported gender is denoted. 
+
+**Tip:** Use the parameter `stringsAsFactors` to interpret character strings as factors automatically:
+
+```{r}
+df = read.csv("R05_notes_dataset.csv", stringsAsFactors = TRUE)
+str(df)
+
+```
+
+***
+
+We can change the **ordering** of the **factor levels**:
+
+```{r}
+df$diet = factor(df$diet, levels=c("vegan", "vegetarian", "meat"))
+```
+
+## Missing data
+
+In the `R` language, missing data are denoted as `NA` (not available). That's a dedicated symbol. It's not to be confused with `NaN` (not a number) that describes impossible data (e.g. from divison by 0).
+
+```{r}
+head(df)
+```
+
+***
+
+Some functions do not work properly when `NA`s are present:
+
+```{r}
+mean(df$sustainability)
+```
+
+In many cases, these functions implement the argument `na.rm=TRUE` (= remove `NA` values):
+
+```{r}
+mean(df$sustainability, na.rm=TRUE)
+```
+
+*** 
+
+There are different strategies for missing values:
+
+- Delete the data
+  - Delete the entire observation (row)
+  - Exclude the observation only from those analyses where the missing value would be required
+- Substitute the missing value with a _typical_ value, like ...
+  - the mean $\bar{x}$
+  - the median
+  - the mode
+  - ...
+- Copy the last observation
+- Estimate the missing value
+  - Regression
+  - Multiple imputation
+  - ...
+  
+Introductory reading: <https://doi.org/10.4097/kjae.2013.64.5.402>
+
+***
+
+We can delete all rows that contain **any** missing data cell with `na.omit()`. That's simple but wasteful in applications where data are valuable.
+
+```{r}
+df = na.omit(df) 
+```
+
+
+## Visualization: one-way ANOVA
+
+For a one-way ANOVA (one grouping variable), we can simply use a bar plot with error bars:
+
+```{r out.width="70%"}
+df %>% filter(gender=="male") %>% 
+  ggplot(., aes(y=sustainability, x = diet)) +
+  stat_summary(fun = mean, geom = "bar", width=0.5, fill="#4E84C4") +
+  stat_summary(fun.data = mean_se, geom = "errorbar", width=0.2)
+```
+
+
+## Visualization: Two-way ANOVA
+
+For two factors, we can use a bar plot with different `fill`s. The bars and error bar need to be _dodged_ a little:
+```{r out.width="70%"}
+ggplot(df, aes(y=sustainability, x = diet, fill=gender)) +
+stat_summary(fun=mean, geom="bar", width=0.5, position=position_dodge(0.55)) +
+stat_summary(fun.data=mean_se, geom="errorbar", width=.2, 
+             position=position_dodge(.55))
+```
+
+***
+
+```{r}
+ggplot(df, aes(y=sustainability, x = gender, group=diet, color=diet)) +
+  stat_summary(fun = mean, geom = "pointrange", position=position_dodge(0.1))+
+  stat_summary(fun=mean, geom="line", position=position_dodge(0.1)) +
+  stat_summary(fun.data = mean_se, geom = "errorbar", width=0.1, 
+               position=position_dodge(0.1))
+```
+
+## Numerical ANOVA computation
+
+The `afex` package implements convenient functions to compute ANOVAs. We will use the function `aov_ez()`:
+
+```{r, message = FALSE}
+library(afex)
+aov_ez(id = "ID",             # identifier for subjects
+       dv = "sustainability", # dependent variable (y)
+       between = "gender",    # between factor (group)
+       data = df)             # data frame
+```
+
+***
+
+**One-way ANOVA**: Effect of `gender`
+
+```{r, warnings=FALSE}
+m = aov_ez(id = "ID", dv = "sustainability", 
+           between = "gender", data = df) 
+summary(m)
+```
+
+***
+
+**One-way ANOVA**: Effect of `diet`
+
+```{r, message = FALSE}
+m = aov_ez(id = "ID", dv = "sustainability", 
+           between = "diet", data = df) 
+summary(m)
+```
+
+***
+
+**Two-way ANOVA**: Effect of `gender` and `diet`
+
+```{r, message = FALSE}
+aov_ez(id = "ID", dv = "sustainability", 
+       between = c("gender", "diet"), data = df) %>% summary()
+```
+
+```{r echo=FALSE, out.width="70%"}
+ggplot(df, aes(y=sustainability, x = diet, group=gender, color=gender)) +
+  stat_summary(fun = mean, geom = "pointrange", position=position_dodge(0.1))+
+  stat_summary(fun=mean, geom="line", position=position_dodge(0.1)) +
+  stat_summary(fun.data = mean_se, geom = "errorbar", width=0.1, 
+               position=position_dodge(0.1))
+```
+
+***
+
+```{r}
+df_nicotine = read.csv("R05_notes_dataset_nicotine.csv", stringsAsFactors=TRUE)
+```
+```{r echo=FALSE}
+ggplot(df_nicotine, aes(y=nicotine_conc, x = time, group=nationality, color=nationality)) +
+  stat_summary(fun = mean, geom = "pointrange", position=position_dodge(0.1))+
+  stat_summary(fun=mean, geom="line", position=position_dodge(0.1)) +
+  stat_summary(fun.data = mean_se, geom = "errorbar", width=0.1, 
+               position=position_dodge(0.1))
+```
+
+***
+
+**Within-subject ANOVA** for factor `time`:
+
+```{r, message = FALSE}
+aov_ez(id = "ID", dv = "nicotine_conc", 
+       within = "time", data = df_nicotine) %>% summary()
+```
+
+***
+
+```{r, message = FALSE}
+aov_ez(id = "ID", dv = "nicotine_conc", between="nationality",
+       within = "time", data = df_nicotine) %>% summary()
+```
+
+
+```{r echo=FALSE, include=FALSE}
+# cleanup here
+```
